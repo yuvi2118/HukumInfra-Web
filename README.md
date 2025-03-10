@@ -36,6 +36,7 @@ HukumInfra_Website/
    - Open `index.html` in a browser.
 3. **Deploy to AWS S3:**
    - Upload all files to the configured S3 bucket for static website hosting.
+   - access the website on http://hukuminfra-web-v1.s3-website-us-east-1.amazonaws.com
 
 ## Color Palette
 | Color Name | Hex Code |
@@ -68,4 +69,4 @@ For any issues or enhancements, please create an issue in the repository or cont
 ## License
 This project is open-source and licensed under [MIT License](LICENSE).
 
-access the website on http://hukuminfra-web-v1.s3-website-us-east-1.amazonaws.com
+
