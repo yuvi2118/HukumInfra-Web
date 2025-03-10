@@ -3,67 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name | Professional Business</title>
+    <title>HukumInfra | Professional Business</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- Top Header -->
     <div class="top-header">
-        <p>📍 Corporate Office: Your Address, City, Country</p>
         <div class="contact-info">
-            <span>📞 +91 9007750027 | 📧 email@company.com</span>
-            <a href="#" class="cta-btn">Get a Quote</a>
+            <span>📞 +91 9950722291</span>
+            <span>📧 HukumInfra@company.com</span>
         </div>
+        <a href="#" class="cta-btn">Get a Quote</a>
     </div>
 
     <!-- Navigation Bar -->
-<header>
-    <div class="logo">
-        <img src="your-logo.png" alt="Company Logo">
-    </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-
-            <!-- Dropdown for Scaffolding -->
-            <li class="dropdown">
-                <a href="#">Scaffolding</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Cuplock Scaffolding</a></li>
-                    <li><a href="#">H-Frame Scaffolding</a></li>
-                    <li><a href="#">Tube & Clamp Scaffolding</a></li>
-                    <li><a href="#">Ringlock Scaffolding</a></li>
-                </ul>
-            </li>
-
-            <!-- Dropdown for Services -->
-            <li class="dropdown">
-                <a href="#">Services</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Manufacturing</a></li>
-                    <li><a href="#">Rental Services</a></li>
-                    <li><a href="#">On-Site Installation</a></li>
-                    <li><a href="#">Consultation</a></li>
-                </ul>
-            </li>
-
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <div class="logo">
+            <img src="assests/Screenshot 2025-03-10 at 10.13.55 PM.png" alt="Company Logo">
+        </div>
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li class="dropdown">
+                    <a href="#">Scaffolding</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Cuplock Scaffolding</a></li>
+                        <li><a href="#">H-Frame Scaffolding</a></li>
+                        <li><a href="#">Tube & Clamp Scaffolding</a></li>
+                        <li><a href="#">Ringlock Scaffolding</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Manufacturing</a></li>
+                        <li><a href="#">Rental Services</a></li>
+                        <li><a href="#">On-Site Installation</a></li>
+                        <li><a href="#">Consultation</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <div class="overlay"></div>
         <div class="hero-content">
             <h1>Scaffolding Materials Manufacturer & Supplier</h1>
-            <p>Providing high-quality scaffolding solutions across the country.</p>
-            <a href="#services" class="btn">Our Services</a>
+            <p>HukumInfra is here to innovate and provide the right and variants kind of scaffolding products across the Globe </p>
         </div>
     </section>
 
-    <!-- Categories Sidebar & Image -->
     <div class="main-container">
         <aside class="sidebar">
             <h3>Categories List</h3>
@@ -77,8 +72,15 @@
                 <li>Aluminium Formwork</li>
             </ul>
         </aside>
-        <div class="main-content">
-            <img src="scaffolding.jpg" alt="Scaffolding">
+        
+        <div class="content-section">
+            <div class="image-container">
+                <img src="assests/Scaffolding HomePage.jpg" alt="Scaffolding">
+            </div>
+            <div class="overview">
+                <h2>Company Overview</h2>
+                <p>HukumInfra is a leading manufacturer and supplier of high-quality scaffolding materials and formwork solutions. With years of expertise in the industry, we are committed to providing innovative and reliable products for construction projects across the globe. Our dedication to safety, durability, and efficiency has made us a trusted partner in the construction industry. Our product range includes cuplock scaffolding, H-frame scaffolding, tube & clamp scaffolding, ringlock scaffolding, and more. We also offer services such as manufacturing, rental services, on-site installation, and consultation to meet the diverse needs of our clients. Whether you are building a residential, commercial, or industrial project, HukumInfra has the right solutions for you.</p>
+            </div>
         </div>
     </div>
 
@@ -95,8 +97,14 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 CompanyName. All Rights Reserved.</p>
+        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
