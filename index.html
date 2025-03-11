@@ -23,7 +23,7 @@
             <img src="assests/Screenshot 2025-03-10 at 10.13.55 PM.png" alt="Company Logo">
         </div>
         <nav>
-            <div class="menu-icon" onclick="toggleMenu()">☰</div>
+            <div class="menu-icon">☰</div>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
@@ -87,10 +87,13 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <div class="phone-input">
+                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
             <button type="submit">Send</button>
         </form>
     </section>
@@ -101,10 +104,28 @@
     </footer>
 
     <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:3000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(data => {
+                alert('Query sent successfully');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your query');
+            });
+        });
     </script>
 </body>
 </html>

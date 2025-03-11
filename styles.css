@@ -262,6 +262,13 @@ nav ul li a:active {
     padding: 50px;
     background: white;
     border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
+    margin: 20px;
+}
+
+#contact h2 {
+    color: #0074B7; /* Industrial Blue */
+    margin-bottom: 20px;
 }
 
 #contact form {
@@ -272,11 +279,17 @@ nav ul li a:active {
     gap: 10px;
 }
 
-#contact input, textarea {
+#contact input, #contact textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+}
+
+#contact .phone-input {
+    display: flex;
+    gap: 10px;
 }
 
 #contact button {
@@ -285,6 +298,13 @@ nav ul li a:active {
     padding: 10px;
     border: none;
     border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background: #b30000; /* Darker Red on hover */
 }
 
 /* Footer */
