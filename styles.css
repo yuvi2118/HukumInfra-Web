@@ -1,139 +1,167 @@
-/* General Styles */
-* {
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #F5F5F5; /* Concrete White */
-    color: #222222; /* Charcoal Black */
 }
 
 /* Top Header */
 .top-header {
-    background: #606060; /* Steel Gray */
+    background: #5598ef; /* Dark Blue */
     color: white;
-    padding: 10px;
+    font-size: 14px;
+    padding: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14px;
+    text-align: center;
 }
 
-.contact-info {
+.top-header p {
+    margin: 0;
+}
+
+/* Middle Header */
+.middle-header {
+    background: white;
+    padding: 20px;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
+    text-align: center;
 }
 
-.cta-btn {
-    background: #D60000; /* Bold Red */
+.middle-header .logo img {
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+}
+
+.middle-header .contact-info {
+    text-align: center;
+    flex: 6;
+}
+
+.middle-header .red-text {
+    color: rgb(218, 63, 63);
+    font-weight: bold;
+}
+
+.middle-header .quote-button .btn {
+    background: red;
     color: white;
-    padding: 5px 15px;
+    padding: 15px 15px;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 6px;
 }
 
-/* Style for the Navigation Bar */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0074B7; /* Industrial Blue */
-    padding: 15px 20px;
-    /* Remove border-radius */
+.middle-header .quote-button .btn:hover {
+    background: darkred;
 }
 
-.logo img {
-    height: 50px;
-    border-radius: 5px; /* Rounded corners */
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
+.middle-header .quote-button {
+    flex: 1;
+    text-align: center;
 }
 
 /* Navigation Bar */
-nav ul {
-    list-style: none;
+.navbar {
+    background: rgb(33, 198, 210);
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
-}
-
-nav ul li {
+    justify-content: center;
+    align-items: center;
     position: relative;
-    margin: 0 15px;
+    z-index: 100; /* Add z-index to ensure navbar appears above other content */
 }
 
-nav ul li a {
-    color: white;
+.nav-toggle {
+    display: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+.nav-menu li a {
+    color: #000;
     text-decoration: none;
+    padding: 20px 25px;
+    display: block;
     font-weight: bold;
-    padding: 10px;
-    display: block;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
-    border-radius: 5px; /* Rounded corners */
 }
-
-nav ul li a:hover,
-nav ul li a:focus,
-nav ul li a:active {
-    background-color: #0056b3; /* Darker Blue on hover, focus, and active */
-    color: white; /* Change text color on hover, focus, and active */
-}
-
-/* Dropdown Styles */
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu {
+/* Mega Menu Styles */
+.mega-menu {
     display: none;
     position: absolute;
-    background: white;
-    list-style: none;
-    padding: 10px;
     top: 100%;
-    left: 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    min-width: 180px;
-    z-index: 10;
-    border-radius: 10px; /* Rounded corners */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    width: 1000px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
-.dropdown-menu li {
-    padding: 8px 12px;
-    border-bottom: 1px solid #ddd;
-    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
-    border-radius: 5px; /* Rounded corners */
+.dropdown:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
 }
 
-.dropdown-menu li:last-child {
-    border-bottom: none;
+.mega-menu-column {
+    padding: 10px;
 }
 
-.dropdown-menu li a {
+.mega-menu-column h3 {
     color: #333;
-    text-decoration: none;
-    font-weight: normal;
-    display: block;
-    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(33, 198, 210);
 }
 
-.dropdown-menu li:hover {
-    background-color: #D60000; /* Change background color on hover */
-    color: white; /* Change text color on hover */
+.mega-menu-column a {
+    color: #666;
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+    transition: color 0.3s;
 }
+
+.mega-menu-column a:hover {
+    color: rgb(33, 198, 210);
+}
+
+.dropdown-toggle i {
+    margin-left: 0.5rem;
+}
+
 
 /* Hero Section */
 .hero {
     position: relative;
+    z-index: 1; /* Lower than the navbar */
+    margin-top: 10px; /* Add margin so the dropdown doesn't collide */
+    margin-left: 5px;
+    padding-left: 5%;
     background: url('assests/banner.jpg') no-repeat left 2px/cover;
     height: 200px;
     display: flex;
@@ -193,12 +221,29 @@ nav ul li a:active {
     margin: auto;
 }
 
+@media (min-width: 1201px) {
+    .main-container {
+        padding-left: 290px; /* 250px sidebar width + 15px padding on each side + 10px gap */
+    }
+}
+
 .sidebar {
     width: 250px;
     background: white;
     padding: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px; /* Rounded corners */
+}
+
+@media (min-width: 1201px) {
+    .sidebar {
+        position: fixed;
+        top: 450px;
+        left: 100px;
+        z-index: 90; /* Below navbar but above most content */
+        max-height: calc(100vh - 40px); /* Full height minus top and bottom margins */
+        overflow-y: auto; /* Add scrolling for tall sidebars */
+    }
 }
 
 .sidebar h3 {
@@ -215,7 +260,7 @@ nav ul li a:active {
 
 .sidebar ul li {
     padding: 10px;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #ddd;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s; /* Add transition for smooth effect */
     border-radius: 5px; /* Rounded corners */
@@ -262,13 +307,6 @@ nav ul li a:active {
     padding: 50px;
     background: white;
     border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
-    margin: 20px;
-}
-
-#contact h2 {
-    color: #0074B7; /* Industrial Blue */
-    margin-bottom: 20px;
 }
 
 #contact form {
@@ -279,17 +317,11 @@ nav ul li a:active {
     gap: 10px;
 }
 
-#contact input, #contact textarea {
+#contact input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
-}
-
-#contact .phone-input {
-    display: flex;
-    gap: 10px;
 }
 
 #contact button {
@@ -298,13 +330,6 @@ nav ul li a:active {
     padding: 10px;
     border: none;
     border-radius: 5px; /* Rounded corners */
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#contact button:hover {
-    background: #b30000; /* Darker Red on hover */
 }
 
 /* Footer */
@@ -314,6 +339,28 @@ footer {
     background: #606060; /* Steel Gray */
     color: white;
     /* Remove border-radius */
+    background-color: #f1f1f1;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 20px;
+    text-align: center;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #000;
+}
+
+.breadcrumb p {
+    margin: 0;
+}
+
+/* Content */
+.content img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Media Queries */
@@ -321,11 +368,17 @@ footer {
     .main-container {
         flex-direction: column;
         align-items: center;
+        padding: 20px; /* Ensure padding is reset for smaller screens */
     }
 
     .sidebar {
         width: 100%;
         margin-bottom: 20px;
+        position: static; /* Ensure sidebar is not fixed on smaller screens */
+        top: auto;
+        left: auto;
+        max-height: none;
+        overflow-y: visible;
     }
 
     .content-section {
@@ -333,62 +386,91 @@ footer {
     }
 }
 
+/* Mobile Navigation */
+/* Mobile Styles */
 @media (max-width: 768px) {
-    .top-header {
-        flex-direction: column;
-        text-align: center;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        position: relative;
     }
-
-    .contact-info {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .menu-icon {
+    
+    .nav-toggle {
         display: block;
+        position: relative;
+        font-size: 1.5rem;
+        cursor: pointer;
+        z-index: 200; /* Higher z-index to ensure it's above everything */
+        padding: 10px; /* Add padding for easier tapping */
     }
 
-    .nav-links {
+    .nav-menu {
         display: none;
         flex-direction: column;
-        align-items: center;
         width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: rgb(33, 198, 210);
+        z-index: 150; /* Add z-index to ensure menu appears above content */
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1); /* Add subtle shadow for better visibility */
     }
 
-    .nav-links.active {
+    .nav-menu.active {
         display: flex;
     }
 
-    nav ul {
-        flex-direction: column;
-        align-items: center;
+    .nav-menu li {
+        width: 100%;
+        border-top: 1px solid rgba(0,0,0,0.1);
     }
 
-    nav ul li {
-        margin: 10px 0;
+    .nav-menu li a {
+        padding: 15px 20px;
     }
 
-    .hero-content h1 {
-        font-size: 30px;
+    /* Mobile dropdown styles */
+    .dropdown.active .mega-menu {
+        display: grid;
+    }
+    
+    .mega-menu {
+        position: static;
+        width: 100%;
+        transform: none;
+        display: none;
+        grid-template-columns: 1fr;
+        padding: 0;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
     }
 
-    .hero-content p {
-        font-size: 16px;
+    .mega-menu-column {
+        padding: 0;
+        background: #f8f8f8;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
     }
 
-    .btn {
-        padding: 8px 15px;
+    .mega-menu-column h3 {
+        padding: 10px 15px;
+        margin: 0;
+        font-size: 14px;
+    }
+    
+    .mega-menu-column a {
+        padding: 8px 20px;
+        border-top: 1px solid rgba(0,0,0,0.05);
+        background: #fff;
     }
 }
 
 @media (max-width: 480px) {
     .top-header {
-        padding: 5px;
+        padding: 10px;
     }
 
     .cta-btn {
@@ -437,5 +519,26 @@ footer {
 
     footer {
         padding: 10px;
+    }
+
+    .top-header, .middle-header, .breadcrumb, .content, footer {
+        padding: 10px;
+    }
+    
+    /* These styles will override the ones for tablets */
+    .navbar {
+        padding: 8px 5px; /* Adjusted padding for better mobile layout */
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .mega-column {
+        width: 100%;
     }
 }
