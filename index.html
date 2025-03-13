@@ -6,6 +6,7 @@
     <title>HukumInfra | Professional Business</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 
@@ -220,13 +221,36 @@
                 },
                 body: JSON.stringify(data)
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(data => {
-                alert('Query sent successfully');
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: 'Your message has been sent successfully. We will get back to you soon!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#28a745',
+                        customClass: {
+                            popup: 'animated fadeInDown'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Clear the form after successful submission
+                            document.getElementById('contactForm').reset();
+                        }
+                    });
+                } else {
+                    throw new Error(data.message || 'Failed to send message');
+                }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('There was an error sending your query');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error sending your message. Please try again later.',
+                    confirmButtonColor: '#dc3545'
+                });
             });
         });
     </script>
