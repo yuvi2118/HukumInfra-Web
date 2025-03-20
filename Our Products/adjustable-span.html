@@ -377,27 +377,14 @@
                 <p>Upgrade your formwork system with **high-quality Adjustable Spans** from HukumInfra. Contact us now for **technical consultation, bulk pricing, or customized solutions**.</p>
         
                 <div style="margin-top: 30px;">
-                    <a href="#contact" class="btn">REQUEST A QUOTE</a>
-                    <a href="#contact" class="btn">GET BULK PRICING</a>
+                    <a href="/contact.html" class="btn">REQUEST A QUOTE</a>
                 </div>
             </div>
         </div>
         
     </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <div class="phone-input">
-                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
-            </div>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
+   
 
     <!-- Footer -->
     <footer>
@@ -492,51 +479,7 @@
             });
         });
         
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-
-            fetch('http://localhost:3000/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Thank You!',
-                        text: 'Your message has been sent successfully. We will get back to you soon!',
-                        confirmButtonText: 'OK',
-                        confirmButtonColor: '#28a745',
-                        customClass: {
-                            popup: 'animated fadeInDown'
-                        }
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Clear the form after successful submission
-                            document.getElementById('contactForm').reset();
-                        }
-                    });
-                } else {
-                    throw new Error(data.message || 'Failed to send message');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'There was an error sending your message. Please try again later.',
-                    confirmButtonColor: '#dc3545'
-                });
-            });
-        });
+        
         
         // Function to set up the sidebar based on the current page context
         function setupContextSidebar() {
