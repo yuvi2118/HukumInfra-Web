@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scaffolding Couplers | HukumInfra</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .product-hero {
+            background: url('assests/couplers-banner.jpg') no-repeat center/cover;
+            height: 200px;
+        }
+        
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th, .specs-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .specs-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .specs-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .cta-section {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-item h3 {
+            color: #0074B7;
+            margin-bottom: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: rgb(33, 198, 210);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="top-header">
+        <p>🔍 vaishali</p>
+    </div>
+
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="logo">
+            <img src="/assests/logo.png" alt="Company Logo">
+        </div>
+        <div class="contact-info">
+            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
+            <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
+        </div>
+        <div class="quote-button">
+            <a href="#" class="btn">GET A QUOTE</a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/about.html">ABOUT US</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-column">
+                        <h4>FORMWORK SYSTEMS</h4>
+                        <a href="formwork-system.html">FORMWORK SYSTEM</a>
+                        <a href="acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
+                        <a href="shuttering-plate.html">SHUTTERING PLATE</a>
+                        <a href="pier-shuttering.html">PIER SHUTTERING</a>
+                        <a href="girder-shuttering.html">GIRDER SHUTTERING</a>
+                        <a href="precast-shuttering.html">PRECAST SHUTTERING</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SCAFFOLDING SYSTEMS</h4>
+                        <a href="cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
+                        <a href="h-frame.html">H-FRAME SCAFFOLDING</a>
+                        <a href="galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
+                        <a href="ms-pipe.html">MS PIPE</a>
+                        <a href="ms-chali.html">MS CHALI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SUPPORT SYSTEMS</h4>
+                        <a href="adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
+                        <a href="adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
+                        <a href="heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
+                        <a href="adjustable-span.html">ADJUSTABLE SPAN</a>
+                        <a href="column-patti.html">COLUMN PATTI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>ACCESSORIES & COMPONENTS</h4>
+                        <a href="couplers.html">COUPLERS</a>
+                        <a href="builder-clamp.html">BUILDER CLAMP</a>
+                        <a href="plank.html">PLANK</a>
+                        <a href="ms-channel.html">M.S. CHANNEL</a>
+                        <a href="jack-wheel.html">JACK WHEEL</a>
+                        <a href="accessories.html">OTHER ACCESSORIES</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero product-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Formwork Systems</h1>
+            <p>Professional Concrete Forming Solutions for Modern Construction Projects</p>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Scaffolding</li>
+                <li>Shuttering Formwork</li>
+                <li>Centering Formwork</li>
+                <li>Culvert & Bridge Formwork</li>
+                <li>Service</li>
+                <li>Aluminium Formwork</li>
+            </ul>
+        </aside>
+        
+        <div class="content-section">
+            <div class="overview">
+                <h2>Scaffolding Couplers Overview</h2>
+                <p>HukumInfra provides premium-quality scaffolding couplers designed to create secure connections between scaffolding tubes in construction projects. Our couplers ensure maximum structural integrity and safety while offering versatility for various scaffolding configurations and applications.</p>
+                
+                <p>Scaffolding couplers are critical components that join scaffold tubes to create stable frameworks. Our range includes swivel couplers, fixed couplers, sleeve couplers, and specialized variants manufactured to meet international safety standards and provide reliable performance in demanding construction environments.</p>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Strength & Safety</h3>
+                    <p>Our couplers are manufactured from high-grade forged steel with zinc plating, providing exceptional load-bearing capacity and resistance to slippage under heavy loads.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Quick Installation</h3>
+                    <p>Engineered with efficient locking mechanisms that allow for fast, secure connections, reducing assembly time while ensuring structural integrity.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Versatility</h3>
+                    <p>Available in multiple configurations to accommodate various angles and connection types, enabling flexible scaffolding designs for complex architectural requirements.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Compliance</h3>
+                    <p>All our couplers comply with IS:2750 and international safety standards, ensuring reliable performance and peace of mind for construction professionals.</p>
+                </div>
+            </div>
+            
+            <h2>Product Gallery</h2>
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="/assests/fixed-coupler.jpg" alt="Fixed Right Angle Couplers">
+                    <div style="padding: 10px;">
+                        <h3>Fixed/Right Angle Couplers</h3>
+                        <p>Creates rigid 90° connections between scaffold tubes, ideal for forming corners and square structures</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/swivel-coupler.jpg" alt="Swivel Couplers">
+                    <div style="padding: 10px;">
+                        <h3>Swivel Couplers</h3>
+                        <p>Allows connections at variable angles from 0-360°, perfect for complex geometric configurations</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/sleeve-coupler.jpg" alt="Sleeve Couplers">
+                    <div style="padding: 10px;">
+                        <h3>Sleeve Couplers</h3>
+                        <p>Joins two scaffold tubes end-to-end, creating extended lengths without compromising strength</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/special-coupler.jpg" alt="Joint Pins & Special Couplers">
+                    <div style="padding: 10px;">
+                        <h3>Joint Pins & Special Couplers</h3>
+                        <p>Specialized connectors for unique applications including beam clamps, board retaining couplers, and base plates</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Material Composition</td>
+                    <td>Forged carbon steel (Grade C45/EN8) with high tensile strength</td>
+                </tr>
+                <tr>
+                    <td>Load Capacities</td>
+                    <td>Fixed Coupler: 6.0 kN<br>Swivel Coupler: 5.5 kN<br>Sleeve Coupler: 16.0 kN</td>
+                </tr>
+                <tr>
+                    <td>Dimensions</td>
+                    <td>Fixed Coupler: 80×60×35mm<br>Swivel Coupler: 140×70×35mm<br>Sleeve Coupler: 110×48mm</td>
+                </tr>
+                <tr>
+                    <td>Surface Treatment</td>
+                    <td>Hot-dip galvanized (min. 42 microns) or electro-galvanized with yellow/blue passivation</td>
+                </tr>
+                <tr>
+                    <td>Testing Standards</td>
+                    <td>IS:2750, BS EN 74-1:2005, ANSI/ASSP A10.8, AS/NZS 1576.2</td>
+                </tr>
+                <tr>
+                    <td>Installation Torque</td>
+                    <td>Fixed Coupler: 45-50 N·m<br>Swivel Coupler: 45-50 N·m<br>Sleeve Coupler: 50-55 N·m</td>
+                </tr>
+                <tr>
+                    <td>Compatibility</td>
+                    <td>Standard 48.3mm OD scaffold tubes (walls 3.2-4.0mm thickness)</td>
+                </tr>
+                <tr>
+                    <td>Product Lifespan</td>
+                    <td>3-5 years under normal usage conditions with proper maintenance</td>
+                </tr>
+                <tr>
+                    <td>Working Temperature</td>
+                    <td>-20°C to +70°C</td>
+                </tr>
+            </table>
+            
+            <div class="overview">
+                <h2>Applications</h2>
+                <p>Our scaffolding couplers are essential components in various construction and industrial applications:</p>
+                <ul>
+                    <li>Construction site scaffolding for access and working platforms</li>
+                    <li>Building facade maintenance and renovation projects</li>
+                    <li>Event and temporary structure assembly</li>
+                    <li>Industrial plant maintenance scaffolds</li>
+                    <li>Bridge construction and maintenance operations</li>
+                    <li>Shipyard and offshore platform construction</li>
+                    <li>Theater and entertainment rigging systems</li>
+                    <li>Custom scaffold configurations for complex architectural structures</li>
+                </ul>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Need High-Quality Scaffolding Couplers for Your Project?</h2>
+                <p>Our team of experts is ready to help you select the right couplers for your specific construction requirements. We offer volume discounts, technical support, and fast delivery to ensure your project stays on schedule.</p>
+                <a href="#contact" class="btn">Request a Quote</a>
+                <p style="margin-top: 15px;">Contact us today at +91 9950722291 for special pricing on bulk orders or to discuss custom requirements.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <div class="phone-input">
+                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache DOM elements
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            // Toggle mobile menu
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            
+            // Handle all dropdown toggles
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    // Always prevent default for dropdown toggles
+                    e.preventDefault();
+                    
+                    const currentDropdown = this.closest('.dropdown');
+                    
+                    if (window.innerWidth <= 768) {
+                        // Close other dropdowns when one is opened
+                        dropdowns.forEach(dropdown => {
+                            if (dropdown !== currentDropdown) {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle the current dropdown
+                        currentDropdown.classList.toggle('active');
+                        
+                        // Stop propagation to prevent document click from immediately closing it
+                        e.stopPropagation();
+                    }
+                });
+            });
+            
+            // Close mega-menu when clicking on a menu item inside it
+            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
+            megaMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // If on mobile, close the dropdown and menu after selecting an item
+                    if (window.innerWidth <= 768) {
+                        this.closest('.dropdown').classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Close menus when clicking outside
+            document.addEventListener('click', function(e) {
+                // If click is outside navbar, close everything
+                if (!e.target.closest('.navbar')) {
+                    navMenu.classList.remove('active');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                } 
+                // If inside navbar but outside an active dropdown, close only dropdowns
+                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                // Debounce the resize event
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    // If switching to desktop view, reset mobile menu states
+                    if (window.innerWidth > 768) {
+                        navMenu.classList.remove('active');
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }, 250);
+            });
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:3000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: 'Your message has been sent successfully. We will get back to you soon!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#28a745',
+                        customClass: {
+                            popup: 'animated fadeInDown'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Clear the form after successful submission
+                            document.getElementById('contactForm').reset();
+                        }
+                    });
+                } else {
+                    throw new Error(data.message || 'Failed to send message');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error sending your message. Please try again later.',
+                    confirmButtonColor: '#dc3545'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

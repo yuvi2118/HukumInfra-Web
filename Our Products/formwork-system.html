@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Formwork Systems | HukumInfra</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .product-hero {
+            background: url('assests/formwork-banner.jpg') no-repeat center/cover;
+            height: 200px;
+        }
+        
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th, .specs-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .specs-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .specs-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .cta-section {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-item h3 {
+            color: #0074B7;
+            margin-bottom: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: rgb(33, 198, 210);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="top-header">
+        <p>🔍 vaishali</p>
+    </div>
+
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="logo">
+            <img src="/assests/logo.png" alt="Company Logo">
+        </div>
+        <div class="contact-info">
+            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
+            <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
+        </div>
+        <div class="quote-button">
+            <a href="#" class="btn">GET A QUOTE</a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/about.html">ABOUT US</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-column">
+                        <h4>FORMWORK SYSTEMS</h4>
+                        <a href="formwork-system.html">FORMWORK SYSTEM</a>
+                        <a href="acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
+                        <a href="shuttering-plate.html">SHUTTERING PLATE</a>
+                        <a href="pier-shuttering.html">PIER SHUTTERING</a>
+                        <a href="girder-shuttering.html">GIRDER SHUTTERING</a>
+                        <a href="precast-shuttering.html">PRECAST SHUTTERING</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SCAFFOLDING SYSTEMS</h4>
+                        <a href="cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
+                        <a href="h-frame.html">H-FRAME SCAFFOLDING</a>
+                        <a href="galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
+                        <a href="ms-pipe.html">MS PIPE</a>
+                        <a href="ms-chali.html">MS CHALI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SUPPORT SYSTEMS</h4>
+                        <a href="adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
+                        <a href="adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
+                        <a href="heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
+                        <a href="adjustable-span.html">ADJUSTABLE SPAN</a>
+                        <a href="column-patti.html">COLUMN PATTI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>ACCESSORIES & COMPONENTS</h4>
+                        <a href="couplers.html">COUPLERS</a>
+                        <a href="builder-clamp.html">BUILDER CLAMP</a>
+                        <a href="plank.html">PLANK</a>
+                        <a href="ms-channel.html">M.S. CHANNEL</a>
+                        <a href="jack-wheel.html">JACK WHEEL</a>
+                        <a href="accessories.html">OTHER ACCESSORIES</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero product-hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Formwork Systems</h1>
+            <p>Professional Concrete Forming Solutions for Modern Construction Projects</p>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Scaffolding</li>
+                <li>Shuttering Formwork</li>
+                <li>Centering Formwork</li>
+                <li>Culvert & Bridge Formwork</li>
+                <li>Service</li>
+                <li>Aluminium Formwork</li>
+            </ul>
+        </aside>
+        
+        <div class="content-section">
+            <div class="overview">
+                <h2>Formwork System Overview</h2>
+                <p>HukumInfra offers a comprehensive range of high-quality formwork systems designed to meet the diverse needs of modern construction projects. Our formwork solutions provide exceptional surface finish, dimensional accuracy, and structural stability while ensuring cost-effectiveness and ease of assembly.</p>
+                
+                <p>Formwork is a temporary mold used to contain freshly placed and compacting concrete until it cures sufficiently to support itself. Our systems are engineered to handle various construction requirements from simple residential foundations to complex commercial structures.</p>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Durability</h3>
+                    <p>Our formwork systems are constructed from high-grade materials engineered to withstand the rigors of construction environments and multiple reuses.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Efficiency</h3>
+                    <p>Designed for quick assembly and disassembly, significantly reducing labor costs and project timelines while maintaining structural integrity.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Versatility</h3>
+                    <p>Adaptable to various construction needs, from standard vertical walls to curved structures, columns, and special architectural elements.</p>
+                </div>
+            </div>
+            
+            <h2>Product Gallery</h2>
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="/assests/formwork1.jpg" alt="Wall Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Wall Formwork</h3>
+                        <p>Perfect for vertical concrete walls with exceptional surface finish</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork2.jpg" alt="Column Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Column Formwork</h3>
+                        <p>Specially designed for square, rectangular or circular columns</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork3.jpg" alt="Slab Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Slab Formwork</h3>
+                        <p>Horizontal forming system for floors and roofs</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork4.jpg" alt="Curved Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Curved Formwork</h3>
+                        <p>Specialized solutions for curved and architectural concrete elements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Specification</th>
+                    <th>Standard Panels</th>
+                    <th>Heavy-Duty Panels</th>
+                </tr>
+                <tr>
+                    <td>Frame Material</td>
+                    <td>High-grade steel (Fe 410 grade) with powder coating</td>
+                    <td>Reinforced steel frame (Fe 540 grade) with additional cross-bracing</td>
+                </tr>
+                <tr>
+                    <td>Facing Material</td>
+                    <td>18mm film-faced plywood with phenolic resin coating</td>
+                    <td>21mm fiber-reinforced plastic or steel facing for extended durability</td>
+                </tr>
+                <tr>
+                    <td>Panel Sizes</td>
+                    <td>Standard: 600mm × 1200mm, 900mm × 1200mm, 1200mm × 1200mm</td>
+                    <td>Heavy-duty: 600mm × 1500mm, 900mm × 1500mm, 1200mm × 1500mm, 1200mm × 2400mm</td>
+                </tr>
+                <tr>
+                    <td>Load Capacity</td>
+                    <td>60 kN/m² for wall applications</td>
+                    <td>80-100 kN/m² for high-pressure concrete applications</td>
+                </tr>
+                <tr>
+                    <td>Surface Finish</td>
+                    <td>Smooth finish with minimal form lines, suitable for exposed concrete (F2/F3 finish)</td>
+                    <td>Premium finish options including textured, architectural patterns, and custom imprints</td>
+                </tr>
+                <tr>
+                    <td>Reuse Capacity</td>
+                    <td>80-100 cycles with proper maintenance</td>
+                    <td>150-200 cycles with routine maintenance</td>
+                </tr>
+                <tr>
+                    <td>Assembly Method</td>
+                    <td>Quick-lock system with pin and wedge connections, 2-person assembly</td>
+                    <td>Reinforced locking system with safety interlocks, compatible with crane lifting</td>
+                </tr>
+                <tr>
+                    <td>Frame Thickness</td>
+                    <td>120mm steel profile with reinforced corners</td>
+                    <td>150mm heavy-gauge steel profile with double reinforcements</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>25-40 kg/m² depending on configuration</td>
+                    <td>45-65 kg/m² for high-pressure applications</td>
+                </tr>
+                <tr>
+                    <td>Concrete Pressure Resistance</td>
+                    <td>Up to 60 kN/m² at standard pour rates</td>
+                    <td>Up to 100 kN/m² allowing faster pour rates</td>
+                </tr>
+                <tr>
+                    <td>Water Tightness</td>
+                    <td>Standard rubber gaskets at panel joints</td>
+                    <td>Enhanced seal system with compression gaskets for water-retaining structures</td>
+                </tr>
+                <tr>
+                    <td>Tie Rod System</td>
+                    <td>Standard tie rod pattern with plastic cones</td>
+                    <td>Water-stop tie rod system with integrated sealing</td>
+                </tr>
+                <tr>
+                    <td>Compliance</td>
+                    <td>Meets IS 14687:1999 standards for formwork</td>
+                    <td>Complies with IS 14687:1999, BS 5975, and DIN 18202 international standards</td>
+                </tr>
+            </table>
+            
+            <div class="overview">
+                <h2>Applications & Use Cases</h2>
+                <p>HukumInfra formwork systems deliver exceptional value across diverse construction environments. Our solutions have been successfully deployed in a wide range of projects:</p>
+                
+                <h3>Residential Construction</h3>
+                <p>Our formwork systems enable rapid construction of residential buildings with consistent quality:</p>
+                <ul>
+                    <li><strong>Multi-story Apartments:</strong> Standardized panel systems allow for cycle times as low as 5-7 days per floor</li>
+                    <li><strong>Villa and Bungalow Construction:</strong> Custom configurations for unique architectural designs</li>
+                    <li><strong>Mass Housing Projects:</strong> Optimized for repetitive layouts with minimal adjustments between pours</li>
+                    <li><strong>Basement Construction:</strong> One-sided wall formwork solutions with integrated water barriers</li>
+                </ul>
+                
+                <h3>Commercial & High-Rise Construction</h3>
+                <p>Our heavy-duty formwork solutions are designed for the demands of commercial construction:</p>
+                <ul>
+                    <li><strong>Office Complexes:</strong> Large-area slab formwork with minimal props for open floor plans</li>
+                    <li><strong>Shopping Centers:</strong> Solutions for large span beams and challenging geometries</li>
+                    <li><strong>High-Rise Buildings:</strong> Climbing formwork systems with hydraulic lifting mechanisms</li>
+                    <li><strong>Parking Structures:</strong> Efficient systems for repetitive concrete elements with tight tolerances</li>
+                </ul>
+                
+                <h3>Infrastructure Projects</h3>
+                <p>Specially engineered solutions for civil infrastructure projects:</p>
+                <ul>
+                    <li><strong>Bridge Construction:</strong> Pier formwork, abutment systems, and cantilever carriage solutions</li>
+                    <li><strong>Tunnel Lining:</strong> Curved formwork solutions with hydraulic stripping mechanisms</li>
+                    <li><strong>Highway Structures:</strong> Heavy-duty retaining wall formwork with climbing brackets</li>
+                    <li><strong>Culverts & Drainage:</strong> Modular systems for rapid deployment and consistent dimensions</li>
+                    <li><strong>Dam Construction:</strong> Custom heavy-duty solutions for mass concrete pours</li>
+                </ul>
+                
+                <h3>Industrial Construction</h3>
+                <p>Robust formwork solutions for demanding industrial environments:</p>
+                <ul>
+                    <li><strong>Power Plants:</strong> High precision formwork for critical structural elements</li>
+                    <li><strong>Process Plants:</strong> Solutions for complex piping penetrations and equipment foundations</li>
+                    <li><strong>Water Treatment Facilities:</strong> Specialized formwork for water-retaining structures with enhanced joint detailing</li>
+                    <li><strong>Industrial Flooring:</strong> Large-area support systems for heavy-duty floor slabs</li>
+                    <li><strong>Silos & Tanks:</strong> Circular climbing formwork systems for uniform wall thickness</li>
+                </ul>
+                
+                <h3>Architectural & Specialty Applications</h3>
+                <p>Innovative solutions for unique architectural concrete:</p>
+                <ul>
+                    <li><strong>Curved and Free-Form Structures:</strong> Flexible formwork systems for complex geometries</li>
+                    <li><strong>Architectural Concrete:</strong> Premium-faced systems for exposed concrete with minimal joint lines</li>
+                    <li><strong>Textured Concrete:</strong> Custom liner systems for decorative imprints and patterns</li>
+                    <li><strong>Complex Columns:</strong> Solutions for non-standard shapes and tapering elements</li>
+                    <li><strong>Feature Walls:</strong> Systems for creating architectural detailing and integrated design elements</li>
+                </ul>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Transform Your Construction Efficiency with HukumInfra Formwork</h2>
+                <p>Our engineered formwork solutions can reduce your concrete structure costs by up to 30% while improving quality and accelerating schedules.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0;">
+                    <div style="background: rgba(255,255,255,0.8); padding: 15px; border-radius: 8px; text-align: left;">
+                        <h3 style="color: #0074B7; margin-top: 0;"><i class="fas fa-calendar-check" style="margin-right: 8px;"></i> Faster Construction</h3>
+                        <p>Reduce your floor-to-floor cycle times by up to 50% with our quick-assembly formwork systems.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.8); padding: 15px; border-radius: 8px; text-align: left;">
+                        <h3 style="color: #0074B7; margin-top: 0;"><i class="fas fa-rupee-sign" style="margin-right: 8px;"></i> Lower Labor Costs</h3>
+                        <p>Cut your formwork labor requirements by up to 40% with our optimized, easy-to-handle systems.</p>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.8); padding: 15px; border-radius: 8px; text-align: left;">
+                        <h3 style="color: #0074B7; margin-top: 0;"><i class="fas fa-tools" style="margin-right: 8px;"></i> Technical Support</h3>
+                        <p>Our engineering team provides complimentary formwork design and on-site training for your project.</p>
+                    </div>
+                </div>
+                <p><strong>Ready to optimize your construction project?</strong> Our formwork specialists are available to provide personalized solutions tailored to your specific project requirements.</p>
+                
+                <div style="margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+                    <a href="tel:+919950722291" class="btn" style="background-color: #0074B7; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center;">
+                        <i class="fas fa-phone-alt" style="margin-right: 8px;"></i> Call Now: +91 9950722291
+                    </a>
+                    <a href="#contact" class="btn" style="background-color: #28a745; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-flex; align-items: center;">
+                        <i class="fas fa-envelope" style="margin-right: 8px;"></i> Request Quote
+                    </a>
+                </div>
+                
+                <div style="margin-top: 30px; background: rgba(0,0,0,0.05); padding: 15px; border-radius: 8px; text-align: left;">
+                    <h3 style="margin-top: 0;"><i class="fas fa-certificate" style="color: #0074B7; margin-right: 8px;"></i> HukumInfra Formwork Guarantee</h3>
+                    <p>We stand behind our formwork systems with our industry-leading guarantee:</p>
+                    <ul style="text-align: left; margin-bottom: 0;">
+                        <li>Free technical consultation and formwork layout design</li>
+                        <li>Guaranteed delivery timeline to meet your project schedule</li>
+                        <li>On-site assembly training and support</li>
+                        <li>12-month warranty on manufacturing defects</li>
+                        <li>Replacement parts availability for 5+ years</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <div class="phone-input">
+                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache DOM elements
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            // Toggle mobile menu
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            
+            // Handle all dropdown toggles
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    // Always prevent default for dropdown toggles
+                    e.preventDefault();
+                    
+                    const currentDropdown = this.closest('.dropdown');
+                    
+                    if (window.innerWidth <= 768) {
+                        // Close other dropdowns when one is opened
+                        dropdowns.forEach(dropdown => {
+                            if (dropdown !== currentDropdown) {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle the current dropdown
+                        currentDropdown.classList.toggle('active');
+                        
+                        // Stop propagation to prevent document click from immediately closing it
+                        e.stopPropagation();
+                    }
+                });
+            });
+            
+            // Close mega-menu when clicking on a menu item inside it
+            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
+            megaMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // If on mobile, close the dropdown and menu after selecting an item
+                    if (window.innerWidth <= 768) {
+                        this.closest('.dropdown').classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Close menus when clicking outside
+            document.addEventListener('click', function(e) {
+                // If click is outside navbar, close everything
+                if (!e.target.closest('.navbar')) {
+                    navMenu.classList.remove('active');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                } 
+                // If inside navbar but outside an active dropdown, close only dropdowns
+                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                // Debounce the resize event
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    // If switching to desktop view, reset mobile menu states
+                    if (window.innerWidth > 768) {
+                        navMenu.classList.remove('active');
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }, 250);
+            });
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:3000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: 'Your message has been sent successfully. We will get back to you soon!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#28a745',
+                        customClass: {
+                            popup: 'animated fadeInDown'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Clear the form after successful submission
+                            document.getElementById('contactForm').reset();
+                        }
+                    });
+                } else {
+                    throw new Error(data.message || 'Failed to send message');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error sending your message. Please try again later.',
+                    confirmButtonColor: '#dc3545'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

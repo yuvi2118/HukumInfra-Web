@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shuttering Plates | HukumInfra</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        .product-hero {
+            background: url('assests/shuttering-plate-banner.jpg') no-repeat center/cover;
+            height: 200px;
+        }
+        
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .gallery-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .specs-table th, .specs-table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .specs-table th {
+            background-color: #f2f2f2;
+        }
+        
+        .specs-table tr:hover {
+            background-color: #f9f9f9;
+        }
+        
+        .cta-section {
+            background-color: #f5f5f5;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+            border-radius: 10px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .feature-item h3 {
+            color: #0074B7;
+            margin-bottom: 10px;
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            color: rgb(33, 198, 210);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Header -->
+    <div class="top-header">
+        <p>🔍 vaishali</p>
+    </div>
+
+    <!-- Middle Header -->
+    <div class="middle-header">
+        <div class="logo">
+            <img src="/assests/logo.png" alt="Company Logo">
+        </div>
+        <div class="contact-info">
+            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
+            <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
+        </div>
+        <div class="quote-button">
+            <a href="#" class="btn">GET A QUOTE</a>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="/index.html">HOME</a></li>
+            <li><a href="/about.html">ABOUT US</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
+                <div class="mega-menu">
+                    <div class="mega-menu-column">
+                        <h4>FORMWORK SYSTEMS</h4>
+                        <a href="formwork-system.html">FORMWORK SYSTEM</a>
+                        <a href="acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
+                        <a href="shuttering-plate.html">SHUTTERING PLATE</a>
+                        <a href="pier-shuttering.html">PIER SHUTTERING</a>
+                        <a href="girder-shuttering.html">GIRDER SHUTTERING</a>
+                        <a href="precast-shuttering.html">PRECAST SHUTTERING</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SCAFFOLDING SYSTEMS</h4>
+                        <a href="cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
+                        <a href="h-frame.html">H-FRAME SCAFFOLDING</a>
+                        <a href="galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
+                        <a href="ms-pipe.html">MS PIPE</a>
+                        <a href="ms-chali.html">MS CHALI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>SUPPORT SYSTEMS</h4>
+                        <a href="adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
+                        <a href="adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
+                        <a href="heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
+                        <a href="adjustable-span.html">ADJUSTABLE SPAN</a>
+                        <a href="column-patti.html">COLUMN PATTI</a>
+                    </div>
+                    <div class="mega-menu-column">
+                        <h4>ACCESSORIES & COMPONENTS</h4>
+                        <a href="couplers.html">COUPLERS</a>
+                        <a href="builder-clamp.html">BUILDER CLAMP</a>
+                        <a href="plank.html">PLANK</a>
+                        <a href="ms-channel.html">M.S. CHANNEL</a>
+                        <a href="jack-wheel.html">JACK WHEEL</a>
+                        <a href="accessories.html">OTHER ACCESSORIES</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">CONTACT US</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero product-hero">
+        <div class="overlay"></div>
+            <h1>Shuttering Plates</h1>
+            <p>Premium Concrete Forming Panels for Smooth Finishes & Maximum Reusability</p>
+            <p>Professional Concrete Forming Solutions for Modern Construction Projects</p>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul>
+                <li>Scaffolding</li>
+                <li>Shuttering Formwork</li>
+                <li>Centering Formwork</li>
+                <li>Culvert & Bridge Formwork</li>
+                <li>Service</li>
+                <li>Aluminium Formwork</li>
+            </ul>
+        </aside>
+        
+        <div class="content-section">
+            <div class="overview">
+                <h2>Shuttering Plate Overview</h2>
+                <p>HukumInfra's premium shuttering plates are engineered for superior concrete forming applications, providing exceptional surface finish and structural integrity. Our shuttering plates combine durability, precision, and cost-effectiveness to deliver optimal results across a wide range of construction projects.</p>
+                
+                <p>Made from high-quality materials and precision-engineered to exacting standards, our shuttering plates create smooth concrete surfaces while withstanding the pressures of fresh concrete. These versatile panels are designed for multiple reuses, maximizing your investment while maintaining consistent quality across projects.</p>
+            </div>
+            
+            <div class="features-list">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Superior Surface Finish</h3>
+                    <p>Our shuttering plates deliver exceptionally smooth concrete surfaces, reducing or eliminating the need for additional finishing work and improving aesthetic outcomes.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Extended Lifespan</h3>
+                    <p>Engineered for multiple reuses with proper maintenance, our shuttering plates offer outstanding durability with 100+ concrete pours potential, maximizing your investment.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Time & Cost Efficiency</h3>
+                    <p>Easy to handle and install, these plates reduce labor requirements and accelerate construction schedules while maintaining high-quality standards.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Precision Engineering</h3>
+                    <p>Manufactured to exact specifications ensuring dimensional accuracy and consistent concrete structures that meet or exceed project requirements.</p>
+                </div>
+            </div>
+            
+            <h2>Product Gallery</h2>
+            <div class="product-gallery">
+                <div class="gallery-item">
+                    <img src="/assests/formwork1.jpg" alt="Wall Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Wall Formwork</h3>
+                        <p>Perfect for vertical concrete walls with exceptional surface finish</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork2.jpg" alt="Column Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Column Formwork</h3>
+                        <p>Specially designed for square, rectangular or circular columns</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork3.jpg" alt="Slab Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Slab Formwork</h3>
+                        <p>Horizontal forming system for floors and roofs</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="/assests/formwork4.jpg" alt="Curved Formwork">
+                    <div style="padding: 10px;">
+                        <h3>Curved Formwork</h3>
+                        <p>Specialized solutions for curved and architectural concrete elements</p>
+                    </div>
+                </div>
+            </div>
+            
+            <h2>Technical Specifications</h2>
+            <table class="specs-table">
+                <tr>
+                    <th>Specification</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td>Material</td>
+                    <td>High-grade steel frame with engineered plywood facing</td>
+                </tr>
+                <tr>
+                    <td>Panel Sizes</td>
+                    <td>Standard sizes: 600mm × 1200mm, 900mm × 1200mm, 1200mm × 1200mm</td>
+                </tr>
+                <tr>
+                    <td>Load Capacity</td>
+                    <td>60 kN/m² (standard panels)</td>
+                </tr>
+                <tr>
+                    <td>Surface Finish</td>
+                    <td>Smooth/Textured options available</td>
+                </tr>
+                <tr>
+                    <td>Reuse Capacity</td>
+                    <td>Up to 100+ uses with proper maintenance</td>
+                </tr>
+                <tr>
+                    <td>Assembly Method</td>
+                    <td>Quick-lock system with pin and wedge connections</td>
+                </tr>
+                <tr>
+                    <td>Weight</td>
+                    <td>25-40 kg/m² depending on configuration</td>
+                </tr>
+                <tr>
+                    <td>Compliance</td>
+                    <td>Meets IS standards for formwork construction</td>
+                </tr>
+            </table>
+            
+            <div class="overview">
+                <h2>Applications</h2>
+                <p>HukumInfra's shuttering plates offer versatile solutions across a wide range of construction applications:</p>
+                
+                <h3>Residential Construction</h3>
+                <p>Our shuttering plates are ideal for residential projects of all scales, from individual homes to large housing developments:</p>
+                <ul>
+                    <li>Foundation walls and footings with precise dimensions and clean finishes</li>
+                    <li>Structural columns and beams requiring exacting tolerances</li>
+                    <li>Concrete slabs and floors with smooth, level surfaces</li>
+                    <li>Staircase construction with perfectly aligned risers and treads</li>
+                    <li>Basement walls requiring waterproof concrete finishes</li>
+                    <li>Architectural concrete elements for decorative purposes</li>
+                </ul>
+                
+                <h3>Commercial Construction Applications</h3>
+                <p>Our shuttering plates excel in commercial projects where quality and efficiency are paramount:</p>
+                <ul>
+                    <li>High-rise building core walls with consistent surface quality</li>
+                    <li>Retail and office space construction with quick turnaround requirements</li>
+                    <li>Commercial floor slabs and decks requiring large, flat surfaces</li>
+                    <li>Parking structure construction with demanding concrete specifications</li>
+                    <li>Load-bearing walls and columns in commercial facilities</li>
+                    <li>Elevator shafts and stairwells requiring precise dimensioning</li>
+                </ul>
+                
+                <h3>Industrial Applications</h3>
+                <p>For industrial facilities where durability and precision are critical:</p>
+                <ul>
+                    <li>Factory floor construction with heavy-duty load requirements</li>
+                    <li>Chemical-resistant concrete structures in processing plants</li>
+                    <li>Machine foundations requiring vibration dampening properties</li>
+                    <li>Industrial tanks and containment structures</li>
+                    <li>Loading docks and ramps with precise grade requirements</li>
+                    <li>Industrial wall systems with specialized performance criteria</li>
+                </ul>
+                
+                <h3>Infrastructure Projects</h3>
+                <p>HukumInfra shuttering plates deliver reliability for critical infrastructure:</p>
+                <ul>
+                    <li>Bridge abutments and piers with high-quality surface finish</li>
+                    <li>Tunnel lining construction with curved geometries</li>
+                    <li>Retaining walls for highways and railways</li>
+                    <li>Water treatment plant structures requiring water-tight concrete</li>
+                    <li>Dam construction components and spillways</li>
+                    <li>Culvert and drainage structure construction</li>
+                </ul>
+                
+                <h3>Special Architectural Applications</h3>
+                <p>Our versatile shuttering plates enable creative architectural expression:</p>
+                <ul>
+                    <li>Exposed architectural concrete with decorative finishes</li>
+                    <li>Custom-shaped architectural elements and features</li>
+                    <li>Board-marked concrete textures for aesthetic effect</li>
+                    <li>Curved concrete walls and features</li>
+                    <li>Concrete staircases with architectural significance</li>
+                    <li>Feature walls and decorative concrete elements</li>
+                </ul>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Enhance Your Construction Projects with Premium Shuttering Plates</h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin: 30px 0;">
+                    <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0074B7; margin-bottom: 15px;">Superior Quality & Consistency</h3>
+                        <p>Our shuttering plates deliver exceptional concrete finishes with precise dimensional control, reducing finishing costs and accelerating project timelines.</p>
+                    </div>
+                    
+                    <div style="background: white; padding: 25px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.1);">
+                        <h3 style="color: #0074B7; margin-bottom: 15px;">Technical Support & Training</h3>
+                        <p>Our expert team provides comprehensive training, on-site support, and technical consultation to optimize your shuttering plate implementation.</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0;">
+                    <a href="#contact" class="btn" style="background-color: #0074B7;">REQUEST A QUOTE</a>
+                    <a href="tel:+919950722291" class="btn" style="background-color: #28a745;">CALL US: +91 9950722291</a>
+                </div>
+                
+                <div style="background: #f1f9ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #0074B7;">
+                    <h3 style="color: #0074B7; margin-bottom: 10px;">HukumInfra Quality Guarantee</h3>
+                    <p>Every shuttering plate we supply undergoes rigorous quality control and is backed by our comprehensive quality guarantee. We stand behind our products with industry-leading warranties and after-sales support.</p>
+                </div>
+                
+                <div style="background: #fff5e5; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ff9800;">
+                    <h3 style="color: #ff9800; margin-bottom: 10px;">Special Offer: Consultation & Site Assessment</h3>
+                    <p>Contact us today to schedule a free consultation and site assessment. Our experts will analyze your project requirements and recommend the optimal shuttering plate solution to maximize efficiency and quality.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <div class="phone-input">
+                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Cache DOM elements
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            // Toggle mobile menu
+            navToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                navMenu.classList.toggle('active');
+            });
+            
+            // Handle all dropdown toggles
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    // Always prevent default for dropdown toggles
+                    e.preventDefault();
+                    
+                    const currentDropdown = this.closest('.dropdown');
+                    
+                    if (window.innerWidth <= 768) {
+                        // Close other dropdowns when one is opened
+                        dropdowns.forEach(dropdown => {
+                            if (dropdown !== currentDropdown) {
+                                dropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Toggle the current dropdown
+                        currentDropdown.classList.toggle('active');
+                        
+                        // Stop propagation to prevent document click from immediately closing it
+                        e.stopPropagation();
+                    }
+                });
+            });
+            
+            // Close mega-menu when clicking on a menu item inside it
+            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
+            megaMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // If on mobile, close the dropdown and menu after selecting an item
+                    if (window.innerWidth <= 768) {
+                        this.closest('.dropdown').classList.remove('active');
+                        navMenu.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Close menus when clicking outside
+            document.addEventListener('click', function(e) {
+                // If click is outside navbar, close everything
+                if (!e.target.closest('.navbar')) {
+                    navMenu.classList.remove('active');
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                } 
+                // If inside navbar but outside an active dropdown, close only dropdowns
+                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
+                    dropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Handle window resize
+            let resizeTimer;
+            window.addEventListener('resize', function() {
+                // Debounce the resize event
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    // If switching to desktop view, reset mobile menu states
+                    if (window.innerWidth > 768) {
+                        navMenu.classList.remove('active');
+                        dropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }
+                }, 250);
+            });
+        });
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch('http://localhost:3000/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: 'Your message has been sent successfully. We will get back to you soon!',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#28a745',
+                        customClass: {
+                            popup: 'animated fadeInDown'
+                        }
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Clear the form after successful submission
+                            document.getElementById('contactForm').reset();
+                        }
+                    });
+                } else {
+                    throw new Error(data.message || 'Failed to send message');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'There was an error sending your message. Please try again later.',
+                    confirmButtonColor: '#dc3545'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
