@@ -9,8 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         .product-hero {
-            background: url('assests/column-patti-banner.jpg') no-repeat center/cover;
+            position: relative;
+            z-index: 1; /* Lower than the navbar */
+            margin-top: 10px; /* Add margin so the dropdown doesn't collide */
+            margin-left: 5px;
+            padding-left: 5%;
+            background: url('/assests/banner.jpg') no-repeat left 2px/cover;
             height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
         }
         
         .product-gallery {

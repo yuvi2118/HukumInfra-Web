@@ -9,8 +9,19 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <style>
         .product-hero {
-            background: url('assests/column-patti-banner.jpg') no-repeat center/cover;
+            position: relative;
+            z-index: 1; /* Lower than the navbar */
+            margin-top: 10px; /* Add margin so the dropdown doesn't collide */
+            margin-left: 5px;
+            padding-left: 5%;
+            background: url('/assests/banner.jpg') no-repeat left 2px/cover;
             height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            color: rgb(255, 255, 255);
+            font-weight: bold;
         }
         
         .product-gallery {
@@ -172,8 +183,7 @@
     <section id="home" class="hero product-hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Column Patti Systems</h1>
-            <p>Precision Column Formwork Accessories for Structural Stability and Alignment</p>
+            <h1>Jack Wheel</h1>
         </div>
     </section>
 
@@ -234,81 +244,102 @@
         
         <div class="content-section">
             <div class="overview">
-                <h2>Column Patti System Overview</h2>
-                <p>HukumInfra's Column Patti accessories are specialized formwork components designed for efficient and precise column construction. These essential elements provide critical reinforcement and alignment support for column formwork systems, ensuring dimensional accuracy, structural integrity, and superior surface finish.</p>
-                
-                <p>Column Patti components act as connectors and reinforcement elements that significantly enhance the strength and stability of column shuttering. Our precision-engineered column patti systems are designed for quick installation, multiple reuses, and compatibility with various column dimensions and shapes, making them indispensable for modern construction projects.</p>
+                <h2>Jack Wheel Overview</h2>
+                <p>HukumInfra’s **Jack Wheel** is a **heavy-duty adjustable wheel system** used for **mobile scaffolding, industrial platforms, and formwork structures**. Designed for **smooth movement and precise height adjustments**, our **Jack Wheels provide stability, safety, and ease of mobility** in **construction, warehouses, and industrial applications**.</p>
+        
+                <p>Constructed from **high-strength steel** with **reinforced rubber or polyurethane wheels**, these jacks ensure **durability, corrosion resistance, and high load-bearing capacity**. The **adjustable height mechanism** enables **secure positioning on uneven surfaces**, enhancing **stability and worker safety**.</p>
+        
+                <p>With **custom sizes, locking mechanisms, and load-bearing capacities**, our **Jack Wheels** are designed for **reliable and efficient performance in demanding environments**.</p>
+        
+                <p>**Key Benefits:**
+                    <ul>
+                        <li>Designed for **scaffolding, industrial platforms, and mobile workstations**.</li>
+                        <li>Manufactured from **high-strength steel** for **maximum durability and support**.</li>
+                        <li>Equipped with **precision-locking mechanisms** to prevent **unintended movement**.</li>
+                        <li>Adjustable **height feature** for use on **uneven terrain**.</li>
+                        <li>Reinforced **polyurethane and rubber wheels** for **smooth mobility and noise reduction**.</li>
+                        <li>Corrosion-resistant **galvanized or powder-coated finishes** for **long-lasting durability**.</li>
+                    </ul>
+                </p>
             </div>
-            
+        
             <div class="features-list">
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Structural Integrity</h3>
-                    <p>Our column patti components are manufactured from high-tensile steel, ensuring exceptional load-bearing capacity and resistance to concrete pressure during column casting.</p>
+                    <h3>High Load-Bearing Strength</h3>
+                    <p>Designed to support **heavy scaffolding structures**, ensuring **maximum stability and security**.</p>
                 </div>
-                
+        
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Fast Installation</h3>
-                    <p>Precision-engineered quick-lock mechanisms allow for rapid assembly and disassembly, significantly reducing labor time and accelerating construction timelines.</p>
+                    <h3>Precision Locking Mechanism</h3>
+                    <p>Features a **strong locking system** to **prevent accidental movement during work**.</p>
                 </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Dimensional Accuracy</h3>
-                    <p>Designed to maintain perfect alignment and plumbness of column formwork, ensuring precise dimensions and superior concrete finish quality.</p>
-                </div>
-                
+        
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-recycle"></i>
                     </div>
-                    <h3>Reusability</h3>
-                    <p>Constructed with durability in mind, our column patti accessories withstand multiple use cycles without degradation, maximizing return on investment.</p>
+                    <h3>Reusability & Cost Efficiency</h3>
+                    <p>Manufactured for **multiple reuse cycles**, reducing **project costs and increasing efficiency**.</p>
+                </div>
+        
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Rust & Corrosion Resistance</h3>
+                    <p>Available with **galvanized or powder-coated finishes** to **enhance durability and lifespan**.</p>
                 </div>
             </div>
-            
+        
             <h2>Product Gallery</h2>
             <div class="product-gallery">
                 <div class="gallery-item">
-                    <img src="/assests/column-patti1.jpg" alt="Standard Column Patti">
+                    <img src="/assets/jack-wheel1.jpg" alt="Standard Jack Wheel">
                     <div style="padding: 10px;">
-                        <h3>Standard Column Patti</h3>
-                        <p>Universal column patti for square and rectangular column applications</p>
+                        <h3>Standard Jack Wheel</h3>
+                        <p>General-purpose **scaffolding jack wheel** with **adjustable height settings**.</p>
                     </div>
                 </div>
-                
+        
                 <div class="gallery-item">
-                    <img src="/assests/column-patti2.jpg" alt="Heavy-Duty Column Patti">
+                    <img src="/assets/jack-wheel2.jpg" alt="Heavy-Duty Jack Wheel">
                     <div style="padding: 10px;">
-                        <h3>Heavy-Duty Column Patti</h3>
-                        <p>Reinforced design for high-load bearing columns in industrial structures</p>
+                        <h3>Heavy-Duty Jack Wheel</h3>
+                        <p>Designed for **high-load applications** in **industrial and warehouse settings**.</p>
                     </div>
                 </div>
-                
+        
                 <div class="gallery-item">
-                    <img src="/assests/column-patti3.jpg" alt="Adjustable Column Patti">
+                    <img src="/assets/jack-wheel3.jpg" alt="Locking Jack Wheel">
                     <div style="padding: 10px;">
-                        <h3>Adjustable Column Patti</h3>
-                        <p>Variable sizing capabilities for custom column dimensions and shapes</p>
+                        <h3>Locking Jack Wheel</h3>
+                        <p>Equipped with a **secure brake mechanism** to **prevent movement on sloped surfaces**.</p>
                     </div>
                 </div>
-                
+        
                 <div class="gallery-item">
-                    <img src="/assests/column-patti4.jpg" alt="Circular Column Patti">
+                    <img src="/assets/jack-wheel4.jpg" alt="Adjustable Jack Wheel">
                     <div style="padding: 10px;">
-                        <h3>Circular Column Patti</h3>
-                        <p>Specialized patti systems for round column applications with perfect curvature</p>
+                        <h3>Adjustable Jack Wheel</h3>
+                        <p>Features **height adjustment functionality** for **multi-purpose applications**.</p>
+                    </div>
+                </div>
+        
+                <div class="gallery-item">
+                    <img src="/assets/jack-wheel5.jpg" alt="Rubber-Coated Jack Wheel">
+                    <div style="padding: 10px;">
+                        <h3>Rubber-Coated Jack Wheel</h3>
+                        <p>Designed with **reinforced rubber wheels** for **shock absorption and noise reduction**.</p>
                     </div>
                 </div>
             </div>
-            
+        
             <h2>Technical Specifications</h2>
             <table class="specs-table">
                 <tr>
@@ -317,136 +348,41 @@
                 </tr>
                 <tr>
                     <td>Material</td>
-                    <td>High-tensile steel (IS:2062 Grade) with corrosion-resistant coating</td>
+                    <td>High-strength mild steel with reinforced rubber/polyurethane wheels</td>
                 </tr>
                 <tr>
-                    <td>Available Sizes</td>
-                    <td>Standard: 75mm, 100mm, 150mm, 225mm, 300mm widths; Custom sizes available on request</td>
-                </tr>
-                <tr>
-                    <td>Thickness Options</td>
-                    <td>2.5mm, 3.0mm, 4.0mm (depending on load requirements)</td>
+                    <td>Wheel Diameter</td>
+                    <td>100mm - 250mm (varies by model)</td>
                 </tr>
                 <tr>
                     <td>Load Capacity</td>
-                    <td>Standard: 30 kN; Heavy-duty: 45 kN; Ultra heavy-duty: 60 kN</td>
+                    <td>Supports up to 300kN per unit</td>
                 </tr>
                 <tr>
-                    <td>Surface Treatment</td>
-                    <td>Powder-coated, Galvanized, or Plain finish options</td>
+                    <td>Locking System</td>
+                    <td>Brake-lock mechanism with height adjustment</td>
                 </tr>
                 <tr>
-                    <td>Connection System</td>
-                    <td>Quick-connect pin and wedge system; Bolt-through option available</td>
+                    <td>Finish Options</td>
+                    <td>Galvanized, Powder-Coated, or Painted</td>
                 </tr>
                 <tr>
-                    <td>Weight</td>
-                    <td>2.3-5.8 kg/m depending on size and thickness</td>
-                </tr>
-                <tr>
-                    <td>Compliance</td>
-                    <td>Meets IS 4990:2011 and international safety standards for formwork accessories</td>
+                    <td>Application</td>
+                    <td>Scaffolding movement, industrial platforms, warehouse applications</td>
                 </tr>
             </table>
-            
-            <div class="overview">
-                <h2>Applications</h2>
-                <p>HukumInfra's Column Patti accessories are essential for a wide range of construction applications where column precision and stability are critical:</p>
-                <ul>
-                    <li><strong>High-Rise Buildings:</strong> Ensuring perfect column alignment and structural integrity in tall structures</li>
-                    <li><strong>Commercial Complexes:</strong> Supporting rapid construction cycles while maintaining dimensional accuracy</li>
-                    <li><strong>Industrial Structures:</strong> Providing the strength needed for heavy-load bearing columns in factories and warehouses</li>
-                    <li><strong>Infrastructure Projects:</strong> Essential for bridge piers, flyover supports, and elevated roadway columns</li>
-                    <li><strong>Institutional Buildings:</strong> Schools, hospitals, and public facilities requiring durable column structures</li>
-                    <li><strong>Architectural Columns:</strong> Specialized patti systems for decorative and non-standard column shapes</li>
-                    <li><strong>Precast Construction:</strong> Providing precise alignment for precast column elements and connections points, ensuring consistency across prefabricated components</li>
-                </ul>
-                
-                <h3>Technical Specifications by Column Type</h3>
-                <p>HukumInfra offers various column patti configurations based on column dimensions and structural requirements:</p>
-                <ul>
-                    <li><strong>Standard Rectangular Columns:</strong> 100mm patti with 3.0mm thickness, suitable for columns up to 450mm × 450mm</li>
-                    <li><strong>Large Rectangular Columns:</strong> 150mm patti with 3.5mm thickness, ideal for columns 450mm × 450mm to 600mm × 600mm</li>
-                    <li><strong>Circular Columns:</strong> Specialized curved patti with adjustable radius settings from 200mm to 600mm diameter</li>
-                    <li><strong>Heavy-Load Columns:</strong> Reinforced 4.0mm thick patti with double-row pin connections for industrial applications</li>
-                </ul>
-                
-                <h3>Safety Considerations and Best Practices</h3>
-                <p>For optimal performance and safety when using column patti systems:</p>
-                <ul>
-                    <li>Always inspect patti components for damage or deformation before installation</li>
-                    <li>Maintain proper spacing between patti elements (typically 300-450mm vertically)</li>
-                    <li>Ensure all connections are fully tightened to specified torque requirements</li>
-                    <li>Never exceed the rated load capacity for the specific patti type being used</li>
-                    <li>Use additional bracing for columns exceeding 3.5m in height</li>
-                    <li>Install safety locks on all quick-connect pins to prevent accidental disengagement</li>
-                </ul>
-                
-                <h3>Maintenance and Handling Guidelines</h3>
-                <p>To maximize the lifespan and performance of your column patti investment:</p>
-                <ul>
-                    <li>Clean components thoroughly after each use, removing all concrete residue</li>
-                    <li>Apply release agent before each use to facilitate easy removal</li>
-                    <li>Store in dry conditions to prevent corrosion and material degradation</li>
-                    <li>Transport with protective packaging to prevent damage to connection points</li>
-                    <li>Perform regular inspections for bent components, connection wear, or coating damage</li>
-                    <li>Replace damaged components immediately rather than attempting field repairs</li>
-                    <li>Maintain an inventory of replacement parts for common wear items</li>
-                </ul>
-            </div>
-            
+        
             <div class="cta-section">
-                <h2>Enhance Your Column Construction Efficiency</h2>
-                <p>HukumInfra's precision-engineered column patti systems deliver superior strength, alignment, and durability for all your column formwork requirements.</p>
-                
-                <div class="features-list" style="text-align: left; margin-top: 30px;">
-                    <div class="feature-item">
-                        <h3>Industry-Leading Quality</h3>
-                        <p>Our column patti systems undergo rigorous testing to ensure consistent performance and exceptional durability across multiple construction cycles. Every component is manufactured to precise tolerances using high-grade materials that exceed industry standards.</p>
-                        <p><strong>Quality Guarantee:</strong> All HukumInfra column patti products carry a 12-month warranty against manufacturing defects.</p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Technical Support & Consulting</h3>
-                        <p>Our engineering team provides comprehensive technical support for column patti applications, including:</p>
-                        <ul>
-                            <li>On-site installation training and demonstrations</li>
-                            <li>Custom design services for specialized column requirements</li>
-                            <li>Load calculation assistance for complex structural applications</li>
-                            <li>Compatibility assessment with existing formwork systems</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Volume Pricing Benefits</h3>
-                        <p>Benefit from our tiered pricing structure for bulk orders:</p>
-                        <ul>
-                            <li>5-10% discount on orders exceeding 500 pieces</li>
-                            <li>10-15% discount on orders exceeding 1000 pieces</li>
-                            <li>Additional value-added services for enterprise clients</li>
-                            <li>Custom manufacturing options for project-specific requirements</li>
-                        </ul>
-                        <p><em>Contact our sales team for current promotions and package deals</em></p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Contact Options</h3>
-                        <p>Reach our column patti specialists through multiple channels:</p>
-                        <ul>
-                            <li><strong>Technical Hotline:</strong> +91 9950722291 (Mon-Sat, 9AM-6PM)</li>
-                            <li><strong>Email:</strong> technical.support@hukuminfra.com</li>
-                            <li><strong>WhatsApp Support:</strong> +91 9950722291</li>
-                            <li><strong>On-site Consultation:</strong> Available by appointment</li>
-                        </ul>
-                    </div>
-                </div>
-                
+                <h2>Order Your Jack Wheels Today</h2>
+                <p>Enhance your **scaffolding and mobile platform safety** with **high-quality Jack Wheels** from HukumInfra. Contact us now for **technical consultation, bulk pricing, or customized solutions**.</p>
+        
                 <div style="margin-top: 30px;">
-                    <a href="#contact" class="btn" style="margin-right: 15px;">REQUEST TECHNICAL CONSULTATION</a>
-                    <a href="#contact" class="btn">GET VOLUME PRICING</a>
+                    <a href="#contact" class="btn">REQUEST A QUOTE</a>
+                    <a href="#contact" class="btn">GET BULK PRICING</a>
                 </div>
             </div>
         </div>
+        
     </div>
 
     <!-- Contact Section -->

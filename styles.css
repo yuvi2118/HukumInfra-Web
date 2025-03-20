@@ -186,7 +186,7 @@ body {
     margin-top: 10px; /* Add margin so the dropdown doesn't collide */
     margin-left: 5px;
     padding-left: 5%;
-    background: url('assests/banner.jpg') no-repeat left 2px/cover;
+    background: url('/assests/banner.jpg') no-repeat left 2px/cover;
     height: 200px;
     display: flex;
     align-items: center;
