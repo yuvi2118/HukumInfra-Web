@@ -78,12 +78,40 @@
             <li><a href="#">CONTACT US</a></li>
         </ul>
     </nav>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Scaffolding Materials Manufacturer & Supplier</h1>
-            <p>HukumInfra is here to innovate and provide the right and variants kind of scaffolding products across the Globe </p>
+    <!-- Carousel Section -->
+    <section id="home" class="carousel-container">
+        <div class="carousel">
+            <div class="carousel-slide active">
+                <div class="overlay"></div>
+                <img src="assests/banner.jpg" alt="Scaffolding Materials">
+                <div class="carousel-content">
+                    <h1>Scaffolding Materials Manufacturer & Supplier</h1>
+                    <p>HukumInfra is here to innovate and provide the right and variants kind of scaffolding products across the Globe</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <img src="assests/Scaffolding HomePage.jpg" alt="Scaffolding Services">
+                <div class="carousel-content">
+                    <h1>Quality Scaffolding Solutions</h1>
+                    <p>Professional products and services for all your construction needs</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="overlay"></div>
+                <img src="assests/logo.png" alt="HukumInfra Logo">
+                <div class="carousel-content">
+                    <h1>Trusted Industry Partner</h1>
+                    <p>Delivering innovative scaffolding systems across the globe</p>
+                </div>
+            </div>
+            <button class="carousel-button prev">&#10094;</button>
+            <button class="carousel-button next">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+                <span class="dot" data-slide="2"></span>
+            </div>
         </div>
     </section>
 
@@ -131,6 +159,142 @@
         <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
     </footer>
 
+    <style>
+        /* Carousel Styles */
+        .carousel-container {
+            position: relative;
+            z-index: 1;
+            margin-top: 10px;
+            margin-left: 5px;
+            padding-left: 0;
+            height: 600px;
+            overflow: hidden;
+        }
+        
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .carousel-slide .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        
+        .carousel-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: left;
+            padding-left: 5%;
+            max-width: 80%;
+        }
+        
+        .carousel-content h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .carousel-content p {
+            font-size: 20px;
+            font-weight: lighter;
+        }
+        
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            background: rgba(33, 198, 210, 0.6);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .carousel-button:hover {
+            background: rgba(33, 198, 210, 0.9);
+        }
+        
+        .carousel-button.prev {
+            left: 10px;
+        }
+        
+        .carousel-button.next {
+            right: 10px;
+        }
+        
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            display: flex;
+            gap: 8px;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .dot.active {
+            background: rgb(33, 198, 210);
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-container {
+                height: 150px;
+            }
+            
+            .carousel-content h1 {
+                font-size: 24px;
+            }
+            
+            .carousel-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Cache DOM elements
@@ -214,6 +378,61 @@
                     }
                 }, 250);
             });
+            // Carousel functionality
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevBtn = document.querySelector('.carousel-button.prev');
+            const nextBtn = document.querySelector('.carousel-button.next');
+            let currentSlide = 0;
+            let slideInterval;
+            
+            // Function to show specific slide
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                // Ensure index is within bounds
+                currentSlide = (index + slides.length) % slides.length;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+            
+            // Start automatic slideshow
+            function startSlideshow() {
+                slideInterval = setInterval(() => {
+                    showSlide(currentSlide + 1);
+                }, 5000); // Change slide every 5 seconds
+            }
+            
+            // Reset interval timer when manually changing slides
+            function resetInterval() {
+                clearInterval(slideInterval);
+                startSlideshow();
+            }
+            
+            // Event listeners for navigation buttons
+            prevBtn.addEventListener('click', () => {
+                showSlide(currentSlide - 1);
+                resetInterval();
+            });
+            
+            nextBtn.addEventListener('click', () => {
+                showSlide(currentSlide + 1);
+                resetInterval();
+            });
+            
+            // Event listeners for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    resetInterval();
+                });
+            });
+            
+            // Initialize carousel
+            showSlide(0);
+            startSlideshow();
         });
         
         document.getElementById('contactForm').addEventListener('submit', function(event) {

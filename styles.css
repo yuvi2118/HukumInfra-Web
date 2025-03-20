@@ -263,7 +263,7 @@ body {
 @media (min-width: 1201px) {
     .sidebar {
         position: absolute;
-        top: 500px; /* Position it higher on the page */
+        top: 900px; /* Position it higher on the page */
         left: 200px;
         z-index: 90; /* Below navbar but above most content */
         max-height: calc(100vh - 140px); /* Full height minus top and bottom margins */
