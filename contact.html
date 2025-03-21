@@ -15,7 +15,7 @@
                 background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)),
                             url('assests/contactbg.jpg') center/cover fixed;
                 display: flex;
-                align-items: start;
+                align-items: center;
                 justify-content: center;
                 position: relative;
                 overflow: hidden;
@@ -44,11 +44,13 @@
             }
 
             .contact-container {
-                max-width: 1400px;
+                max-width: 1200px;
                 margin: -100px auto 50px;
                 padding: 40px;
                 position: relative;
                 z-index: 3;
+                width: 90%;
+                box-sizing: border-box;
             }
 
             .contact-wrapper {
@@ -64,8 +66,24 @@
             .contact-grid {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                grid-template-areas: 
+                    "form info"
+                    "illustration illustration";
                 gap: 40px;
                 padding: 40px;
+                box-sizing: border-box;
+            }
+            
+            .form-section {
+                grid-area: form;
+            }
+            
+            .contact-info {
+                grid-area: info;
+            }
+            
+            .illustrator-image {
+                grid-area: illustration;
             }
 
             .form-section {
@@ -77,6 +95,8 @@
             .form-group {
                 position: relative;
                 margin-bottom: 30px;
+                width: 100%;
+                box-sizing: border-box;
             }
 
             .input-animated {
@@ -241,28 +261,237 @@
             @media (max-width: 992px) {
                 .contact-grid {
                     grid-template-columns: 1fr;
+                    grid-template-areas: 
+                        "form"
+                        "info"
+                        "illustration";
+                    padding: 20px;
+                    gap: 30px;
+                    width: 100%;
+                }
+                
+                .form-section {
+                    padding: 25px;
+                    order: 1;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .contact-info {
+                    order: 2;
+                }
+                
+                .illustrator-image {
+                    order: 3;
+                    margin: 20px auto;
+                    max-width: 90%;
                 }
                 
                 .parallax-hero {
                     height: 40vh;
+                    min-height: 200px;
+                    background-attachment: scroll;
+                    align-items: center;
                 }
                 
                 .hero-content h1 {
                     font-size: 3em;
                 }
+                
+                .hero-content p {
+                    font-size: 1em;
+                    padding: 0 15px;
+                }
+                
+                .contact-container {
+                    width: 95%;
+                    padding: 15px;
+                    margin-top: -50px;
+                    margin-bottom: 30px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                .contact-info-card {
+                    padding: 25px;
+                    margin-bottom: 20px;
+                }
+                
+                .illustrator-image img {
+                    margin-top: 0;
+                    max-width: 100%;
+                    height: auto;
+                    border-radius: 15px;
+                }
+                
+                .input-animated {
+                    width: 100%;
+                    margin-bottom: 5px;
+                    box-sizing: border-box;
+                }
+                
+                .social-links {
+                    margin-top: 20px;
+                    margin-bottom: 10px;
+                }
+                
+                #map {
+                    margin-top: 30px;
+                    height: 300px;
+                }
             }
-
+            
+            /* Additional media query for smaller mobile devices */
+            @media (max-width: 576px) {
+                .parallax-hero {
+                    height: 35vh;
+                    min-height: 180px;
+                    background-attachment: scroll;
+                }
+                
+                .contact-grid {
+                    padding: 10px;
+                    gap: 20px;
+                }
+                
+                .contact-wrapper {
+                    border-radius: 15px;
+                }
+                
+                .form-section {
+                    padding: 20px 15px;
+                    border-radius: 15px;
+                }
+                
+                .hero-content h1 {
+                    font-size: 2.2em;
+                    margin-top: 30px;
+                }
+                
+                .hero-content p {
+                    font-size: 0.9em;
+                    padding: 0 20px;
+                }
+                
+                .contact-container {
+                    width: 95%;
+                    padding: 5px;
+                    margin-top: -30px;
+                    margin-bottom: 20px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                
+                .contact-info-card {
+                    padding: 20px 15px;
+                    margin-bottom: 15px;
+                    border-radius: 15px;
+                }
+                
+                .contact-info-icon {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+                
+                .social-link {
+                    width: 40px;
+                    height: 40px;
+                    font-size: 16px;
+                    margin: 0 5px;
+                }
+                
+                .social-links {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 20px 0 10px;
+                }
+                
+                .input-animated {
+                    padding: 12px 15px;
+                    font-size: 14px;
+                    border-radius: 8px;
+                }
+                
+                .submit-btn {
+                    padding: 15px;
+                    font-size: 16px;
+                    border-radius: 8px;
+                }
+                
+                .label-animated {
+                    font-size: 14px;
+                }
+                
+                .form-group {
+                    margin-bottom: 18px;
+                }
+                
+                .illustrator-image {
+                    margin: 15px auto 25px;
+                    padding: 0;
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                
+                .illustrator-image img {
+                    border-radius: 10px;
+                }
+                
+                #map {
+                    margin-top: 20px;
+                    height: 250px;
+                    border-radius: 15px;
+                }
+            }
+            
+            /* Extra small devices */
+            @media (max-width: 375px) {
+                .parallax-hero {
+                    height: 30vh;
+                    min-height: 150px;
+                }
+                
+                .hero-content h1 {
+                    font-size: 1.8em;
+                }
+                
+                .contact-container {
+                    margin-top: -25px;
+                    width: 98%;
+                    padding: 5px;
+                }
+                
+                .form-section, .contact-info-card {
+                    padding: 15px 12px;
+                }
+                
+                .input-animated {
+                    padding: 10px 12px;
+                }
+                
+                .submit-btn {
+                    padding: 12px;
+                }
+            }
+            
             /* Add this CSS to your existing styles */
             .illustrator-image {
                 text-align: center;
-                margin-top: 10px;
+                margin-top: 30px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                box-sizing: border-box;
             }
 
             .illustrator-image img {
-                margin-top: -280px;
-                max-width:500px;
+                max-width: 500px;
+                width: 100%;
                 height: auto;
                 border-radius: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                box-sizing: border-box;
             }
 
             
