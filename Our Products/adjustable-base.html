@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Patti Systems | HukumInfra</title>
+    <title>Adjustable Prop / MS Prop Systems | HukumInfra</title>
     <link rel="stylesheet" href="/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -22,29 +22,6 @@
             text-align: left;
             color: rgb(255, 255, 255);
             font-weight: bold;
-        }
-
-        @media (max-width: 768px) {
-            .middle-header {
-                flex-direction: column;
-                padding: 10px;
-            }
-            
-            .middle-header .contact-info {
-                margin: 15px 0;
-            }
-            
-            .middle-header .red-text {
-                font-size: 25px;
-                font-family: garamond;
-                font-weight: bold;
-            }
-            
-            .mega-menu {
-                width: 100%;
-                left: 0;
-                transform: none;
-            }
         }
         
         .product-gallery {
@@ -128,6 +105,168 @@
             color: rgb(33, 198, 210);
             margin-bottom: 15px;
         }
+        
+        .application-section {
+            margin-top: 40px;
+        }
+        
+        .application-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .application-item {
+            background: #f8f8f8;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .application-item h3 {
+            color: #0074B7;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+        }
+        
+        .prop-types-section {
+            margin-top: 40px;
+            background-color: #f0f9ff;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        
+        .prop-types-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .prop-type-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .prop-type-card .header {
+            background: #0074B7;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .prop-type-card .content {
+            padding: 20px;
+        }
+        
+        .prop-type-card ul {
+            padding-left: 20px;
+            margin-top: 15px;
+        }
+        
+        .prop-type-card li {
+            margin-bottom: 8px;
+        }
+        
+        .comparison-section {
+            margin-top: 40px;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .comparison-table th, .comparison-table td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: left;
+        }
+        
+        .comparison-table th {
+            background-color: #0074B7;
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .safety-section {
+            margin-top: 40px;
+            background-color: #fff5f5;
+            padding: 30px;
+            border-radius: 10px;
+            border-left: 5px solid #ff4949;
+        }
+        
+        .safety-section h2 {
+            color: #ff4949;
+            margin-bottom: 20px;
+        }
+        
+        .installation-section {
+            margin-top: 40px;
+        }
+        
+        .installation-steps {
+            margin-top: 20px;
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 25px;
+            counter-increment: step-counter;
+        }
+        
+        .step-number {
+            flex: 0 0 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #0074B7;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-right: 20px;
+        }
+        
+        .step-content {
+            flex: 1;
+        }
+        
+        .step-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #0074B7;
+        }
+        
+        .accessories-section {
+            margin-top: 40px;
+        }
+        
+        .highlight-box {
+            background-color: #fffde7;
+            border-left: 5px solid #ffd600;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .highlight-box h3 {
+            color: #ff8f00;
+            margin-top: 0;
+        }
     </style>
 </head>
 <body>
@@ -207,7 +346,7 @@
     <section id="home" class="hero product-hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>Adjustable Base / U Jack</h1>
+            <h1>Adjustable Prop (MS Prop)</h1>
         </div>
     </section>
 
@@ -232,11 +371,11 @@
             <div class="sidebar-category support-category show">
                 <h4>Support Systems</h4>
                 <ul>
-                    <li><a href="adjustable-prop.html">Adjustable Prop/ MS Prop</a></li>
+                    <li class="active"><a href="adjustable-prop.html">Adjustable Prop/ MS Prop</a></li>
                     <li><a href="adjustable-base.html">Adjustable Base/ U Jack</a></li>
                     <li><a href="heavy-duty-bridge-crib.html">Heavy Duty Bridge Crib</a></li>
                     <li><a href="adjustable-span.html">Adjustable Span</a></li>
-                    <li class="active"><a href="column-patti.html">Column Patti</a></li>
+                    <li><a href="column-patti.html">Column Patti</a></li>
                 </ul>
             </div>
             
@@ -268,23 +407,17 @@
         
         <div class="content-section">
             <div class="overview">
-                <h2>Adjustable Base (Base Jack) Overview</h2>
-                <p>HukumInfra’s Adjustable Base, also known as the **Base Jack**, is a critical scaffolding component used to provide **superior stability and precise height adjustment** in construction projects. It serves as the foundation of scaffolding systems, ensuring **even load distribution** and a **stable working platform** on various surfaces.</p>
+                <h2>Adjustable Prop (MS Prop) Overview</h2>
+                <p>HukumInfra's Adjustable Props, also known as <strong>MS Props</strong>, are <strong>high-strength, telescopic support systems</strong> designed for providing <strong>temporary structural support in construction projects</strong>. These versatile props serve as the backbone of modern construction, offering <strong>reliable support for slab, beam, wall, and column formwork applications</strong> during the concrete curing process.</p>
         
-                <p>Our **Base Jacks** are designed with a **threaded rod mechanism**, allowing workers to fine-tune the height of scaffolding structures, making them **essential for construction sites with uneven terrain**. Manufactured from **high-strength mild steel** and **galvanized for durability**, these jacks **prevent rust, corrosion, and deformation** under heavy loads.</p>
+                <p>Constructed from <strong>premium-grade mild steel with precision engineering</strong>, our Adjustable Props deliver <strong>exceptional load-bearing capacity up to 150kN</strong> while enabling <strong>precise height adjustments</strong> through their innovative telescopic design. The <strong>two-part system</strong> consisting of inner and outer tubes with a <strong>threaded adjustment mechanism</strong> allows contractors to achieve <strong>exact height requirements with millimeter precision</strong>, ensuring perfect alignment and structural integrity in all construction scenarios.</p>
         
-                <p>The **adjustable height mechanism** makes the Base Jack an indispensable tool for **bridge construction, industrial sites, high-rise buildings, and metro projects**. With **multiple size variations**, our Base Jacks cater to the specific needs of each project while maintaining **compliance with international safety standards**.</p>
+                <p>HukumInfra's Adjustable Props come in <strong>various size ranges from 1.5m to 5.0m</strong>, catering to different construction needs from <strong>residential buildings to large-scale infrastructure projects</strong>. Each prop features a <strong>robust locking mechanism with safety pins</strong> for secure positioning and <strong>anti-corrosion treatment</strong> to withstand harsh construction environments. Our props are designed for <strong>quick assembly and dismantling</strong>, significantly reducing labor costs and project timelines while maintaining the highest safety standards.</p>
         
-                <p>**Key Benefits:**
-                    <ul>
-                        <li>Allows **precise height adjustments** for scaffolding stability.</li>
-                        <li>Manufactured from **heavy-duty steel** for exceptional **load-bearing capacity**.</li>
-                        <li>Threaded rod system provides **seamless height variation** based on project needs.</li>
-                        <li>Designed with **corrosion-resistant coatings** for enhanced **durability and longevity**.</li>
-                        <li>Compatible with **various scaffolding types**, ensuring **secure locking mechanisms**.</li>
-                        <li>Provides **even load distribution** to enhance **structural integrity**.</li>
-                    </ul>
-                </p>
+                <div class="highlight-box">
+                    <h3>Industry-Leading Features</h3>
+                    <p>HukumInfra's Adjustable Props are the preferred choice for construction professionals nationwide due to their <strong>superior engineering, industrial-grade materials, and comprehensive safety features</strong>. Each prop undergoes <strong>rigorous quality testing</strong> to ensure consistent performance under extreme load conditions, making them the most reliable support solution for critical concrete structures.</p>
+                </div>
             </div>
         
             <div class="features-list">
@@ -292,286 +425,188 @@
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Unmatched Strength & Load-Bearing Capacity</h3>
-                    <p>Built from **reinforced steel**, capable of supporting **heavy loads**, making it ideal for large-scale construction projects.</p>
+                    <h3>Superior Load Capacity</h3>
+                    <p>Engineered to support <strong>heavy concrete structures up to 150kN</strong> per unit, our props feature <strong>reinforced steel construction</strong> with <strong>optimized wall thickness</strong> to provide maximum stability during concrete setting. The <strong>wider base plate design</strong> ensures even load distribution, preventing sinking on softer ground surfaces.</p>
                 </div>
         
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-bolt"></i>
                     </div>
-                    <h3>Height Adjustability for Uneven Surfaces</h3>
-                    <p>The **precision-threaded rod system** enables **fine height adjustments**, ensuring scaffolding stability on **irregular or sloped surfaces**.</p>
+                    <h3>Precision Height Adjustment</h3>
+                    <p>The <strong>telescopic inner tube</strong> with <strong>fine-thread adjustment mechanism</strong> allows for <strong>height variations from 1.5m to 5.0m</strong>, with <strong>millimeter-precise control</strong>. The <strong>quick-release pin system</strong> provides coarse adjustment, while the <strong>threaded sleeve mechanism</strong> offers fine-tuning capabilities for achieving perfect leveling.</p>
                 </div>
         
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-recycle"></i>
                     </div>
-                    <h3>Reusability & Cost Efficiency</h3>
-                    <p>Designed for **multiple reuse cycles**, significantly **reducing construction costs** and improving efficiency.</p>
+                    <h3>Exceptional Durability</h3>
+                    <p>Manufactured using <strong>high-tensile MS tubing with reinforced walls</strong>, our props are designed for <strong>multiple use cycles exceeding 200 deployments</strong>. All components feature <strong>anti-rust treatments</strong> including <strong>zinc plating, galvanization, or powder coating</strong>, ensuring longevity even in moisture-heavy environments.</p>
                 </div>
         
                 <div class="feature-item">
                     <div class="feature-icon">
                         <i class="fas fa-tools"></i>
                     </div>
-                    <h3>Anti-Corrosion & Long-Lasting Finish</h3>
-                    <p>Base Jacks are **galvanized or powder-coated** to **prevent rust**, ensuring **long-lasting performance** in **outdoor environments**.</p>
+                    <h3>Versatile Application Range</h3>
+                    <p>Suitable for <strong>diverse construction scenarios</strong> including <strong>slab support, beam formwork, wall bracing, and column shuttering</strong>. The <strong>universal joint base plates</strong> and <strong>multi-angle head plates</strong> allow for <strong>adaptation to irregular surfaces</strong> and special construction requirements, making them ideal for both standard and complex architectural designs.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-unlock-alt"></i>
+                    </div>
+                    <h3>Advanced Locking Mechanism</h3>
+                    <p>Features a <strong>heavy-duty prop nut with positive locking system</strong> that prevents accidental height adjustments under load. The <strong>double-thread safety collar</strong> provides redundant security, while the <strong>quick-action handle</strong> allows for effortless adjustments even when wearing work gloves.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Modular Compatibility</h3>
+                    <p>Designed with <strong>universal connection points</strong> compatible with all major formwork systems. The <strong>standardized end fittings</strong> allow integration with <strong>H-frames, cup-lock systems, and traditional timber formwork</strong>, creating a versatile construction ecosystem that adapts to changing project requirements.</p>
+                </div>
+            </div>
+            
+            <div class="prop-types-section">
+                <h2>Adjustable Prop Classifications</h2>
+                <p>HukumInfra offers multiple classifications of Adjustable Props to meet specific construction requirements:</p>
+                
+                <div class="prop-types-grid">
+                    <div class="prop-type-card">
+                        <div class="header">Standard Duty Props (Type A)</div>
+                        <div class="content">
+                            <p>Ideal for residential and light commercial construction with load capacities up to 35kN.</p>
+                            <ul>
+                                <li>Height Range: 1.5m - 3.0m</li>
+                                <li>Outer Tube: 60mm diameter, 3.2mm wall thickness</li>
+                                <li>Inner Tube: 48mm diameter, 2.9mm wall thickness</li>
+                                <li>Base Plate: 150mm x 150mm</li>
+                                <li>Weight: 12-15kg depending on size</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="prop-type-card">
+                        <div class="header">Medium Duty Props (Type B)</div>
+                        <div class="content">
+                            <p>Suited for commercial construction and medium-sized infrastructure projects with load capacities up to 60kN.</p>
+                            <ul>
+                                <li>Height Range: 2.0m - 4.0m</li>
+                                <li>Outer Tube: 76mm diameter, 3.6mm wall thickness</li>
+                                <li>Inner Tube: 60mm diameter, 3.2mm wall thickness</li>
+                                <li>Base Plate: 180mm x 180mm</li>
+                                <li>Weight: 18-22kg depending on size</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="prop-type-card">
+                        <div class="header">Heavy Duty Props (Type C)</div>
+                        <div class="content">
+                            <p>Designed for heavy infrastructure, industrial construction, and high-load applications with capacities up to 150kN.</p>
+                            <ul>
+                                <li>Height Range: 2.5m - 5.0m</li>
+                                <li>Outer Tube: 88mm diameter, 4.0mm wall thickness</li>
+                                <li>Inner Tube: 76mm diameter, 3.6mm wall thickness</li>
+                                <li>Base Plate: 200mm x 200mm with reinforcement</li>
+                                <li>Weight: 25-35kg depending on size</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="prop-type-card">
+                        <div class="header">Specialized Props</div>
+                        <div class="content">
+                            <p>Custom-engineered solutions for unique construction challenges including:</p>
+                            <ul>
+                                <li><strong>Push-Pull Props:</strong> For vertical alignment of wall formwork</li>
+                                <li><strong>Tripod Props:</strong> Self-standing supports with enhanced stability</li>
+                                <li><strong>Heavy-Duty Shoring Props:</strong> For extreme load conditions up to 200kN</li>
+                                <li><strong>Extra Long Props:</strong> For heights up to 7.0m with reinforced construction</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="application-section">
+                <h2>Construction Applications</h2>
+                <p>HukumInfra's Adjustable Props provide essential support across various construction scenarios:</p>
+                
+                <div class="application-grid">
+                    <div class="application-item">
+                        <h3>Slab Formwork Support</h3>
+                        <p>The primary application for Adjustable Props is supporting horizontal slab formwork during concrete pouring and curing. Props are typically arranged in grid patterns with appropriate spacing based on slab thickness and load calculations. They transfer the weight of wet concrete, reinforcement, and construction loads to the floor below while maintaining precise elevation control.</p>
+                    </div>
+                    
+                    <div class="application-item">
+                        <h3>Beam Formwork Support</h3>
+                        <p>For concrete beam construction, Adjustable Props provide vertical support to beam bottom formwork and side shutters. The props can be configured with special U-head attachments to support beam soffit panels and ensure correct positioning during concrete pouring. Their adjustable nature allows for precise camber control when required by structural designs.</p>
+                    </div>
+                    
+                    <div class="application-item">
+                        <h3>Wall Formwork Bracing</h3>
+                        <p>When used as inclined supports (typically at 45-60° angles), Adjustable Props provide essential bracing for wall formwork panels. This application prevents formwork movement or deflection during concrete placement, ensuring wall verticality and structural integrity. Special swivel heads allow for secure connections at various angles.</p>
+                    </div>
+                    
+                    <div class="application-item">
+                        <h3>Column Formwork Support</h3>
+                        <p>For column construction, Adjustable Props provide lateral support to column formwork, preventing movement during concrete placement. Multiple props are typically arranged around column formwork in triangulated configurations to provide stability from all directions while allowing access for concrete pouring and vibration.</p>
+                    </div>
+                    
+                    <div class="application-item">
+                        <h3>Temporary Structural Support</h3>
+                        <p>During renovation or retrofit projects, Adjustable Props provide temporary structural support for existing elements while modifications are made to supporting structures. This critical application requires precise load calculations and proper prop setup to ensure structural stability throughout the construction phase.</p>
+                    </div>
+                    
+                    <div class="application-item">
+                        <h3>Prefabricated Element Installation</h3>
+                        <p>Adjustable Props serve as temporary supports during the installation and alignment of prefabricated concrete elements such as precast beams, wall panels, and floor slabs. Their precise height adjustment capability ensures perfect positioning before permanent connections are established.</p>
+                    </div>
                 </div>
             </div>
         
             <h2>Product Gallery</h2>
             <div class="product-gallery">
                 <div class="gallery-item">
-                    <img src="/assets/base-jack1.jpg" alt="Standard Base Jack">
+                    <img src="/assets/adjustable-prop1.jpg" alt="Standard Adjustable Prop">
                     <div style="padding: 10px;">
-                        <h3>Standard Base Jack</h3>
-                        <p>General-purpose adjustable Base Jack with **precision height control**.</p>
+                        <h3>Standard Adjustable Prop</h3>
+                        <p>Our versatile <strong>Type B Medium Duty Prop</strong> featuring a <strong>threaded sleeve adjustment mechanism</strong> and <strong>universal U-head</strong> for slab and beam formwork support. Provides <strong>load capacity up to 60kN</strong> with <strong>height adjustment range of 2.0m to 4.0m</strong>.</p>
                     </div>
                 </div>
         
                 <div class="gallery-item">
-                    <img src="/assets/base-jack2.jpg" alt="Heavy-Duty Base Jack">
+                    <img src="/assets/adjustable-prop2.jpg" alt="Heavy-Duty Adjustable Prop">
                     <div style="padding: 10px;">
-                        <h3>Heavy-Duty Base Jack</h3>
-                        <p>Designed for **high-load applications** in industrial construction projects.</p>
+                        <h3>Heavy-Duty Adjustable Prop</h3>
+                        <p>Industrial-grade <strong>Type C Heavy Duty Prop</strong> designed for <strong>high-load applications up to 150kN</strong>. Features <strong>reinforced base plate, double-locking mechanism</strong>, and <strong>increased wall thickness</strong> for extreme stability in infrastructure and industrial construction projects.</p>
                     </div>
                 </div>
         
                 <div class="gallery-item">
-                    <img src="/assets/base-jack3.jpg" alt="Galvanized Base Jack">
+                    <img src="/assets/adjustable-prop3.jpg" alt="Galvanized Adjustable Prop">
                     <div style="padding: 10px;">
-                        <h3>Galvanized Base Jack</h3>
-                        <p>Corrosion-resistant Base Jack, **ideal for outdoor scaffolding setups**.</p>
+                        <h3>Galvanized Adjustable Prop</h3>
+                        <p><strong>Corrosion-resistant galvanized finish</strong> providing <strong>extended service life in humid and coastal environments</strong>. Complete <strong>hot-dip galvanization</strong> covers all surfaces including threads, ensuring <strong>protection against rust and oxidation</strong> for long-term outdoor applications.</p>
                     </div>
                 </div>
         
                 <div class="gallery-item">
-                    <img src="/assets/base-jack4.jpg" alt="Adjustable U-Head Jack">
+                    <img src="/assets/adjustable-prop4.jpg" alt="Adjustable Push-Pull Prop">
                     <div style="padding: 10px;">
-                        <h3>Adjustable U-Head Jack</h3>
-                        <p>Supports **formwork beams and slab shuttering systems** with precision adjustments.</p>
+                        <h3>Adjustable Push-Pull Prop</h3>
+                        <p>Specialized prop designed for <strong>aligning and bracing vertical formwork panels</strong>. Features <strong>swivel connections at both ends</strong> for installation at various angles, making it ideal for <strong>wall formwork alignment and support</strong>. Includes <strong>fine-adjustment turnbuckle mechanism</strong> for precise positioning.</p>
                     </div>
                 </div>
         
                 <div class="gallery-item">
-                    <img src="/assets/base-jack5.jpg" alt="Industrial Base Jack">
+                    <img src="/assets/adjustable-prop5.jpg" alt="Adjustable Shoring Prop">
                     <div style="padding: 10px;">
-                        <h3>Industrial Base Jack</h3>
-                        <p>Designed for **large infrastructure projects**, including **bridges and flyovers**.</p>
+                        <h3>Adjustable Shoring Prop</h3>
+                        <p>Extra-strength prop system for <strong>large-scale slab and beam shuttering</strong> in <strong>infrastructure projects</strong>. Offers <strong>extended height range up to 5.0m</strong> with <strong>reinforced construction</strong> and <strong>double-locking safety features</strong>. Compatible with <strong>H-frame and other modular shoring systems</strong>.</p>
                     </div>
                 </div>
-            </div>
-        
-            <h2>Technical Specifications</h2>
-            <table class="specs-table">
-                <tr>
-                    <th>Specification</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td>Material</td>
-                    <td>Mild Steel (MS), hot-dip galvanized for corrosion protection</td>
-                </tr>
-                <tr>
-                    <td>Threaded Rod Diameter</td>
-                    <td>35mm - 38mm</td>
-                </tr>
-                <tr>
-                    <td>Base Plate Size</td>
-                    <td>150mm x 150mm</td>
-                </tr>
-                <tr>
-                    <td>Height Adjustment Range</td>
-                    <td>Up to 600mm</td>
-                </tr>
-                <tr>
-                    <td>Load Capacity</td>
-                    <td>Supports up to 150kN per unit</td>
-                </tr>
-                <tr>
-                    <td>Finish</td>
-                    <td>Galvanized, powder-coated, or painted options</td>
-                </tr>
-                <tr>
-                    <td>Usage</td>
-                    <td>Scaffolding base support, load-bearing formwork applications</td>
-                </tr>
-            </table>
-        
-            <div class="cta-section">
-                <h2>Order Your Adjustable Base Jacks Today</h2>
-                <p>Upgrade your scaffolding system with **high-quality Adjustable Base Jacks** from HukumInfra. Contact us now for **technical consultation, bulk pricing, or customized solutions**.</p>
-        
-                <div style="margin-top: 30px;">
-                    <a href="/contact.html" class="btn">REQUEST A QUOTE</a>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
-    </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up the sidebar based on product context
-            setupContextSidebar();
-            
-            // Cache DOM elements
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const dropdowns = document.querySelectorAll('.dropdown');
-            
-            // Toggle mobile menu
-            navToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-            });
-            
-            // Handle all dropdown toggles
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    // Always prevent default for dropdown toggles
-                    e.preventDefault();
-                    
-                    const currentDropdown = this.closest('.dropdown');
-                    
-                    if (window.innerWidth <= 768) {
-                        // Close other dropdowns when one is opened
-                        dropdowns.forEach(dropdown => {
-                            if (dropdown !== currentDropdown) {
-                                dropdown.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle the current dropdown
-                        currentDropdown.classList.toggle('active');
-                        
-                        // Stop propagation to prevent document click from immediately closing it
-                        e.stopPropagation();
-                    }
-                });
-            });
-            
-            // Close mega-menu when clicking on a menu item inside it
-            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
-            megaMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // If on mobile, close the dropdown and menu after selecting an item
-                    if (window.innerWidth <= 768) {
-                        this.closest('.dropdown').classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Close menus when clicking outside
-            document.addEventListener('click', function(e) {
-                // If click is outside navbar, close everything
-                if (!e.target.closest('.navbar')) {
-                    navMenu.classList.remove('active');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                } 
-                // If inside navbar but outside an active dropdown, close only dropdowns
-                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                }
-            });
-            
-            // Handle window resize
-            let resizeTimer;
-            window.addEventListener('resize', function() {
-                // Debounce the resize event
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    // If switching to desktop view, reset mobile menu states
-                    if (window.innerWidth > 768) {
-                        navMenu.classList.remove('active');
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    }
-                }, 250);
-            });
-        });
-        
-        
-        
-        // Function to set up the sidebar based on the current page context
-        function setupContextSidebar() {
-            // Get the current page filename
-            const currentPath = window.location.pathname;
-            const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-            
-            // Create a map of product categories and their associated pages
-            const productCategories = {
-                formwork: ['formwork-system.html', 'acro-plate-wall-formwork.html', 'shuttering-plate.html', 
-                          'pier-shuttering.html', 'girder-shuttering.html', 'precast-shuttering.html'],
-                scaffolding: ['cuplock-scaffolding-system.html', 'h-frame.html', 'galvanized-prop.html', 
-                             'ms-pipe.html', 'ms-chali.html'],
-                support: ['adjustable-prop.html', 'adjustable-base.html', 'heavy-duty-bridge-crib.html', 
-                         'adjustable-span.html', 'column-patti.html'],
-                accessories: ['couplers.html', 'builder-clamp.html', 'plank.html', 'ms-channel.html', 
-                             'jack-wheel.html', 'accessories.html']
-            };
-            
-            // Determine which category the current page belongs to
-            let currentCategory = '';
-            for (const [category, pages] of Object.entries(productCategories)) {
-                if (pages.includes(currentPage)) {
-                    currentCategory = category;
-                    break;
-                }
-            }
-            
-            // If we found a category, update the sidebar
-            if (currentCategory) {
-                // Hide all categories first
-                document.querySelectorAll('.sidebar-category').forEach(cat => {
-                    cat.classList.remove('show');
-                });
-                
-                // Always show the category the current page belongs to
-                const mainCategory = document.querySelector(`.sidebar-category.${currentCategory}-category`);
-                if (mainCategory) {
-                    mainCategory.classList.add('show');
-                }
-                
-                // Show 1-2 additional related categories based on context
-                if (currentCategory === 'formwork') {
-                    // For formwork pages, also show support systems as they're closely related
-                    document.querySelector('.sidebar-category.support-category').classList.add('show');
-                } else if (currentCategory === 'scaffolding') {
-                    // For scaffolding, show accessories which are often used with scaffolding
-                    document.querySelector('.sidebar-category.accessories-category').classList.add('show');
-                } else if (currentCategory === 'support') {
-                    // For support systems, show formwork as they're often used together
-                    document.querySelector('.sidebar-category.formwork-category').classList.add('show');
-                } else if (currentCategory === 'accessories') {
-                    // For accessories, show scaffolding as many accessories are for scaffolding
-                    document.querySelector('.sidebar-category.scaffolding-category').classList.add('show');
-                }
-                
-                // Set active state for current page link
-                const allLinks = document.querySelectorAll('.sidebar a');
-                allLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.parentElement.classList.add('active');
-                    }
-                });
-            }
-        }
-    </script>
-</body>
-</html>
