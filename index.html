@@ -7,6 +7,84 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        /* Additional responsive styles */
+        @media (max-width: 768px) {
+            .middle-header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .middle-header .contact-info {
+                margin: 15px 0;
+            }
+            
+            .middle-header .red-text {
+                font-size: 28px;
+            }
+            
+            .mega-menu {
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+            
+            .content-section {
+                padding: 10px;
+            }
+            
+            .carousel-content h1 {
+                font-size: 28px;
+            }
+            
+            .carousel-content p {
+                font-size: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .carousel-container {
+                height: 300px;
+            }
+            
+            .carousel-content h1 {
+                font-size: 24px;
+            }
+            
+            .carousel-content p {
+                font-size: 14px;
+            }
+            
+            .middle-header .red-text {
+                font-size: 22px;
+            }
+            
+            .middle-header .contact-info {
+                font-size: 16px;
+            }
+            
+            .middle-header .quote-button .btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Tablet-specific adjustments */
+        @media (min-width: 481px) and (max-width: 1024px) {
+            .main-container {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .carousel-container {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -288,7 +366,7 @@
         
         @media (max-width: 480px) {
             .carousel-container {
-                height: 150px;
+                height: 300px;
             }
             
             .carousel-content h1 {
@@ -438,6 +516,36 @@
             // Initialize carousel
             showSlide(0);
             startSlideshow();
+            
+            // Handle touch events for carousel
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            const carousel = document.querySelector('.carousel');
+            
+            carousel.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, {passive: true});
+            
+            carousel.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            }, {passive: true});
+            
+            function handleSwipe() {
+                // Threshold for swipe detection
+                const threshold = 50;
+                
+                if (touchEndX < touchStartX - threshold) {
+                    // Swipe left - next slide
+                    showSlide(currentSlide + 1);
+                    resetInterval();
+                } else if (touchEndX > touchStartX + threshold) {
+                    // Swipe right - previous slide
+                    showSlide(currentSlide - 1);
+                    resetInterval();
+                }
+            }
         });
     </script>
 </body>
