@@ -21,6 +21,29 @@
                 overflow: hidden;
             }
 
+            @media (max-width: 768px) {
+            .middle-header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .middle-header .contact-info {
+                margin: 15px 0;
+            }
+            
+            .middle-header .red-text {
+                font-size: 25px;
+                font-family: garamond;
+                font-weight: bold;
+            }
+            
+            .mega-menu {
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+        }
+
             .hero-content {
                 text-align: center;
                 color: white;
@@ -440,7 +463,7 @@
                 
                 #map {
                     margin-top: 20px;
-                    height: 250px;
+                    height: 50px;
                     border-radius: 15px;
                 }
             }
@@ -509,9 +532,6 @@
             <div class="contact-info">
                 <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
                 <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
-            </div>
-            <div class="quote-button">
-                <a href="#" class="btn">GET A QUOTE</a>
             </div>
         </div>
 

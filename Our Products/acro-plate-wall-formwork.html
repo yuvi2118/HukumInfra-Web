@@ -24,6 +24,31 @@
             font-weight: bold;
         }
         
+
+        /* Additional responsive styles */
+        @media (max-width: 768px) {
+            .middle-header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .middle-header .contact-info {
+                margin: 15px 0;
+            }
+            
+            .middle-header .red-text {
+                font-size: 25px;
+                font-family: garamond;
+                font-weight: bold;
+            }
+            
+            .mega-menu {
+                width: 100%;
+                left: 0;
+                transform: none;
+            }
+        }
+        
         .product-gallery {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -104,6 +129,230 @@
             font-size: 2rem;
             color: rgb(33, 198, 210);
             margin-bottom: 15px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        .product-header {
+            position: relative;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+        .wave-bg {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 200px;
+            z-index: 1;
+        }
+        .wave-path {
+            fill: #1a56db;
+            opacity: 0.8;
+        }
+        .product-info {
+            display: flex;
+            position: relative;
+            z-index: 2;
+        }
+        .product-text {
+            flex: 1;
+            padding-right: 30px;
+        }
+        .product-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .product-image {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .product-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        h1 {
+            color: #1a56db;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #1a56db;
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+        h3 {
+            color: #333;
+            font-size: 20px;
+            margin: 15px 0 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .key-features {
+            margin: 20px 0;
+        }
+        .key-features li {
+            margin-bottom: 10px;
+            list-style-type: none;
+            padding-left: 25px;
+            position: relative;
+        }
+        .key-features li:before {
+            content: "•";
+            color: #1a56db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            color: #1a56db;
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        .specs-table th, .specs-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .specs-table th {
+            background-color: #1a56db;
+            color: white;
+        }
+        .specs-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .cta-section {
+            background-color: #1a56db;
+            color: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        .cta-section h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: white;
+            color: #1a56db;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .applications {
+            margin: 30px 0;
+        }
+        .applications ul {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .applications li {
+            background-color: #e6efff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .benefits-list {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .benefits-list ul {
+            list-style-type: none;
+        }
+        .benefits-list li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .benefits-list li:before {
+            content: "✓";
+            color: #1a56db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
     </style>
 </head>
@@ -246,22 +495,23 @@
         <div class="content-section">
             <div class="overview">
                 <h2>Acro Plate Wall Formwork Overview</h2>
-                <p>HukumInfra’s Acro Plate Wall Formwork is an advanced, high-strength component used extensively in concrete shuttering and formwork systems. Designed for **superior durability and structural stability**, our Acro Plates ensure **perfect alignment, load distribution, and reusability**, making them indispensable for modern construction projects.</p>
+                <p>HukumInfra's Acro Plate Wall Formwork is an advanced, high-strength component used extensively in concrete shuttering and formwork systems. Designed for <strong>superior durability and structural stability</strong>, our Acro Plates ensure <strong>perfect alignment, load distribution, and reusability</strong>, making them indispensable for modern construction projects.</p>
         
-                <p>These plates are crafted from **high-grade steel sheets reinforced with precision-punched angle frames**, ensuring exceptional resistance to **heavy loads, concrete pressure, and deformation**. Whether used in **high-rise buildings, bridges, metro projects, precast structures, or commercial complexes**, our Acro Plate systems optimize formwork efficiency, **minimize material wastage**, and accelerate construction timelines.</p>
+                <p>These plates are crafted from <strong>high-grade steel sheets reinforced with precision-punched angle frames</strong>, ensuring exceptional resistance to <strong>heavy loads, concrete pressure, and deformation</strong>. Whether used in <strong>high-rise buildings, bridges, metro projects, precast structures, or commercial complexes</strong>, our Acro Plate systems optimize formwork efficiency, <strong>minimize material wastage</strong>, and accelerate construction timelines.</p>
         
-                <p>With **customizable size and thickness options**, these plates can be **tailored to specific project requirements**. The robust design ensures **high reusability**, helping contractors **reduce costs and improve sustainability** in large-scale infrastructure developments.</p>
-        
-                <p>**Key Benefits:**
-                    <ul>
-                        <li>Ensures **consistent concrete finish** by preventing deformation and leakage.</li>
-                        <li>Enhances **structural stability** with superior load-bearing strength.</li>
-                        <li>Minimizes **labor costs** with quick installation and multiple reuses.</li>
-                        <li>Available in **custom sizes and thicknesses** for specific project needs.</li>
-                        <li>Designed for **compatibility with various scaffolding and shuttering systems**.</li>
-                        <li>Manufactured with **corrosion-resistant coatings** for extended durability.</li>
-                    </ul>
-                </p>
+                <p>With <strong>customizable size and thickness options</strong>, these plates can be <strong>tailored to specific project requirements</strong>. The robust design ensures <strong>high reusability</strong>, helping contractors <strong>reduce costs and improve sustainability</strong> in large-scale infrastructure developments.</p>
+            </div>
+            
+            <div class="benefits-list">
+                <h3>Key Benefits:</h3>
+                <ul>
+                    <li>Ensures <strong>consistent concrete finish</strong> by preventing deformation and leakage.</li>
+                    <li>Enhances <strong>structural stability</strong> with superior load-bearing strength.</li>
+                    <li>Minimizes <strong>labor costs</strong> with quick installation and multiple reuses.</li>
+                    <li>Available in <strong>custom sizes and thicknesses</strong> for specific project needs.</li>
+                    <li>Designed for <strong>compatibility with various scaffolding and shuttering systems</strong>.</li>
+                    <li>Manufactured with <strong>corrosion-resistant coatings</strong> for extended durability.</li>
+                </ul>
             </div>
         
             <div class="features-list">
@@ -286,7 +536,7 @@
                         <i class="fas fa-recycle"></i>
                     </div>
                     <h3>Reusability & Cost Efficiency</h3>
-                    <p>Manufactured for **multiple reuses**, reducing overall project costs by minimizing material waste and replacement needs.</p>
+                    <p>Manufactured for <strong>multiple reuses</strong>, reducing overall project costs by minimizing material waste and replacement needs.</p>
                 </div>
         
                 <div class="feature-item">
@@ -294,8 +544,22 @@
                         <i class="fas fa-tools"></i>
                     </div>
                     <h3>Customizable Design</h3>
-                    <p>Available in multiple sizes and thickness options, adaptable to various formwork applications, including **slabs, beams, and columns**.</p>
+                    <p>Available in multiple sizes and thickness options, adaptable to various formwork applications, including <strong>slabs, beams, and columns</strong>.</p>
                 </div>
+            </div>
+            
+            <div class="applications">
+                <h2>Applications</h2>
+                <p>The Acro Plate Wall Formwork system is versatile and suitable for numerous construction applications:</p>
+                <ul>
+                    <li>High-rise building construction</li>
+                    <li>Bridges and flyovers</li>
+                    <li>Metro rail projects</li>
+                    <li>Precast concrete structures</li>
+                    <li>Commercial complexes</li>
+                    <li>Industrial installations</li>
+                    <li>Infrastructure development projects</li>
+                </ul>
             </div>
         
             <h2>Product Gallery</h2>
@@ -328,7 +592,7 @@
                     <img src="/assets/acro-plate4.jpg" alt="Precast Acro Plate">
                     <div style="padding: 10px;">
                         <h3>Precast Acro Plate</h3>
-                        <p>Designed for **precast concrete structures**, ensuring seamless formwork alignment.</p>
+                        <p>Designed for <strong>precast concrete structures</strong>, ensuring seamless formwork alignment.</p>
                     </div>
                 </div>
         
@@ -336,7 +600,7 @@
                     <img src="/assets/acro-plate5.jpg" alt="Bridge Acro Plate">
                     <div style="padding: 10px;">
                         <h3>Bridge Acro Plate</h3>
-                        <p>High-strength plate engineered for **infrastructure projects, including bridges and flyovers**.</p>
+                        <p>High-strength plate engineered for <strong>infrastructure projects, including bridges and flyovers</strong>.</p>
                     </div>
                 </div>
             </div>
@@ -376,10 +640,27 @@
                     <td>Meets IS 4990:2011 and global construction safety standards</td>
                 </tr>
             </table>
+            
+            <div class="quality-assurance">
+                <h2>Quality Assurance</h2>
+                <p>Each Acro Plate undergoes rigorous quality testing to ensure structural integrity and performance reliability. Our manufacturing process adheres to strict quality control measures, resulting in products that consistently exceed industry standards and maintain compliance with IS 4990:2011 specifications.</p>
+                
+                <h3>Why Choose HukumInfra's Acro Plate Wall Formwork:</h3>
+                <div class="benefits-list">
+                    <ul>
+                        <li>Engineered for superior load-bearing capacity</li>
+                        <li>Precision manufacturing for perfect dimensional accuracy</li>
+                        <li>Cost-effective solution with high reusability factor</li>
+                        <li>Reduced maintenance requirements</li>
+                        <li>Extended service life compared to standard alternatives</li>
+                        <li>Technical support and consultation available</li>
+                    </ul>
+                </div>
+            </div>
         
             <div class="cta-section">
                 <h2>Order Your Acro Plate Wall Formwork Today</h2>
-                <p>Upgrade your construction efficiency with **high-quality Acro Plate Wall Formwork** from HukumInfra. Contact us now for technical consultation, bulk pricing, or customized solutions.</p>
+                <p>Upgrade your construction efficiency with <strong>high-quality Acro Plate Wall Formwork</strong> from HukumInfra. Contact us now for technical consultation, bulk pricing, or customized solutions.</p>
         
                 <div style="margin-top: 30px;">
                     <a href="/contact.html" class="btn">REQUEST A QUOTE</a>
