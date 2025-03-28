@@ -7,7 +7,7 @@ body {
 
 /* Top Header */
 .top-header {
-    background: #032094; /* Dark Blue */
+    background: #1F3A93; /* Midnight Blue */
     color: white;
     font-size: 14px;
     padding: 5px;
@@ -46,13 +46,13 @@ body {
 }
 
 .middle-header .red-text {
-    color: rgb(218, 63, 63);
+    color: rgb(255, 0, 0);
     font-weight: bold;
     font-size: 40px;
 }
 
 .middle-header .quote-button .btn {
-    background: red;
+    background: #E74C3C; /* Bright Red */
     color: white;
     padding: 15px 15px;
     text-decoration: none;
@@ -61,7 +61,7 @@ body {
 }
 
 .middle-header .quote-button .btn:hover {
-    background: darkred;
+    background: #C0392B; /* Darker Red */
 }
 
 .middle-header .quote-button {
@@ -71,7 +71,7 @@ body {
 
 /* Navigation Bar */
 .navbar {
-    background: rgb(33, 198, 210);
+    background: #3498DB; /* Light Blue */
     padding: 0;
     display: flex;
     justify-content: center;
@@ -97,7 +97,7 @@ body {
 }
 
 .nav-menu li a {
-    color: #000;
+    color: #2C3E50; /* Dark Slate */
     text-decoration: none;
     padding: 15px 20px;
     display: block;
@@ -111,7 +111,7 @@ body {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: #fff;
+    background: #F2F4F7; /* Light Gray */
     width: 700px;
     padding: 15px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -167,7 +167,7 @@ body {
 }
 
 .mega-menu-column a:hover {
-    color: rgb(33, 198, 210);
+    color: #5DADE2; /* Soft Blue */
     background-color: #f5f5f5;
     padding-left: 5px;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
@@ -224,7 +224,7 @@ body {
 
 .btn {
     display: inline-block;
-    background: #D60000; /* Bold Red */
+    background: #E74C3C; /* Bright Red */
     color: white;
     padding: 10px 20px;
     margin-top: 10px;
@@ -400,7 +400,7 @@ body {
 }
 
 #contact button {
-    background: #D60000; /* Bold Red */
+    background: #E74C3C; /* Bright Red */
     color: white;
     padding: 12px 25px;
     border: none;
@@ -426,7 +426,7 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: #1a1a1a;
+    background-color: #34495E; /* Navy Blue */
     color: #ffffff;
     padding: 3rem 0;
     margin-top: 2rem;
@@ -461,7 +461,7 @@ body {
 .contact-btn {
     display: inline-block;
     padding: 0.8rem 1.5rem;
-    background-color: #ff6b00;
+    background-color: #E67E22; /* Orange */
     color: white;
     text-decoration: none;
     border-radius: 5px;

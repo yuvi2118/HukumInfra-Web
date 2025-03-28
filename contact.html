@@ -826,7 +826,7 @@
                 const formData = new FormData(this);
                 const data = Object.fromEntries(formData.entries());
 
-                fetch('http://localhost:3000/send', {
+                fetch('http://localhost:5500/send', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
