@@ -5,9 +5,14 @@ AOS.init({
 });
 
 // Navbar scroll effect
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    navbar.classList.toggle('scrolled', window.scrollY > 50);
+    const currentScroll = window.scrollY;
+    if (Math.abs(currentScroll - lastScroll) > 50) {
+        navbar.classList.toggle('scrolled', currentScroll > 50);
+        lastScroll = currentScroll;
+    }
 });
 
 // Counter animation
