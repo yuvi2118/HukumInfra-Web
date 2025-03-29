@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#home">
-                <img src="assests/logo.png" alt="HukumInfra Logo" style="height: 40px; margin-right: 10px; border-radius: 50%;">
+                <img src="assests/logo.png" alt="HukumInfra Logo" style="height: 40px; margin-right: 12px;">
                 HukumInfra
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -25,12 +25,10 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="#services">Solutions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -44,8 +42,8 @@
                     <h1 class="hero-title">Global Leaders in Scaffolding Solutions</h1>
                     <p class="hero-text">Providing innovative and reliable scaffolding systems for construction, industrial, and commercial projects worldwide.</p>
                     <div class="hero-btns">
-                        <a href="#services" class="btn btn-primary">Our Solutions</a>
-                        <a href="#contact" class="btn btn-outline-light">Get in Touch</a>
+                        <a href="#services" class="glass-button">Our Solutions</a>
+                        <a href="#contact" class="glass-button">Get in Touch</a>
                     </div>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
@@ -56,17 +54,62 @@
         <div class="hero-wave"></div>
     </section>
 
+    <!-- Add the Glassmorphism CSS -->
+    <style>
+        .glass-panel {
+            color: #fff;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            border-radius: 15px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .glass-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 0;
+            text-decoration: none;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+
     <!-- About Section -->
     <section id="about" class="about section-padding">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6" data-aos="fade-right">
-                    <img src="assests/banner.jpg" alt="About HukumInfra" class="img-fluid">
+                    <img src="assests/banner.jpg" alt="About HukumInfra" class="img-fluid rounded shadow">
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
-                    <h2>About HukumInfra</h2>
-                    <p>HukumInfra, a subsidiary of the HukumCorporation Group, specializes in providing world-class scaffolding solutions. With decades of experience, we are committed to delivering safe, durable, and innovative scaffolding systems for construction and industrial projects across the globe.</p>
-                    <p>Our mission is to empower businesses with reliable scaffolding systems that ensure safety and efficiency at every stage of their projects.</p>
+                    <h2 class="mb-4">About HukumInfra</h2>
+                    <p class="mb-3">
+                        HukumInfra, a proud subsidiary of the HukumCorporation Group, is a global leader in scaffolding solutions. With decades of expertise, we specialize in delivering safe, durable, and innovative scaffolding systems tailored to meet the needs of construction and industrial projects worldwide.
+                    </p>
+                    <p class="mb-4">
+                        Our mission is to empower businesses with reliable scaffolding systems that ensure safety, efficiency, and success at every stage of their projects. We are committed to excellence, innovation, and customer satisfaction.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Decades of industry experience</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Global presence and delivery</li>
+                        <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Commitment to safety and quality</li>
+                    </ul>
+                    <a href="#services" class="btn btn-primary mt-3">Learn More</a>
                 </div>
             </div>
         </div>
@@ -80,6 +123,7 @@
                 <p>Comprehensive scaffolding systems tailored to meet your project needs.</p>
             </div>
             <div class="row">
+                <!-- Service Card 1 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-card">
                         <div class="service-icon"><i class="fas fa-building"></i></div>
@@ -87,6 +131,8 @@
                         <p>High-quality scaffolding systems for residential, commercial, and industrial construction projects.</p>
                     </div>
                 </div>
+
+                <!-- Service Card 2 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-card">
                         <div class="service-icon"><i class="fas fa-industry"></i></div>
@@ -94,6 +140,8 @@
                         <p>Durable scaffolding solutions for factories, refineries, and other industrial facilities.</p>
                     </div>
                 </div>
+
+                <!-- Service Card 3 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-card">
                         <div class="service-icon"><i class="fas fa-tools"></i></div>
@@ -101,6 +149,8 @@
                         <p>Tailored scaffolding systems designed to meet the unique requirements of your project.</p>
                     </div>
                 </div>
+
+                <!-- Service Card 4 -->
                 <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-card">
                         <div class="service-icon"><i class="fas fa-globe"></i></div>
@@ -149,67 +199,45 @@
         <div class="container">
             <div class="section-title text-center" data-aos="fade-up">
                 <h2>What Our Clients Say</h2>
-                <p>Trusted by businesses worldwide for our scaffolding expertise.</p>
+                <p>Feedback from those who trust our expertise</p>
             </div>
             <div class="row">
+                <!-- Testimonial Card 1 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text">HukumInfra's scaffolding systems are reliable and easy to assemble. They made our construction project seamless.</p>
+                        <img src="assests/rakesh.jpg" alt="Client" class="client-img">
                         <div class="client-info">
-                            <img src="https://via.placeholder.com/60x60" alt="Client" class="client-img">
-                            <div>
-                                <h4>John Doe</h4>
-                                <span>Project Manager, BuildCorp</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
+                            <h4>Prabhjot Singh</h4>
+                            <span>CEO, Real Estate Corp</span>
                         </div>
+                        <p class="testimonial-text">HukumInfra delivered our project on time and within budget. Their attention to detail was impressive.</p>
+                        <i class="fas fa-quote-right quote-icon"></i>
                     </div>
                 </div>
+
+                <!-- Testimonial Card 2 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text">Their scaffolding solutions ensured safety and efficiency on our industrial site. Highly recommended!</p>
+                        <img src="assests/priya.jpg" alt="Client" class="client-img">
                         <div class="client-info">
-                            <img src="https://via.placeholder.com/60x60" alt="Client" class="client-img">
-                            <div>
-                                <h4>Jane Smith</h4>
-                                <span>Operations Head, IndustrialWorks</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star-half-alt"></i>
-                                </div>
-                            </div>
+                            <h4>Priya Sharma</h4>
+                            <span>Project Manager</span>
                         </div>
+                        <p class="testimonial-text">Working with HukumInfra was a seamless experience. Their team is professional and highly skilled.</p>
+                        <i class="fas fa-quote-right quote-icon"></i>
                     </div>
                 </div>
+
+                <!-- Testimonial Card 3 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-card">
-                        <i class="fas fa-quote-right quote-icon"></i>
-                        <p class="testimonial-text">HukumInfra's global delivery service was a game-changer for our international projects.</p>
+                        <img src="assests/anand.jpg" alt="Client" class="client-img">
                         <div class="client-info">
-                            <img src="https://via.placeholder.com/60x60" alt="Client" class="client-img">
-                            <div>
-                                <h4>Michael Lee</h4>
-                                <span>CEO, GlobalConstruct</span>
-                                <div class="rating">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                            </div>
+                            <h4>Anand Kumar</h4>
+                            <span>Director, Urban Development</span>
                         </div>
+                        <p class="testimonial-text">The innovation and quality of work provided by HukumInfra exceeded our expectations.</p>
+                        <i class="fas fa-quote-right quote-icon"></i>
                     </div>
                 </div>
             </div>
@@ -218,10 +246,10 @@
 
     <!-- CTA Section -->
     <section class="cta">
-        <div class="container text-center">
+        <div class="glass-panel">
             <h2 data-aos="fade-up">Ready to Build Your Future?</h2>
             <p data-aos="fade-up" data-aos-delay="100">Let's create something amazing together</p>
-            <a href="#contact" class="btn btn-light btn-lg" data-aos="fade-up" data-aos-delay="200">Get Started</a>
+            <a href="#contact" class="glass-button" data-aos="fade-up" data-aos-delay="200">Get Started</a>
         </div>
     </section>
 
@@ -330,15 +358,17 @@
 
     /* Navbar */
     .navbar {
-        padding: 20px 0;
-        transition: all 0.3s ease;
-        z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
     }
 
     .navbar.scrolled {
-        background-color: #fff;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        padding: 10px 0;
+        background: rgba(255, 255, 255, 0.1); /* Transparent background */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 10px 0; /* Adjust padding when scrolled */
     }
 
     .navbar-brand {
@@ -348,7 +378,7 @@
     }
 
     .nav-link {
-        color: var(--dark-color);
+        color: var (--dark-color);
         font-weight: 500;
         margin-left: 25px;
         position: relative;
@@ -519,45 +549,7 @@
         border-radius: 50%;
     }
 
-    /* Services Section */
-    .services {
-        background-color: var(--light-color);
-    }
-
-    .service-card {
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080') 
-                no-repeat center center / cover;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-        color: white; /* Ensures text is visible on the background */
-        padding: 20px;
-    }
-
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
-    }
-
-    .service-title {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-        position: relative;
-        padding-bottom: 15px;
-    }
-
-    .service-title:after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background-color: var(--primary-color);
-    }
+    
 
     /* Footer */
     .footer {
@@ -608,6 +600,18 @@
 
     .whatsapp-float i {
         margin-top: 16px;
+    }
+
+    /* Add spacing between image and text in the About section for mobile */
+    @media (max-width: 768px) {
+        #about .row {
+            gap: 20px; /* Adds space between the image and text */
+        }
+    }
+
+    /* Reduce space between About and Services sections */
+    #about {
+        margin-bottom: 0px; /* Decrease the bottom margin */
     }
 </style>
 
@@ -672,5 +676,35 @@
             });
         });
     </script>
+    <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+<script>
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+<script>
+    document.addEventListener('click', function (event) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        // Check if the click is outside the navbar or toggler
+        if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // Programmatically trigger the toggler to close the menu
+            }
+        }
+    });
+</script>
 </body>
 </html>
