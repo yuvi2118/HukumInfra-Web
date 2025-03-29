@@ -210,11 +210,14 @@
 }
 
 .navbar-brand img {
-    transition: transform 0.3s ease;
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px;
+    border-radius: 0; /* Ensure no rounding is applied */
+    transition: transform 0.3s ease; /* Keep the hover effect */
 }
 
 .navbar-brand img:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Adds a hover effect */
 }
 
 @media (max-width: 768px) {
