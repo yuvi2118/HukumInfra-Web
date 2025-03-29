@@ -3,254 +3,1431 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | HukumInfra</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <title>About Us - Your Company</title>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #4e56f6;
+            --secondary-color: #2539CC;
+            --accent-color: #FFD166;
+            --text-dark: #333333;
+            --text-light: #777777;
+            --background-light: #f8f9fa;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --transition: all 0.3s ease;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-dark);
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #4e56f6, #2539CC);
+            color: var(--white);
+            margin-top: 80px;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 0.5s;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 0.8s;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: var(--radius);
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            animation: fadeInUp 1s forwards 1.1s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+
+        .stats-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            gap: 20px;
+        }
+
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--gray-100);
+            border-radius: var(--radius);
+            transition: var(--transition);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-title {
+            font-size: 18px;
+            color: var(--text-dark);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .member-image {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .member-info h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .member-position {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--gray-200);
+            color: var(--text-dark);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--primary-color);
+            opacity: 0.1;
+            z-index: -1;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card:hover::before {
+            height: 100%;
+        }
+
+        .service-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .service-link i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+
+        .service-link:hover {
+            color: var(--secondary-color);
+        }
+
+        .service-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Clients Section */
+        .clients-section {
+            background-color: var(--gray-100);
+        }
+
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .client-logo {
+            background-color: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            filter: grayscale(100%);
+        }
+
+        .client-logo:hover {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        .client-logo img {
+            max-width: 100%;
+            max-height: 80px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 30px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        .footer-col p {
+            color: #b3b3b3;
+            margin-bottom: 15px;
+        }
+
+        .footer-contact li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Our Company</title>
+    <!-- AOS Library CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-color: #f8f9fa;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #4361ee;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: #3a0ca3;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #4361ee;
+            color: white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+        
+        .btn:hover {
+            background: #3a0ca3;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        header.scrolled {
+            padding: 0.5rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #3a0ca3;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-weight: 500;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        
+        .nav-links a:hover {
+            color: #4361ee;
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #4361ee;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+            background-size: cover;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            z-index: 1;
+            padding: 0 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.3s;
+            position: relative;
+        }
+        
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background-color: #f72585;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.6s;
+        }
+        
+        .hero-btn {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: 0.9s;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* About Section */
+        .about-section {
+            padding: 7rem 0;
+            background-color: white;
+        }
+        
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #4361ee;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        
+        .about-content {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: #3a0ca3;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background-color: #f72585;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        /* Values Section */
+        .values-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #3a0ca3;
+            position: relative;
+            padding-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #f72585;
+        }
+        
+        .values-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .value-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background-color: rgba(67, 97, 238, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #4361ee;
+        }
+        
+        .value-card h3 {
+            margin-bottom: 1rem;
+            color: #3a0ca3;
+        }
+        
+        /* Client Section */
+        .clients-section {
+            padding: 7rem 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .clients-container {
+            margin-top: 3rem;
+        }
+        
+        .client-logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .client-logo {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            width: 180px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .client-logo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .client-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.5s ease;
+        }
+        
+        .client-logo:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        
+        /* Testimonial Section */
+        .testimonial-section {
+            padding: 7rem 0;
+            background: linear-gradient(135deg, #4361ee, #3a0ca3);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .testimonial-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,100 L0,100 Z" fill="rgba(255,255,255,0.05)"/></svg>');
+            background-size: cover;
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .testimonial-card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .testimonial-text::before,
+        .testimonial-text::after {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonial-text::before {
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-text::after {
+            bottom: -50px;
+            right: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .author-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 1rem;
+            border: 3px solid #f72585;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 1.5rem;
+            color: #3a0ca3;
+        }
+        
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: #666;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .navbar {
+                padding: 1rem 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background-color: white;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 1.5rem 0;
+            }
+            
+            .about-container, .values-container {
+                gap: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .about-image::before {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .about-content h2, .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .client-logo {
+                width: 150px;
+                height: 100px;
+            }
+            
+            .testimonial-text {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Animation keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-   
-
-    <!-- Middle Header -->
-    <div class="middle-header">
-        <div class="logo">
-            <a href="index.html">
-            <img src="assests/logo.png" alt="Company Logo"></a>
-        </div>
-        <div class="contact-info">
-            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
-            <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
-        </div>
-        <div class="quote-button">
-            <a href="#" class="btn">GET A QUOTE</a>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="about.html">ABOUT US</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
-                <div class="mega-menu">
-                    <div class="mega-menu-column">
-                        <h4>FORMWORK SYSTEMS</h4>
-                        <a href="Our Products/formwork-system.html">FORMWORK SYSTEM</a>
-                        <a href="Our Products/acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
-                        <a href="Our Products/shuttering-plate.html">SHUTTERING PLATE</a>
-                        <a href="Our Products/pier-shuttering.html">PIER SHUTTERING</a>
-                        <a href="Our Products/girder-shuttering.html">GIRDER SHUTTERING</a>
-                        <a href="Our Products/precast-shuttering.html">PRECAST SHUTTERING</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SCAFFOLDING SYSTEMS</h4>
-                        <a href="Our Products/cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
-                        <a href="Our Products/h-frame.html">H-FRAME SCAFFOLDING</a>
-                        <a href="Our Products/galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
-                        <a href="Our Products/ms-pipe.html">MS PIPE</a>
-                        <a href="Our Products/ms-chali.html">MS CHALI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SUPPORT SYSTEMS</h4>
-                        <a href="Our Products/adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
-                        <a href="Our Products/adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
-                        <a href="Our Products/heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
-                        <a href="Our Products/adjustable-span.html">ADJUSTABLE SPAN</a>
-                        <a href="Our Products/column-patti.html">COLUMN PATTI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>ACCESSORIES & COMPONENTS</h4>
-                        <a href="Our Products/couplers.html">COUPLERS</a>
-                        <a href="Our Products/builder-clamp.html">BUILDER CLAMP</a>
-                        <a href="Our Products/plank.html">PLANK</a>
-                        <a href="Our Products/ms-channel.html">M.S. CHANNEL</a>
-                        <a href="Our Products/jack-wheel.html">JACK WHEEL</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="contact.html">CONTACT US</a></li>
-        </ul>
-    </nav>
-
-    <!-- About Us Section -->
-    <section class="about-us">
+    <!-- Header -->
+    <header id="header">
         <div class="container">
-            <h1>About Us</h1>
-            <p>HukumInfra is a leading manufacturer and supplier of high-quality scaffolding materials and formwork solutions. With years of expertise in the industry, we are committed to providing innovative and reliable products for construction projects across the globe. Our dedication to safety, durability, and efficiency has made us a trusted partner in the construction industry.</p>
-            <p>Our product range includes cuplock scaffolding, H-frame scaffolding, tube & clamp scaffolding, ringlock scaffolding, and more. We also offer services such as manufacturing, rental services, on-site installation, and consultation to meet the diverse needs of our clients. Whether you are building a residential, commercial, or industrial project, HukumInfra has the right solutions for you.</p>
-            <div class="team">
-                <h2>Our Team</h2>
-                <div class="team-members">
-                    <div class="team-member">
-                        <img src="assests/team-member1.jpg" alt="Team Member 1">
-                        <h3>John Doe</h3>
-                        <p>CEO</p>
+            <nav class="navbar">
+                <a href="index.html" class="logo">YourCompany</a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" data-aos-delay="100">About Our Company</h1>
+            <p data-aos="fade-up" data-aos-delay="300">We are a team of passionate professionals dedicated to delivering exceptional solutions that drive growth and innovation.</p>
+            <div class="hero-btn" data-aos="fade-up" data-aos-delay="500">
+                <a href="#about" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-image" data-aos="fade-right" data-aos-duration="1000">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Our Team Working">
+                </div>
+                <div class="about-content" data-aos="fade-left" data-aos-duration="1000">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, YourCompany has grown from a small startup to a leading provider of innovative solutions in our industry. Our journey has been defined by a commitment to excellence, integrity, and pushing the boundaries of what's possible.</p>
+                    <p>We believe in creating lasting partnerships with our clients, understanding their unique challenges, and delivering solutions that exceed expectations. Our team of experts brings together diverse skills and perspectives to tackle complex problems and drive meaningful results.</p>
+                    <p>Today, we serve clients across the globe, helping them navigate the ever-changing landscape of technology and business. Our success is measured not just by the projects we complete, but by the lasting impact we make on our clients' businesses.</p>
+                    <a href="contact.html" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Core Values</h2>
+            </div>
+            <div class="values-container">
+                <div class="value-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
                     </div>
-                    <div class="team-member">
-                        <img src="assests/team-member2.jpg" alt="Team Member 2">
-                        <h3>Jane Smith</h3>
-                        <p>CTO</p>
+                    <h3>Innovation</h3>
+                    <p>We embrace change and constantly seek new ways to solve problems and create value for our clients.</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-gem"></i>
                     </div>
-                    <div class="team-member">
-                        <img src="assests/team-member3.jpg" alt="Team Member 3">
-                        <h3>Mike Johnson</h3>
-                        <p>COO</p>
+                    <h3>Excellence</h3>
+                    <p>We strive for the highest standards in everything we do, delivering quality that stands the test of time.</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We act with honesty, transparency, and ethics in all our interactions and business practices.</p>
+                </div>
+                <div class="value-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and partnerships to achieve extraordinary results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Our Trusted Clients</h2>
+                <p>We're proud to partner with leading companies across industries</p>
+            </div>
+            <div class="clients-container" data-aos="fade-up">
+                <div class="client-logo-container">
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="100">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+1" alt="Client 1">
+                    </div>
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+2" alt="Client 2">
+                    </div>
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="300">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+3" alt="Client 3">
+                    </div>
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="400">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+4" alt="Client 4">
+                    </div>
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="500">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+5" alt="Client 5">
+                    </div>
+                    <div class="client-logo" data-aos="zoom-in" data-aos-delay="600">
+                        <img src="https://via.placeholder.com/150x60/ffffff/000000?text=COMPANY+6" alt="Client 6">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Address</h3>
-                <p>123 Construction Way<br>Building Plaza<br>City, State ZIP</p>
+    <!-- Testimonial Section -->
+    <section class="testimonial-section">
+        <div class="container">
+            <div class="testimonial-container" data-aos="fade-up">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Working with YourCompany has been transformative for our business. Their team not only delivered an exceptional solution but also provided valuable insights that helped us improve our operations across the board.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Jane Smith">
+                        </div>
+                        <div class="author-info">
+                            <h4>Jane Smith</h4>
+                            <p>CEO, XYZ Corporation</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Phone: (555) 123-4567<br>Email: info@hukuminfra.com</p>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-container" data-aos="fade-up">
+                <h2>Ready to Work With Us?</h2>
+                <p>Let's discuss how we can help you achieve your business goals and drive innovation.</p>
+                <a href="contact.html" class="btn">Contact Us Today</a>
             </div>
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Hukum Infra is your trusted partner in construction and infrastructure development, delivering excellence since [year].</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>YourCompany</h3>
+                    <p>Delivering exceptional solutions since 2010</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, New York, NY</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@yourcompany.com</p>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="footer-section">
-                <a href="contact.html" class="contact-btn">Contact Us</a>
+            <div class="footer-bottom">
+                <p>&copy; 2023 YourCompany. All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .top-header, .middle-header, .navbar, footer {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-        }
-
-        .top-header p, .middle-header p, .navbar a, footer p {
-            margin: 0;
-        }
-
-        .middle-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .middle-header .logo img {
-            height: 50px;
-        }
-
-        .middle-header .contact-info {
-            text-align: right;
-        }
-
-        .middle-header .quote-button .btn {
-            background-color: #ff0000;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .navbar .nav-menu {
-            list-style: none;
-            display: flex;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar .nav-menu li {
-            margin: 0 10px;
-        }
-
-        .navbar .nav-menu a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .about-us {
-            padding: 50px 20px;
-            background-color: #f4f4f4;
-        }
-
-        .about-us .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .about-us h1, .about-us h2 {
-            text-align: center;
-        }
-
-        .about-us p {
-            text-align: justify;
-            line-height: 1.6;
-        }
-
-        .team {
-            margin-top: 50px;
-        }
-
-        .team-members {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .team-member {
-            text-align: center;
-            margin: 20px;
-        }
-
-        .team-member img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-        }
-
-        footer {
-            text-align: center;
-        }
-
-        @media (max-width: 768px) {
-            .middle-header {
-                flex-direction: column;
-                text-align: center;
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <!-- Main JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
             }
-
-            .middle-header .contact-info {
-                text-align: center;
-            }
-
-            .navbar .nav-menu {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .team-members {
-                flex-direction: column;
-                align-items: center;
-            }
+        });
+        
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+                hamburger.innerHTML = navLinks.classList.contains('active') ? 
+                    '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+            });
         }
-    </style>
+        
+        // Counter animation for stats
+        const stats = document.querySelectorAll('.stat-number');
+        if (stats.length) {
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const countTo = parseInt(entry.target.getAttribute('data-count'));
+                        let count = 0;
+                        const updateCount = () => {
+                            const speed = Math.floor(countTo / 100);
+                            if (count < countTo) {
+                                count += speed;
+                                if (count > countTo) count = countTo;
+                                entry.target.textContent = count;
+                                setTimeout(updateCount, 20);
+                            } else {
+                                observer.unobserve(entry.target);
+                            }
+                        };
+                        updateCount();
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            stats.forEach(stat => counterObserver.observe(stat));
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                    hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

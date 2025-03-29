@@ -4,7 +4,15 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Us | HukumInfra</title>
-        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -515,74 +523,240 @@
                 border-radius: 20px;
             }
 
-            
+            /* Navbar Styles */
+        .navbar {
+            padding: 20px 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .navbar.scrolled {
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.6rem;
+            color: var(--primary);
+        }
+
+        .nav-link {
+            color: var(--dark);
+            font-weight: 500;
+            margin-left: 25px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover:before, 
+        .nav-link.active:before {
+            width: 100%;
+        }
+
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Navigation */
+        .navbar {
+            padding: 20px 0;
+            transition: all 0.4s ease;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .navbar-nav .nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 0 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: white;
+        }
+        
+        .navbar-nav .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar-nav .nav-link:hover::after,
+        .navbar-nav .nav-link.active::after {
+            width: 100%;
+        }
+        
+        .navbar.scrolled {
+            background-color: var(--dark);
+            padding: 10px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            padding: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: #fff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        .navbar.scrolled .nav-link {
+            color: var(--dark);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 28px;
+            color: #fff;
+        }
+        
+        .navbar-brand span {
+            color: var(--primary);
+        }
+        
+        .navbar.scrolled .navbar-brand {
+            color: var(--dark);
+        }
+        
+        .nav-link {
+            color: #fff;
+            font-weight: 500;
+            margin-left: 15px;
+            position: relative;
+        }
+        
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:before, .nav-link.active:before {
+            width: 100%;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            padding: 20px 0;
+            transition: all 0.4s ease;
+        }
+
+        .navbar.scrolled {
+            background-color: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .nav-link {
+            margin-left: 25px;
+            font-weight: 500;
+            color: var(--dark);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover:before {
+            width: 100%;
+        }
+
         </style>
     </head>
     <body>
-        <!-- Top Header -->
-        <div class="top-header">
-            <p>📍 vaishali</p>
-        </div>
-
-        <!-- Middle Header -->
-        <div class="middle-header">
-            <div class="logo">
-                <img src="assests/logo.png" alt="Company Logo">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#home">Hukum Infrastructure</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonials">Testimonials</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="contact-info">
-                <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
-                <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
-            </div>
-        </div>
-
-        <!-- Navigation Bar -->
-        <nav class="navbar">
-            <div class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
-                    <div class="mega-menu">
-                        <div class="mega-menu-column">
-                            <h4>FORMWORK SYSTEMS</h4>
-                            <a href="Our Products/formwork-system.html">FORMWORK SYSTEM</a>
-                            <a href="Our Products/acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
-                            <a href="Our Products/shuttering-plate.html">SHUTTERING PLATE</a>
-                            <a href="Our Products/pier-shuttering.html">PIER SHUTTERING</a>
-                            <a href="Our Products/girder-shuttering.html">GIRDER SHUTTERING</a>
-                            <a href="Our Products/precast-shuttering.html">PRECAST SHUTTERING</a>
-                        </div>
-                        <div class="mega-menu-column">
-                            <h4>SCAFFOLDING SYSTEMS</h4>
-                            <a href="Our Products/cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
-                            <a href="Our Products/h-frame.html">H-FRAME SCAFFOLDING</a>
-                            <a href="Our Products/galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
-                            <a href="Our Products/ms-pipe.html">MS PIPE</a>
-                            <a href="Our Products/ms-chali.html">MS CHALI</a>
-                        </div>
-                        <div class="mega-menu-column">
-                            <h4>SUPPORT SYSTEMS</h4>
-                            <a href="Our Products/adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
-                            <a href="Our Products/adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
-                            <a href="Our Products/heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
-                            <a href="Our Products/adjustable-span.html">ADJUSTABLE SPAN</a>
-                            <a href="Our Products/column-patti.html">COLUMN PATTI</a>
-                        </div>
-                        <div class="mega-menu-column">
-                            <h4>ACCESSORIES & COMPONENTS</h4>
-                            <a href="Our Products/couplers.html">COUPLERS</a>
-                            <a href="Our Products/builder-clamp.html">BUILDER CLAMP</a>
-                            <a href="Our Products/plank.html">PLANK</a>
-                            <a href="Our Products/ms-channel.html">M.S. CHANNEL</a>
-                            <a href="Our Products/jack-wheel.html">JACK WHEEL</a>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
         </nav>
 
         <!-- Hero Section -->

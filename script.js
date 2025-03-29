@@ -1,3 +1,33 @@
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Counter animation
+const counters = document.querySelectorAll('.stat-number');
+counters.forEach(counter => {
+    const updateCount = () => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        const count = parseInt(counter.innerText);
+        const increment = target / 200;
+        if (count < target) {
+            counter.innerText = Math.ceil(count + increment);
+            setTimeout(updateCount, 1);
+        } else {
+            counter.innerText = target;
+        }
+    };
+    counter.innerText = '0';
+    updateCount();
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile menu toggle
     const navToggle = document.querySelector('.nav-toggle');
