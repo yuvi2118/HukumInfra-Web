@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact Us | HukumInfra</title>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <link href="styles.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | HukumInfra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+            
+             /* Base Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        overflow-x: hidden;
+        min-height: 100vh;
+        overflow-y: visible !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .section-title h2:after {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title p {
+        color: var(--grey-color);
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+            
+            
             /* Add new styles for enhanced animations and professional look */
             .parallax-hero {
                 height: 350px;
@@ -82,6 +136,7 @@
                 z-index: 3;
                 width: 90%;
                 box-sizing: border-box;
+                margin-bottom: -500px; /* Add additional space before footer */
             }
 
             .contact-wrapper {
@@ -338,7 +393,7 @@
                     width: 95%;
                     padding: 15px;
                     margin-top: -50px;
-                    margin-bottom: 30px;
+                    margin-bottom: 80px; /* Increased space before footer on mobile */
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -408,7 +463,7 @@
                     width: 95%;
                     padding: 5px;
                     margin-top: -30px;
-                    margin-bottom: 20px;
+                    margin-bottom: 60px; /* Increased space before footer on small mobile */
                     margin-left: auto;
                     margin-right: auto;
                 }
@@ -491,6 +546,7 @@
                     margin-top: -25px;
                     width: 98%;
                     padding: 5px;
+                    margin-bottom: 50px; /* Ensure space before footer on extra small devices */
                 }
                 
                 .form-section, .contact-info-card {
@@ -523,241 +579,199 @@
                 border-radius: 20px;
             }
 
-            /* Navbar Styles */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
+            /* Navbar */
+    .navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    }
 
-        .navbar.scrolled {
-            background-color: #fff;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.1); /* Transparent background */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 10px 0; /* Adjust padding when scrolled */
+    }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.6rem;
-            color: var(--primary);
-        }
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: black;
+    }
 
-        .nav-link {
-            color: var(--dark);
-            font-weight: 500;
-            margin-left: 25px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
+    .nav-link {
+        color: var (--dark-color);
+        font-weight: 500;
+        margin-left: 25px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
 
-        .nav-link:before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: all 0.3s ease;
-        }
+    .nav-link:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
 
-        .nav-link:hover:before, 
-        .nav-link.active:before {
-            width: 100%;
-        }
+    .nav-link:hover:before, 
+    .nav-link.active:before {
+        width: 100%;
+    }
 
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
-
-        /* Navigation */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.4s ease;
-            z-index: 1000;
+        /* Enhanced Animations */
+    @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: white;
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
-        .navbar-nav .nav-link {
-            color: rgba(255, 255, 255, 0.8);
-            margin: 0 15px;
-            position: relative;
-            transition: all 0.3s ease;
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         
-        .navbar-nav .nav-link:hover,
-        .navbar-nav .nav-link.active {
-            color: white;
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
         
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: white;
-            transition: all 0.3s ease;
+        @keyframes wave {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-25%) translateY(10px); }
+            100% { transform: translateX(-50%) translateY(0); }
         }
         
-        .navbar-nav .nav-link:hover::after,
-        .navbar-nav .nav-link.active::after {
-            width: 100%;
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
         }
         
-        .navbar.scrolled {
-            background-color: var(--dark);
-            padding: 10px 0;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        @keyframes fadeInRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
-        /* Navbar Styles */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            background-color: #fff;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 10px 0;
-        }
-        
-        .navbar.scrolled .nav-link {
-            color: var(--dark);
-        }
-        
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 28px;
-            color: #fff;
-        }
-        
-        .navbar-brand span {
-            color: var(--primary);
-        }
-        
-        .navbar.scrolled .navbar-brand {
-            color: var(--dark);
-        }
-        
-        .nav-link {
-            color: #fff;
-            font-weight: 500;
-            margin-left: 15px;
-            position: relative;
-        }
-        
-        .nav-link:before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary);
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover:before, .nav-link.active:before {
-            width: 100%;
-        }
-        
-        .navbar-toggler {
-            border: none;
-            padding: 0;
-        }
-        
-        .navbar-toggler:focus {
-            box-shadow: none;
-        }
+        /* Footer */
+    .footer {
+        background-color: #333 !important;
+        color: white;
+        padding: 80px 0 20px;
+        position: relative !important;
+        z-index: 9 !important;
+        clear: both !important;
+        margin-top: 200px !important;
+        display: block !important;
+        visibility: visible !important;
+    }
 
-        /* Navbar Styles */
-        .navbar {
-            padding: 20px 0;
-            transition: all 0.4s ease;
-        }
+    .footer h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
 
-        .navbar.scrolled {
-            background-color: white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            padding: 15px 0;
-        }
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.8rem;
-            color: var(--primary);
-        }
+    .footer-links li {
+        margin-bottom: 10px;
+    }
 
-        .nav-link {
-            margin-left: 25px;
-            font-weight: 500;
-            color: var(--dark);
-            position: relative;
-            transition: all 0.3s ease;
-        }
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-        .nav-link:before {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
-            transition: all 0.3s ease;
-        }
+    .footer-links a:hover {
+        color: white;
+    }
+    
+     /* Floating WhatsApp Icon */
+     .whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px;
+    right: 40px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 999999;
 
-        .nav-link:hover:before {
-            width: 100%;
-        }
+    /* Center the icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.whatsapp-float i {
+    margin-top: 0; /* Remove any margin to ensure proper centering */
+}
+
+/* Fix spacing between contact container and footer */
+.contact-container {
+    margin-bottom: 0; /* Remove unnecessary bottom margin */
+    padding-bottom: 20px; /* Add a small padding for spacing */
+}
+
+@media (max-width: 768px) { /* For mobile screens */
+    .contact-container {
+        margin-bottom: -600px; /* Ensure no extra margin on mobile */
+        padding-bottom: 20px; /* Add a small padding for spacing */
+    }
+
+    .contact-wrapper {
+        margin-bottom: 0; /* Remove any extra margin */
+    }
+
+    .footer {
+        margin-top: 0; /* Remove unnecessary top margin */
+    }
+}
         </style>
     </head>
     <body>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#home">Hukum Infrastructure</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">Testimonials</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assests/logo.png" alt="HukumInfra Logo" style="height: 40px; margin-right: 12px;">
+                HukumInfra
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-        </nav>
+        </div>
+    </nav>
 
         <!-- Hero Section -->
         <section class="parallax-hero">
@@ -841,74 +855,140 @@
                 </div>
                 
                 <div id="map"></div>
+                </div>
             </div>
         </div>
+        <!-- End of contact container -->
 
-        <script>
-            // Initialize Google Map
-            function initMap() {
-                const location = { lat: 28.6139, lng: 77.2090 }; // New Delhi coordinates
-                const map = new google.maps.Map(document.getElementById('map'), {
-                    zoom: 15,
-                    center: location,
-                    styles: [
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.fill",
-                            "stylers": [{"saturation": 36}, {"color": "#333333"}, {"lightness": 40}]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.text.stroke",
-                            "stylers": [{"visibility": "on"}, {"color": "#ffffff"}, {"lightness": 16}]
-                        },
-                        {
-                            "featureType": "all",
-                            "elementType": "labels.icon",
-                            "stylers": [{"visibility": "off"}]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.fill",
-                            "stylers": [{"color": "#fefefe"}, {"lightness": 20}]
-                        },
-                        {
-                            "featureType": "administrative",
-                            "elementType": "geometry.stroke",
-                            "stylers": [{"color": "#fefefe"}, {"lightness": 17}, {"weight": 1.2}]
-                        }
-                    ]
-                });
-                
-                const marker = new google.maps.Marker({
-                    position: location,
-                    map: map
-                });
-                }
+<!-- Clear divider -->
+<div style="clear: both; height: 300px; display: block;"></div>
 
-        </script>
+<!-- Footer section -->
+<footer style="position: static !important; display: block !important; visibility: visible !important; background: #000 !important; color: white !important; padding: 80px 0 30px !important; margin-top: 300px !important; z-index: 100000 !important;">
+  <div class="container">
+    <div class="row">
+      <!-- Company Info -->
+      <div class="col-lg-4">
+        <h3>HukumInfra</h3>
+        <p>Leading construction solutions for a better tomorrow.</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="col-lg-4">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="col-lg-4">
+        <h4>Contact Us</h4>
+        <div class="footer-contact-info">
+          <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Delhi, India</p>
+          <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+          <p><i class="fas fa-envelope"></i> info@hukuminfra.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
         
-        <!-- Footer Section -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Address</h3>
-                    <p>123 Construction Way<br>Building Plaza<br>City, State ZIP</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>Phone: (555) 123-4567<br>Email: info@hukumcorporation.com</p>
-                </div>
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <p>Hukum Infra is your trusted partner in construction and infrastructure development, delivering excellence since [year].</p>
-                </div>
-                <div class="footer-section">
-                    <a href="contact.html" class="contact-btn">Contact Us</a>
-                </div>
-            </div>
-        </footer>
+        <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
 
+        <!-- Custom JavaScript -->
+        <script>
+            // Initialize AOS
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+
+            // Navbar scroll
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                navbar.classList.toggle('scrolled', window.scrollY > 50);
+            });
+
+            // Counter animation
+            const counters = document.querySelectorAll('.stat-number');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.dataset.target);
+                        animateCount(entry.target, target);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+
+            counters.forEach(counter => observer.observe(counter));
+            
+            function animateCount(el, target) {
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    el.textContent = Math.floor(current);
+                    if (current >= target) {
+                        el.textContent = target;
+                        clearInterval(timer);
+                    }
+                }, 20);
+            }
+            
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+        <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+        </script>
+        <script>
+            window.addEventListener('scroll', () => {
+                const navbar = document.querySelector('.navbar');
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        </script>
+        <script>
+            document.addEventListener('click', function (event) {
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+
+                // Check if the click is outside the navbar or toggler
+                if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarToggler.click(); // Programmatically trigger the toggler to close the menu
+                    }
+                }
+            });
+        </script>
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Cache DOM elements
@@ -1040,5 +1120,9 @@
                 });
             });
         </script>
+        
+        <!-- Bootstrap core JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     </body>
 </html>

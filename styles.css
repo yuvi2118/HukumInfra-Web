@@ -228,9 +228,46 @@
 
 /* Footer */
 .footer {
-    background-color: var(--dark);
+    background-color: var(--dark-color);
     color: white;
     padding: 80px 0 20px;
+    position: relative; /* Ensure it stays in the flow of the document */
+    z-index: 1; /* Ensure it appears above other elements */
+}
+
+.footer h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Ensure the footer is visible even if the content is short */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Push the footer to the bottom */
 }
 
 /* Navbar */
@@ -273,6 +310,11 @@
 .nav-link:hover:before, 
 .nav-link.active:before {
     width: 100%;
+}
+
+.show-less-button {
+    display: block;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
