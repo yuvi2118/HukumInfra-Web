@@ -2,75 +2,445 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Patti Systems | HukumInfra</title>
-    <link rel="stylesheet" href="/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <meta name="viewport"="width=device-width, initial-scale=1.0">
+    <title>HukumInfra - Global Scaffolding Solutions</title>
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assests/logo.png" alt="HukumInfra Logo" style="height: 40px; margin-right: 12px;">
+                HukumInfra
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/solution.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Accessories Section -->
+    <section class="accessories-section">
+        <div class="container">
+            
+            <!-- Image Collage Section -->
+            <div class="image-section text-center" data-aos="fade-up">
+                <img src="/assests/picture/accessories 1.png" alt="Accessories Collage" class="img-fluid rounded">
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12" data-aos="fade-up">
+                    <div class="table-container">
+                        <table class="accessories-table">
+                            <thead>
+                                <tr>
+                                    <th>Accessory</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Top Cup</strong></td>
+                                    <td>A vital component in the Cuplock scaffolding system, the top cup securely locks ledger blades in place, ensuring a firm and stable framework. Manufactured from high-strength steel, it resists wear and tear, making it ideal for heavy-duty construction projects.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Bottom Cup</strong></td>
+                                    <td>Positioned at the base of vertical Cuplock standards, the bottom cup provides a firm seating for the ledgers, ensuring proper load distribution. It plays a crucial role in the stability and alignment of scaffolding structures, reducing movement and increasing safety.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>C-Clamp</strong></td>
+                                    <td>A robust and versatile fastening tool used to securely hold formwork, pipes, and other materials in place. Ideal for welding, woodworking, and construction applications, it allows for easy adjustments while maintaining a firm grip on the components.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cup Nut</strong></td>
+                                    <td>A specially designed fastening nut that ensures a secure and firm connection in Cuplock scaffolding systems. Its unique shape allows for easy tightening and loosening, making assembly and disassembly more efficient on construction sites.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Spigot Pin</strong></td>
+                                    <td>A precision-engineered connecting pin used to join vertical scaffolding tubes or standards. It enhances structural integrity, ensuring proper alignment and stability in multi-level scaffolding arrangements. Made from high-grade steel, it offers excellent durability.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rapid Clamp</strong></td>
+                                    <td>A high-tensile strength clamp used in scaffolding and formwork systems to provide a quick and secure fastening solution. The rapid clamp significantly reduces assembly time and enhances safety by offering a tight grip on structures.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prop Nut</strong></td>
+                                    <td>A key component in adjustable scaffolding props, allowing fine height adjustments for leveling and supporting formwork and temporary structures. Its threaded design ensures precise positioning and stability under load.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Prop Sleeve</strong></td>
+                                    <td>A reinforcing sleeve that strengthens scaffolding props, ensuring secure height adjustments and reducing wear over extended use. Made from corrosion-resistant steel, it extends the lifespan of scaffolding props in demanding environments.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ledger Blade</strong></td>
+                                    <td>A heavy-duty connector used in Cuplock scaffolding systems to lock ledgers onto vertical standards securely. It provides structural stability and allows for quick and efficient assembly, making it a critical component in modular scaffolding frameworks.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Jack Nut</strong></td>
+                                    <td>A crucial element in adjustable scaffolding base jacks and U-head jacks, allowing precise leveling of scaffolding structures. Made from high-quality cast iron or steel, it supports heavy loads and ensures uniform height adjustments.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Nails</strong></td>
+                                    <td>High-quality construction-grade nails used for formwork, framing, and structural reinforcement. Available in various sizes and finishes, they provide strong holding power and durability in demanding construction applications.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Tie Rod with Wing Nut</strong></td>
+                                    <td>A widely used formwork accessory that holds shuttering panels securely in place. The tie rod system distributes forces evenly, preventing bulging and deformation during concrete pouring, while the wing nut ensures easy tightening and removal.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>GI Agricultural Nipples</strong></td>
+                                    <td>Galvanized iron (GI) pipe fittings designed for agricultural irrigation, plumbing, and water distribution applications. Corrosion-resistant and highly durable, they ensure a long-lasting, leak-free connection between pipes.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gugu Machine</strong></td>
+                                    <td>A specialized construction tool used for operations such as cutting, fastening, or drilling in scaffolding and formwork setups. Designed for efficiency, it reduces manual effort and speeds up on-site processes.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="glass-panel">
+            <h2 data-aos="fade-up">Ready to Build Your Future?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Let's create something amazing together</p>
+            <a href="/contact.html" class="glass-button" data-aos="fade-up" data-aos-delay="200">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h3>HukumInfra</h3>
+                    <p>Empowering construction and industrial projects with world-class scaffolding solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/solution.html">Solutions</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Delhi, India</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@hukuminfra.com</p>
+                    </div>
+                </div>
     <style>
-        .product-hero {
-            position: relative;
-            z-index: 1; /* Lower than the navbar */
-            margin-top: 10px; /* Add margin so the dropdown doesn't collide */
-            margin-left: 5px;
-            padding-left: 5%;
-            background: url('/assests/banner.jpg') no-repeat left 2px/cover;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
-        }
-        @media (max-width: 768px) {
-            .middle-header {
-                flex-direction: column;
-                padding: 10px;
-            }
-            
-            .middle-header .contact-info {
-                margin: 15px 0;
-            }
-            
-            .middle-header .red-text {
-                font-size: 25px;
-                font-family: garamond;
-                font-weight: bold;
-            }
-            
-            .mega-menu {
-                width: 100%;
-                left: 0;
-                transform: none;
-            }
-        }
-        
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .gallery-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .gallery-item:hover {
-            transform: translateY(-5px);
-        }
-        
-        .gallery-item img {
+        .glass-panel {
+            color: #fff;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            border-radius: 15px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .glass-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 0;
+            text-decoration: none;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
         
-        .specs-table {
+        .table-container {
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-x: auto; /* Enable horizontal scrolling for smaller screens */
+        }
+
+        .accessories-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .accessories-table th,
+        .accessories-table td {
+            border: 1px solid #ddd;
+            padding: 12px 15px;
+        }
+
+        .accessories-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .accessories-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .accessories-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .accessories-table td {
+            vertical-align: top;
+        }
+
+    /* Root Variables */
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #3b82f6;
+        --dark-color: #1e293b;
+        --light-color: #f8fafc;
+        --accent-color: #f59e0b;
+        --grey-color: #64748b;
+    }
+
+    /* Base Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .section-title h2:after {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title p {
+        color: var(--grey-color);
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.1); /* Transparent background */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 10px 0; /* Adjust padding when scrolled */
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    .nav-link {
+        color: var (--dark-color);
+        font-weight: 500;
+        margin-left: 25px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover:before, 
+    .nav-link.active:before {
+        width: 100%;
+    }
+
+
+    /* Enhanced Animations */
+    @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes wave {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-25%) translateY(10px); }
+            100% { transform: translateX(-50%) translateY(0); }
+        }
+        
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeInRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+
+    /* About Section */
+    .about-section {
+        padding: 60px 20px; /* Add spacing around the section */
+        background-color: #f8fafc; /* Light background color */
+        border-radius: 15px; /* Rounded corners for a modern look */
+        margin: 80px auto; /* Add spacing from other sections */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .about-section .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .about-section .section-title::after {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-section .row {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Add spacing between image and text */
+    }
+
+    .about-section img {
+        width: 100%;
+        border-radius: 15px; /* Rounded corners for the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .about-section .about-text {
+        font-size: 1.1rem;
+        color: var(--grey-color);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .specs-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -88,630 +458,169 @@
         
         .specs-table tr:hover {
             background-color: #f9f9f9;
-        }
-        
-        .cta-section {
-            background-color: #f5f5f5;
-            padding: 40px;
-            text-align: center;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .features-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .feature-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .feature-item h3 {
-            color: #0074B7;
-            margin-bottom: 10px;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            color: rgb(33, 198, 210);
-            margin-bottom: 15px;
-        }
-    </style>
-</head>
-<body>
+        }    
 
+    /* Footer */
+    .footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 80px 0 20px;
+    }
+
+    .footer h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .footer-links a:hover {
+        color: white;
+    }
+
+    /* Floating WhatsApp Icon */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 100px;
+        right: 40px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
+
+    .whatsapp-float i {
+        margin-top: 16px;
+    }
+
+    /* Add spacing between image and text in the About section for mobile */
+    @media (max-width: 768px) {
+        #about .row {
+            gap: 20px; /* Adds space between the image and text */
+        }
+    }
+
+    /* Reduce space between About and Services sections */
+    #about {
+        margin-bottom: 0px; /* Decrease the bottom margin */
+    }
+
+    .accessories-section {
+        padding: 100px 20px 60px; /* Add top padding to push the content below the navbar */
+        background-color: #f8fafc; /* Optional: Light background color */
+        border-radius: 10px; /* Optional: Rounded corners for a modern look */
+        margin-top: 20px; /* Optional: Add margin to separate from other sections */
+    }
+</style>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     
-
-    <!-- Middle Header -->
-    <div class="middle-header">
-        <div class="logo">
-            <img src="/assests/logo.png" alt="Company Logo">
-        </div>
-        <div class="contact-info">
-            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
-            <p>📧 Email us: <span class="red-text">HukumInfra@company.com</span></p>
-        </div>
-        <div class="quote-button">
-            <a href="/contact.html" class="btn">GET A QUOTE</a>
-        </div>
-    </div>
-
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/about.html">ABOUT US</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
-                <div class="mega-menu">
-                    <div class="mega-menu-column">
-                        <h4>FORMWORK SYSTEMS</h4>
-                        <a href="formwork-system.html">FORMWORK SYSTEM</a>
-                        <a href="acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
-                        <a href="shuttering-plate.html">SHUTTERING PLATE</a>
-                        <a href="pier-shuttering.html">PIER SHUTTERING</a>
-                        <a href="girder-shuttering.html">GIRDER SHUTTERING</a>
-                        <a href="precast-shuttering.html">PRECAST SHUTTERING</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SCAFFOLDING SYSTEMS</h4>
-                        <a href="cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
-                        <a href="h-frame.html">H-FRAME SCAFFOLDING</a>
-                        <a href="galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
-                        <a href="ms-pipe.html">MS PIPE</a>
-                        <a href="ms-chali.html">MS CHALI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SUPPORT SYSTEMS</h4>
-                        <a href="adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
-                        <a href="adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
-                        <a href="heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
-                        <a href="adjustable-span.html">ADJUSTABLE SPAN</a>
-                        <a href="column-patti.html">COLUMN PATTI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>ACCESSORIES & COMPONENTS</h4>
-                        <a href="couplers.html">COUPLERS</a>
-                        <a href="builder-clamp.html">BUILDER CLAMP</a>
-                        <a href="plank.html">PLANK</a>
-                        <a href="ms-channel.html">M.S. CHANNEL</a>
-                        <a href="jack-wheel.html">JACK WHEEL</a>
-                        <a href="accessories.html">OTHER ACCESSORIES</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="../contact.html">CONTACT US</a></li>
-        </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero product-hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Column Patti Systems</h1>
-            <p>Precision Column Formwork Accessories for Structural Stability and Alignment</p>
-        </div>
-    </section>
-
-    <div class="main-container">
-        <aside class="sidebar">
-            <h3>Product Categories</h3>
-            
-            <!-- Formwork Systems Category -->
-            <div class="sidebar-category formwork-category show">
-                <h4>Formwork Systems</h4>
-                <ul>
-                    <li><a href="formwork-system.html">Formwork System</a></li>
-                    <li><a href="acro-plate-wall-formwork.html">Acro Plate Wall Formwork</a></li>
-                    <li><a href="shuttering-plate.html">Shuttering Plate</a></li>
-                    <li><a href="pier-shuttering.html">Pier Shuttering</a></li>
-                    <li><a href="girder-shuttering.html">Girder Shuttering</a></li>
-                    <li><a href="precast-shuttering.html">Precast Shuttering</a></li>
-                </ul>
-            </div>
-            
-            <!-- Support Systems Category -->
-            <div class="sidebar-category support-category show">
-                <h4>Support Systems</h4>
-                <ul>
-                    <li><a href="adjustable-prop.html">Adjustable Prop/ MS Prop</a></li>
-                    <li><a href="adjustable-base.html">Adjustable Base/ U Jack</a></li>
-                    <li><a href="heavy-duty-bridge-crib.html">Heavy Duty Bridge Crib</a></li>
-                    <li><a href="adjustable-span.html">Adjustable Span</a></li>
-                    <li class="active"><a href="column-patti.html">Column Patti</a></li>
-                </ul>
-            </div>
-            
-            <!-- Scaffolding Systems Category (hidden by default) -->
-            <div class="sidebar-category scaffolding-category">
-                <h4>Scaffolding Systems</h4>
-                <ul>
-                    <li><a href="cuplock-scaffolding-system.html">Cuplock Scaffolding System</a></li>
-                    <li><a href="h-frame.html">H-Frame Scaffolding</a></li>
-                    <li><a href="galvanized-prop.html">Scaffolding Galvanized Prop</a></li>
-                    <li><a href="ms-pipe.html">MS Pipe</a></li>
-                    <li><a href="ms-chali.html">MS Chali</a></li>
-                </ul>
-            </div>
-            
-            <!-- Accessories Category (hidden by default) -->
-            <div class="sidebar-category accessories-category">
-                <h4>Accessories & Components</h4>
-                <ul>
-                    <li><a href="couplers.html">Couplers</a></li>
-                    <li><a href="builder-clamp.html">Builder Clamp</a></li>
-                    <li><a href="plank.html">Plank</a></li>
-                    <li><a href="ms-channel.html">M.S. Channel</a></li>
-                    <li><a href="jack-wheel.html">Jack Wheel</a></li>
-                    <li><a href="accessories.html">Other Accessories</a></li>
-                </ul>
-            </div>
-        </aside>
-        
-        <div class="content-section">
-            <div class="overview">
-                <h2>Column Patti System Overview</h2>
-                <p>HukumInfra's Column Patti accessories are specialized formwork components designed for efficient and precise column construction. These essential elements provide critical reinforcement and alignment support for column formwork systems, ensuring dimensional accuracy, structural integrity, and superior surface finish.</p>
-                
-                <p>Column Patti components act as connectors and reinforcement elements that significantly enhance the strength and stability of column shuttering. Our precision-engineered column patti systems are designed for quick installation, multiple reuses, and compatibility with various column dimensions and shapes, making them indispensable for modern construction projects.</p>
-            </div>
-            
-            <div class="features-list">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Structural Integrity</h3>
-                    <p>Our column patti components are manufactured from high-tensile steel, ensuring exceptional load-bearing capacity and resistance to concrete pressure during column casting.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Fast Installation</h3>
-                    <p>Precision-engineered quick-lock mechanisms allow for rapid assembly and disassembly, significantly reducing labor time and accelerating construction timelines.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-ruler-combined"></i>
-                    </div>
-                    <h3>Dimensional Accuracy</h3>
-                    <p>Designed to maintain perfect alignment and plumbness of column formwork, ensuring precise dimensions and superior concrete finish quality.</p>
-                </div>
-                
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Reusability</h3>
-                    <p>Constructed with durability in mind, our column patti accessories withstand multiple use cycles without degradation, maximizing return on investment.</p>
-                </div>
-            </div>
-            
-            <h2>Product Gallery</h2>
-            <div class="product-gallery">
-                <div class="gallery-item">
-                    <img src="/assests/column-patti1.jpg" alt="Standard Column Patti">
-                    <div style="padding: 10px;">
-                        <h3>Standard Column Patti</h3>
-                        <p>Universal column patti for square and rectangular column applications</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="/assests/column-patti2.jpg" alt="Heavy-Duty Column Patti">
-                    <div style="padding: 10px;">
-                        <h3>Heavy-Duty Column Patti</h3>
-                        <p>Reinforced design for high-load bearing columns in industrial structures</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="/assests/column-patti3.jpg" alt="Adjustable Column Patti">
-                    <div style="padding: 10px;">
-                        <h3>Adjustable Column Patti</h3>
-                        <p>Variable sizing capabilities for custom column dimensions and shapes</p>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="/assests/column-patti4.jpg" alt="Circular Column Patti">
-                    <div style="padding: 10px;">
-                        <h3>Circular Column Patti</h3>
-                        <p>Specialized patti systems for round column applications with perfect curvature</p>
-                    </div>
-                </div>
-            </div>
-            
-            <h2>Technical Specifications</h2>
-            <table class="specs-table">
-                <tr>
-                    <th>Specification</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td>Material</td>
-                    <td>High-tensile steel (IS:2062 Grade) with corrosion-resistant coating</td>
-                </tr>
-                <tr>
-                    <td>Available Sizes</td>
-                    <td>Standard: 75mm, 100mm, 150mm, 225mm, 300mm widths; Custom sizes available on request</td>
-                </tr>
-                <tr>
-                    <td>Thickness Options</td>
-                    <td>2.5mm, 3.0mm, 4.0mm (depending on load requirements)</td>
-                </tr>
-                <tr>
-                    <td>Load Capacity</td>
-                    <td>Standard: 30 kN; Heavy-duty: 45 kN; Ultra heavy-duty: 60 kN</td>
-                </tr>
-                <tr>
-                    <td>Surface Treatment</td>
-                    <td>Powder-coated, Galvanized, or Plain finish options</td>
-                </tr>
-                <tr>
-                    <td>Connection System</td>
-                    <td>Quick-connect pin and wedge system; Bolt-through option available</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>2.3-5.8 kg/m depending on size and thickness</td>
-                </tr>
-                <tr>
-                    <td>Compliance</td>
-                    <td>Meets IS 4990:2011 and international safety standards for formwork accessories</td>
-                </tr>
-            </table>
-            
-            <div class="overview">
-                <h2>Applications</h2>
-                <p>HukumInfra's Column Patti accessories are essential for a wide range of construction applications where column precision and stability are critical:</p>
-                <ul>
-                    <li><strong>High-Rise Buildings:</strong> Ensuring perfect column alignment and structural integrity in tall structures</li>
-                    <li><strong>Commercial Complexes:</strong> Supporting rapid construction cycles while maintaining dimensional accuracy</li>
-                    <li><strong>Industrial Structures:</strong> Providing the strength needed for heavy-load bearing columns in factories and warehouses</li>
-                    <li><strong>Infrastructure Projects:</strong> Essential for bridge piers, flyover supports, and elevated roadway columns</li>
-                    <li><strong>Institutional Buildings:</strong> Schools, hospitals, and public facilities requiring durable column structures</li>
-                    <li><strong>Architectural Columns:</strong> Specialized patti systems for decorative and non-standard column shapes</li>
-                    <li><strong>Precast Construction:</strong> Providing precise alignment for precast column elements and connections points, ensuring consistency across prefabricated components</li>
-                </ul>
-                
-                <h3>Technical Specifications by Column Type</h3>
-                <p>HukumInfra offers various column patti configurations based on column dimensions and structural requirements:</p>
-                <ul>
-                    <li><strong>Standard Rectangular Columns:</strong> 100mm patti with 3.0mm thickness, suitable for columns up to 450mm × 450mm</li>
-                    <li><strong>Large Rectangular Columns:</strong> 150mm patti with 3.5mm thickness, ideal for columns 450mm × 450mm to 600mm × 600mm</li>
-                    <li><strong>Circular Columns:</strong> Specialized curved patti with adjustable radius settings from 200mm to 600mm diameter</li>
-                    <li><strong>Heavy-Load Columns:</strong> Reinforced 4.0mm thick patti with double-row pin connections for industrial applications</li>
-                </ul>
-                
-                <h3>Safety Considerations and Best Practices</h3>
-                <p>For optimal performance and safety when using column patti systems:</p>
-                <ul>
-                    <li>Always inspect patti components for damage or deformation before installation</li>
-                    <li>Maintain proper spacing between patti elements (typically 300-450mm vertically)</li>
-                    <li>Ensure all connections are fully tightened to specified torque requirements</li>
-                    <li>Never exceed the rated load capacity for the specific patti type being used</li>
-                    <li>Use additional bracing for columns exceeding 3.5m in height</li>
-                    <li>Install safety locks on all quick-connect pins to prevent accidental disengagement</li>
-                </ul>
-                
-                <h3>Maintenance and Handling Guidelines</h3>
-                <p>To maximize the lifespan and performance of your column patti investment:</p>
-                <ul>
-                    <li>Clean components thoroughly after each use, removing all concrete residue</li>
-                    <li>Apply release agent before each use to facilitate easy removal</li>
-                    <li>Store in dry conditions to prevent corrosion and material degradation</li>
-                    <li>Transport with protective packaging to prevent damage to connection points</li>
-                    <li>Perform regular inspections for bent components, connection wear, or coating damage</li>
-                    <li>Replace damaged components immediately rather than attempting field repairs</li>
-                    <li>Maintain an inventory of replacement parts for common wear items</li>
-                </ul>
-            </div>
-            
-            <div class="cta-section">
-                <h2>Enhance Your Column Construction Efficiency</h2>
-                <p>HukumInfra's precision-engineered column patti systems deliver superior strength, alignment, and durability for all your column formwork requirements.</p>
-                
-                <div class="features-list" style="text-align: left; margin-top: 30px;">
-                    <div class="feature-item">
-                        <h3>Industry-Leading Quality</h3>
-                        <p>Our column patti systems undergo rigorous testing to ensure consistent performance and exceptional durability across multiple construction cycles. Every component is manufactured to precise tolerances using high-grade materials that exceed industry standards.</p>
-                        <p><strong>Quality Guarantee:</strong> All HukumInfra column patti products carry a 12-month warranty against manufacturing defects.</p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Technical Support & Consulting</h3>
-                        <p>Our engineering team provides comprehensive technical support for column patti applications, including:</p>
-                        <ul>
-                            <li>On-site installation training and demonstrations</li>
-                            <li>Custom design services for specialized column requirements</li>
-                            <li>Load calculation assistance for complex structural applications</li>
-                            <li>Compatibility assessment with existing formwork systems</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Volume Pricing Benefits</h3>
-                        <p>Benefit from our tiered pricing structure for bulk orders:</p>
-                        <ul>
-                            <li>5-10% discount on orders exceeding 500 pieces</li>
-                            <li>10-15% discount on orders exceeding 1000 pieces</li>
-                            <li>Additional value-added services for enterprise clients</li>
-                            <li>Custom manufacturing options for project-specific requirements</li>
-                        </ul>
-                        <p><em>Contact our sales team for current promotions and package deals</em></p>
-                    </div>
-                    
-                    <div class="feature-item">
-                        <h3>Contact Options</h3>
-                        <p>Reach our column patti specialists through multiple channels:</p>
-                        <ul>
-                            <li><strong>Technical Hotline:</strong> +91 9950722291 (Mon-Sat, 9AM-6PM)</li>
-                            <li><strong>Email:</strong> technical.support@hukumcorporation.com</li>
-                            <li><strong>WhatsApp Support:</strong> +91 9950722291</li>
-                            <li><strong>On-site Consultation:</strong> Available by appointment</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <a href="#contact" class="btn" style="margin-right: 15px;">REQUEST TECHNICAL CONSULTATION</a>
-                    <a href="#contact" class="btn">GET VOLUME PRICING</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contactForm">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <div class="phone-input">
-                <input type="tel" name="phone" placeholder="Your Phone Number (e.g., +91 1234567890)" required>
-            </div>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-    </section>
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Address</h3>
-                <p>123 Construction Way<br>Building Plaza<br>City, State ZIP</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Phone: (555) 123-4567<br>Email: info@hukumcorporation.com</p>
-            </div>
-            <div class="footer-section">
-                <h3>About Us</h3>
-                <p>Hukum Infra is your trusted partner in construction and infrastructure development, delivering excellence since [year].</p>
-            </div>
-            <div class="footer-section">
-                <a href="../contact.html" class="contact-btn">Contact Us</a>
-            </div>
-        </div>
-    </footer>
-
+    <!-- Custom JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up the sidebar based on product context
-            setupContextSidebar();
-            
-            // Cache DOM elements
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const dropdowns = document.querySelectorAll('.dropdown');
-            
-            // Toggle mobile menu
-            navToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-            });
-            
-            // Handle all dropdown toggles
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    // Always prevent default for dropdown toggles
-                    e.preventDefault();
-                    
-                    const currentDropdown = this.closest('.dropdown');
-                    
-                    if (window.innerWidth <= 768) {
-                        // Close other dropdowns when one is opened
-                        dropdowns.forEach(dropdown => {
-                            if (dropdown !== currentDropdown) {
-                                dropdown.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle the current dropdown
-                        currentDropdown.classList.toggle('active');
-                        
-                        // Stop propagation to prevent document click from immediately closing it
-                        e.stopPropagation();
-                    }
-                });
-            });
-            
-            // Close mega-menu when clicking on a menu item inside it
-            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
-            megaMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // If on mobile, close the dropdown and menu after selecting an item
-                    if (window.innerWidth <= 768) {
-                        this.closest('.dropdown').classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Close menus when clicking outside
-            document.addEventListener('click', function(e) {
-                // If click is outside navbar, close everything
-                if (!e.target.closest('.navbar')) {
-                    navMenu.classList.remove('active');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                } 
-                // If inside navbar but outside an active dropdown, close only dropdowns
-                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-number');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCount(entry.target, target);
+                    observer.unobserve(entry.target);
                 }
-            });
-            
-            // Handle window resize
-            let resizeTimer;
-            window.addEventListener('resize', function() {
-                // Debounce the resize event
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    // If switching to desktop view, reset mobile menu states
-                    if (window.innerWidth > 768) {
-                        navMenu.classList.remove('active');
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    }
-                }, 250);
             });
         });
+
+        counters.forEach(counter => observer.observe(counter));
         
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-
-            fetch('http://localhost:3000/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Thank You!',
-                        text: 'Your message has been sent successfully. We will get back to you soon!',
-                        confirmButtonText: 'OK',
-                        confirmButtonColor: '#28a745',
-                        customClass: {
-                            popup: 'animated fadeInDown'
-                        }
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Clear the form after successful submission
-                            document.getElementById('contactForm').reset();
-                        }
-                    });
-                } else {
-                    throw new Error(data.message || 'Failed to send message');
+        function animateCount(el, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                el.textContent = Math.floor(current);
+                if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
                 }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Oops...',
-                    text: 'There was an error sending your message. Please try again later.',
-                    confirmButtonColor: '#dc3545'
+            }, 20);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
-        
-        // Function to set up the sidebar based on the current page context
-        function setupContextSidebar() {
-            // Get the current page filename
-            const currentPath = window.location.pathname;
-            const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-            
-            // Create a map of product categories and their associated pages
-            const productCategories = {
-                formwork: ['formwork-system.html', 'acro-plate-wall-formwork.html', 'shuttering-plate.html', 
-                          'pier-shuttering.html', 'girder-shuttering.html', 'precast-shuttering.html'],
-                scaffolding: ['cuplock-scaffolding-system.html', 'h-frame.html', 'galvanized-prop.html', 
-                             'ms-pipe.html', 'ms-chali.html'],
-                support: ['adjustable-prop.html', 'adjustable-base.html', 'heavy-duty-bridge-crib.html', 
-                         'adjustable-span.html', 'column-patti.html'],
-                accessories: ['couplers.html', 'builder-clamp.html', 'plank.html', 'ms-channel.html', 
-                             'jack-wheel.html', 'accessories.html']
-            };
-            
-            // Determine which category the current page belongs to
-            let currentCategory = '';
-            for (const [category, pages] of Object.entries(productCategories)) {
-                if (pages.includes(currentPage)) {
-                    currentCategory = category;
-                    break;
-                }
-            }
-            
-            // If we found a category, update the sidebar
-            if (currentCategory) {
-                // Hide all categories first
-                document.querySelectorAll('.sidebar-category').forEach(cat => {
-                    cat.classList.remove('show');
-                });
-                
-                // Always show the category the current page belongs to
-                const mainCategory = document.querySelector(`.sidebar-category.${currentCategory}-category`);
-                if (mainCategory) {
-                    mainCategory.classList.add('show');
-                }
-                
-                // Show 1-2 additional related categories based on context
-                if (currentCategory === 'formwork') {
-                    // For formwork pages, also show support systems as they're closely related
-                    document.querySelector('.sidebar-category.support-category').classList.add('show');
-                } else if (currentCategory === 'scaffolding') {
-                    // For scaffolding, show accessories which are often used with scaffolding
-                    document.querySelector('.sidebar-category.accessories-category').classList.add('show');
-                } else if (currentCategory === 'support') {
-                    // For support systems, show formwork as they're often used together
-                    document.querySelector('.sidebar-category.formwork-category').classList.add('show');
-                } else if (currentCategory === 'accessories') {
-                    // For accessories, show scaffolding as many accessories are for scaffolding
-                    document.querySelector('.sidebar-category.scaffolding-category').classList.add('show');
-                }
-                
-                // Set active state for current page link
-                const allLinks = document.querySelectorAll('.sidebar a');
-                allLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.parentElement.classList.add('active');
-                    }
-                });
+    </script>
+    <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+<script>
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+<script>
+    document.addEventListener('click', function (event) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        // Check if the click is outside the navbar or toggler
+        if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // Programmatically trigger the toggler to close the menu
             }
         }
-    </script>
+    });
+</script>
 </body>
 </html>

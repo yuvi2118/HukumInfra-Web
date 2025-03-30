@@ -3,77 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Column Patti Systems | HukumInfra</title>
-    <link rel="stylesheet" href="/styles.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>HukumInfra - Global Scaffolding Solutions</title>
+    
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="product.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="/assests/logo.png" alt="HukumInfra Logo" style="height: 40px; margin-right: 12px;">
+                HukumInfra
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/solution.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- New Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Acro Plate Wall Formwork</h2>
+            <div class="row align-items-center">
+                <!-- Image -->
+                <div class="col-lg-5" data-aos="fade-right">
+                    <img src="/assests/picture/Acro plate -1.jpeg" alt="Acro Plate Wall Formwork" class="img-fluid rounded">
+                </div>
+                <!-- Text Content -->
+                <div class="col-lg-5" data-aos="fade-left">
+                    <p class="about-text">
+                        Acro Plate Wall Formwork is a modular and reusable formwork system designed for casting reinforced concrete walls, columns, and foundations. Made from high-tensile steel, it provides a strong, durable, and precise mold for concrete structures, ensuring high-quality finishes with minimal rework. Acro plates are widely used in residential, commercial, and infrastructure projects due to their strength, ease of assembly, and cost-effectiveness.
+                    </p>
+                    <h2 class="about-text">Key Features:</h2>
+                    <ul class="about-text">
+                        <li class="mb-2"><i ></i>High-Durability: Manufactured from high-tensile steel for repeated use.
+
+                        <li class="mb-2"><i ></i>Smooth Surface Finish: Ensures minimal surface imperfections in concrete structures.
+
+                        <li class="mb-2"><i ></i>Modular Design: Easily adaptable to different wall dimensions and shapes.
+
+                        <li class="mb-2"><i ></i>Quick Assembly & Dismantling: Reduces construction time and labor costs.
+
+                        <li class="mb-2"><i ></i>Corrosion-Resistant Coating: Available in powder-coated, galvanized, or painted finishes.
+                    </ul>
+                </div>
+                <h2>Technical Specifications</h2>
+                <table class="specs-table">
+                    <tr>
+                        <th>Specification</th>
+                        <th>Details</th>
+                    </tr>
+                    <tr>
+                        <td>Material</td>
+                        <td>High-tensile steel (IS:2062) with reinforced edges</td>
+                    </tr>
+                    <tr>
+                        <td>Available Sizes</td>
+                        <td>600mm x 900mm, 600mm x 1200mm, 900mm x 1200mm (Custom sizes available)</td>
+                    </tr>
+                    <tr>
+                        <td>Thickness</td>
+                        <td>2.5mm, 3mm, 4mm, 5mm</td>
+                    </tr>
+                    <tr>
+                        <td>Load Capacity</td>
+                        <td>Designed to withstand 50 – 80 kN/m² of concrete pressure</td>
+                    </tr>
+                    <tr>
+                        <td>Surface Treatment</td>
+                        <td>Powder-coated, Galvanized, or Painted</td>
+                    </tr>
+                    <tr>
+                        <td>Connection System</td>
+                        <td>Quick-locking pin and wedge system for secure assembly</td>
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        <td>12 – 28 kg depending on size and thickness</td>
+                    </tr>
+                    <tr>
+                        <td>Application</td>
+                        <td>Walls, Columns, Retaining Walls, Shear Walls, and Foundations</td>
+                    </tr>
+                    <tr>
+                        <td>Reusability</td>
+                        <td>Up to 50+ uses with proper maintenance</td>
+                    </tr>
+                    <tr>
+                        <td>Compliance</td>
+                        <td>Meets IS 4990:2011 and Eurocode 2 formwork standards</td>
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="glass-panel">
+            <h2 data-aos="fade-up">Ready to Build Your Future?</h2>
+            <p data-aos="fade-up" data-aos-delay="100">Let's create something amazing together</p>
+            <a href="/contact.html" class="glass-button" data-aos="fade-up" data-aos-delay="200">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <h3>HukumInfra</h3>
+                    <p>Empowering construction and industrial projects with world-class scaffolding solutions.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/solution.html">Solutions</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <h4>Contact Us</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-map-marker-alt"></i> 123 Business Street, Delhi, India</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-envelope"></i> info@hukuminfra.com</p>
+                    </div>
+                </div>
     <style>
-        .product-hero {
-            position: relative;
-            z-index: 1; /* Lower than the navbar */
-            margin-top: 10px; /* Add margin so the dropdown doesn't collide */
-            margin-left: 5px;
-            padding-left: 5%;
-            background: url('/assests/banner.jpg') no-repeat left 2px/cover;
-            height: 200px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            color: rgb(255, 255, 255);
-            font-weight: bold;
+        .glass-panel {
+            color: #fff;
+            margin: 40px auto;
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            width: 100%;
+            border-radius: 15px;
+            padding: 32px;
+            backdrop-filter: blur(10px);
+        }
+
+        .glass-button {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 0;
+            text-decoration: none;
+            border-radius: 15px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(30px);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 14px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .glass-button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
         }
         
 
-        /* Additional responsive styles */
-        @media (max-width: 768px) {
-            .middle-header {
-                flex-direction: column;
-                padding: 10px;
-            }
-            
-            .middle-header .contact-info {
-                margin: 15px 0;
-            }
-            
-            .middle-header .red-text {
-                font-size: 25px;
-                font-family: garamond;
-                font-weight: bold;
-            }
-            
-            .mega-menu {
-                width: 100%;
-                left: 0;
-                transform: none;
-            }
+    /* Root Variables */
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #3b82f6;
+        --dark-color: #1e293b;
+        --light-color: #f8fafc;
+        --accent-color: #f59e0b;
+        --grey-color: #64748b;
+    }
+
+    /* Base Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: var(--dark-color);
+        background-color: var(--light-color);
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+    }
+
+    a {
+        text-decoration: none;
+        color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    a:hover {
+        color: var(--secondary-color);
+    }
+
+    .section-padding {
+        padding: 100px 0;
+    }
+
+    .section-title {
+        margin-bottom: 60px;
+        text-align: center;
+    }
+
+    .section-title h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .section-title h2:after {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-title p {
+        color: var(--grey-color);
+        font-size: 1.1rem;
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    /* Navbar */
+    .navbar {
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    }
+
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.1); /* Transparent background */
+        backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        padding: 10px 0; /* Adjust padding when scrolled */
+    }
+
+    .navbar-brand {
+        font-weight: 700;
+        font-size: 1.6rem;
+        color: black;
+    }
+
+    .nav-link {
+        color: var (--dark-color);
+        font-weight: 500;
+        margin-left: 25px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:before {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-color);
+        transition: all 0.3s ease;
+    }
+
+    .nav-link:hover:before, 
+    .nav-link.active:before {
+        width: 100%;
+    }
+
+
+    /* Enhanced Animations */
+    @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
         
-        .gallery-item {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+        @keyframes scaleIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
         }
         
-        .gallery-item:hover {
-            transform: translateY(-5px);
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
         }
         
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
+        @keyframes wave {
+            0% { transform: translateX(0) translateY(0); }
+            50% { transform: translateX(-25%) translateY(10px); }
+            100% { transform: translateX(-50%) translateY(0); }
         }
         
-        .specs-table {
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes fadeInRight {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeInLeft {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+
+    /* About Section */
+    .about-section {
+        padding: 60px 20px; /* Add spacing around the section */
+        background-color: #f8fafc; /* Light background color */
+        border-radius: 15px; /* Rounded corners for a modern look */
+        margin: 80px auto; /* Add spacing from other sections */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .about-section .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--dark-color);
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .about-section .section-title::after {
+        content: '';
+        width: 70px;
+        height: 4px;
+        background: var(--primary-color);
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-section .row {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Add spacing between image and text */
+    }
+
+    .about-section img {
+        width: 100%;
+        border-radius: 15px; /* Rounded corners for the image */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    .about-section .about-text {
+        font-size: 1.1rem;
+        color: var(--grey-color);
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    .specs-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -91,740 +413,162 @@
         
         .specs-table tr:hover {
             background-color: #f9f9f9;
-        }
-        
-        .cta-section {
-            background-color: #f5f5f5;
-            padding: 40px;
-            text-align: center;
-            margin-top: 40px;
-            border-radius: 10px;
-        }
-        
-        .cta-section h2 {
-            margin-bottom: 20px;
-            color: #333;
-        }
-        
-        .features-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .feature-item {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        
-        .feature-item h3 {
-            color: #0074B7;
-            margin-bottom: 10px;
-        }
-        
-        .feature-icon {
-            font-size: 2rem;
-            color: rgb(33, 198, 210);
-            margin-bottom: 15px;
-        }
+        }    
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f5f5f5;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        .product-header {
-            position: relative;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            overflow: hidden;
-            margin-bottom: 30px;
-        }
-        .wave-bg {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 100%;
-            height: 200px;
-            z-index: 1;
-        }
-        .wave-path {
-            fill: #1a56db;
-            opacity: 0.8;
-        }
-        .product-info {
-            display: flex;
-            position: relative;
-            z-index: 2;
-        }
-        .product-text {
-            flex: 1;
-            padding-right: 30px;
-        }
-        .product-images {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-        .product-image {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-        .product-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        h1 {
-            color: #1a56db;
-            font-size: 28px;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #1a56db;
-            font-size: 24px;
-            margin: 30px 0 15px;
-        }
-        h3 {
-            color: #333;
-            font-size: 20px;
-            margin: 15px 0 10px;
-        }
-        p {
-            margin-bottom: 15px;
-        }
-        .key-features {
-            margin: 20px 0;
-        }
-        .key-features li {
-            margin-bottom: 10px;
-            list-style-type: none;
-            padding-left: 25px;
-            position: relative;
-        }
-        .key-features li:before {
-            content: "•";
-            color: #1a56db;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-        .features-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .feature-item {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .feature-icon {
-            color: #1a56db;
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-        .product-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .gallery-item {
-            background-color: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-        .specs-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 30px 0;
-        }
-        .specs-table th, .specs-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .specs-table th {
-            background-color: #1a56db;
-            color: white;
-        }
-        .specs-table tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        .cta-section {
-            background-color: #1a56db;
-            color: white;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            margin: 40px 0;
-        }
-        .cta-section h2 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        .btn {
-            display: inline-block;
-            background-color: white;
-            color: #1a56db;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #f0f0f0;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        .applications {
-            margin: 30px 0;
-        }
-        .applications ul {
-            list-style-type: none;
-            padding-left: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        .applications li {
-            background-color: #e6efff;
-            padding: 8px 15px;
-            border-radius: 20px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-        .benefits-list {
-            background-color: #f9f9f9;
-            padding: 25px;
-            border-radius: 8px;
-            margin: 30px 0;
-        }
-        .benefits-list ul {
-            list-style-type: none;
-        }
-        .benefits-list li {
-            padding-left: 30px;
-            position: relative;
-            margin-bottom: 15px;
-        }
-        .benefits-list li:before {
-            content: "✓";
-            color: #1a56db;
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-    </style>
-</head>
-<body>
+    /* Footer */
+    .footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: 80px 0 20px;
+    }
 
+    .footer h3 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
 
-    <!-- Middle Header -->
-    <div class="middle-header">
-        <div class="logo">
-            <a href="/index.html">
-            <img src="/assests/logo.png" alt="Company Logo"></a>
-        </div>
-        <div class="contact-info">
-            <p>📞 Call us 24x7 <span class="red-text">+91 9950722291</span></p>
-            <p>📧 Email us: <span class="red-text">info@hukumcorporation.com</span></p>
-        </div>
-        <div class="quote-button">
-            <a href="/contact.html" class="btn">GET A QUOTE</a>
-        </div>
-    </div>
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-toggle">
-            <i class="fas fa-bars"></i>
-        </div>
-        <ul class="nav-menu">
-            <li><a href="/index.html">HOME</a></li>
-            <li><a href="/about.html">ABOUT US</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle">OUR PRODUCTS <i class="fas fa-caret-down"></i></a>
-                <div class="mega-menu">
-                    <div class="mega-menu-column">
-                        <h4>FORMWORK SYSTEMS</h4>
-                        <a href="formwork-system.html">FORMWORK SYSTEM</a>
-                        <a href="acro-plate-wall-formwork.html">ACRO PLATE WALL FORMWORK</a>
-                        <a href="shuttering-plate.html">SHUTTERING PLATE</a>
-                        <a href="pier-shuttering.html">PIER SHUTTERING</a>
-                        <a href="girder-shuttering.html">GIRDER SHUTTERING</a>
-                        <a href="precast-shuttering.html">PRECAST SHUTTERING</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SCAFFOLDING SYSTEMS</h4>
-                        <a href="cuplock-scaffolding-system.html">CUPLOCK SCAFFOLDING SYSTEM</a>
-                        <a href="h-frame.html">H-FRAME SCAFFOLDING</a>
-                        <a href="galvanized-prop.html">SCAFFOLDING GALVANIZED PROP</a>
-                        <a href="ms-pipe.html">MS PIPE</a>
-                        <a href="ms-chali.html">MS CHALI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>SUPPORT SYSTEMS</h4>
-                        <a href="adjustable-prop.html">ADJUSTABLE PROP/ MS PROP</a>
-                        <a href="adjustable-base.html">ADJUSTABLE BASE/ U JACK</a>
-                        <a href="heavy-duty-bridge-crib.html">HEAVY DUTY BRIDGE CRIB</a>
-                        <a href="adjustable-span.html">ADJUSTABLE SPAN</a>
-                        <a href="column-patti.html">COLUMN PATTI</a>
-                    </div>
-                    <div class="mega-menu-column">
-                        <h4>ACCESSORIES & COMPONENTS</h4>
-                        <a href="couplers.html">COUPLERS</a>
-                        <a href="builder-clamp.html">BUILDER CLAMP</a>
-                        <a href="plank.html">PLANK</a>
-                        <a href="ms-channel.html">M.S. CHANNEL</a>
-                        <a href="jack-wheel.html">JACK WHEEL</a>
-                        <a href="accessories.html">OTHER ACCESSORIES</a>
-                    </div>
-                </div>
-            </li>
-            <li><a href="#">CONTACT US</a></li>
-        </ul>
-    </nav>
+    .footer-links li {
+        margin-bottom: 10px;
+    }
 
-    <!-- Hero Section -->
-    <section id="home" class="hero product-hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Acro Plate Wall Formwork</h1>
-        </div>
-    </section>
+    .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
 
-    <div class="main-container">
-        <aside class="sidebar">
-            <h3>Product Categories</h3>
-            
-            <!-- Formwork Systems Category -->
-            <div class="sidebar-category formwork-category show">
-                <h4>Formwork Systems</h4>
-                <ul>
-                    <li><a href="formwork-system.html">Formwork System</a></li>
-                    <li><a href="acro-plate-wall-formwork.html">Acro Plate Wall Formwork</a></li>
-                    <li><a href="shuttering-plate.html">Shuttering Plate</a></li>
-                    <li><a href="pier-shuttering.html">Pier Shuttering</a></li>
-                    <li><a href="girder-shuttering.html">Girder Shuttering</a></li>
-                    <li><a href="precast-shuttering.html">Precast Shuttering</a></li>
-                </ul>
-            </div>
-            
-            <!-- Support Systems Category -->
-            <div class="sidebar-category support-category show">
-                <h4>Support Systems</h4>
-                <ul>
-                    <li><a href="adjustable-prop.html">Adjustable Prop/ MS Prop</a></li>
-                    <li><a href="adjustable-base.html">Adjustable Base/ U Jack</a></li>
-                    <li><a href="heavy-duty-bridge-crib.html">Heavy Duty Bridge Crib</a></li>
-                    <li><a href="adjustable-span.html">Adjustable Span</a></li>
-                    <li class="active"><a href="column-patti.html">Column Patti</a></li>
-                </ul>
-            </div>
-            
-            <!-- Scaffolding Systems Category (hidden by default) -->
-            <div class="sidebar-category scaffolding-category">
-                <h4>Scaffolding Systems</h4>
-                <ul>
-                    <li><a href="cuplock-scaffolding-system.html">Cuplock Scaffolding System</a></li>
-                    <li><a href="h-frame.html">H-Frame Scaffolding</a></li>
-                    <li><a href="galvanized-prop.html">Scaffolding Galvanized Prop</a></li>
-                    <li><a href="ms-pipe.html">MS Pipe</a></li>
-                    <li><a href="ms-chali.html">MS Chali</a></li>
-                </ul>
-            </div>
-            
-            <!-- Accessories Category (hidden by default) -->
-            <div class="sidebar-category accessories-category">
-                <h4>Accessories & Components</h4>
-                <ul>
-                    <li><a href="couplers.html">Couplers</a></li>
-                    <li><a href="builder-clamp.html">Builder Clamp</a></li>
-                    <li><a href="plank.html">Plank</a></li>
-                    <li><a href="ms-channel.html">M.S. Channel</a></li>
-                    <li><a href="jack-wheel.html">Jack Wheel</a></li>
-                    <li><a href="accessories.html">Other Accessories</a></li>
-                </ul>
-            </div>
-        </aside>
-        
-        <div class="content-section">
-            <div class="overview">
-                <h2>Acro Plate Wall Formwork Overview</h2>
-                <p>HukumInfra's Acro Plate Wall Formwork is an advanced, high-strength component used extensively in concrete shuttering and formwork systems. Designed for <strong>superior durability and structural stability</strong>, our Acro Plates ensure <strong>perfect alignment, load distribution, and reusability</strong>, making them indispensable for modern construction projects.</p>
-        
-                <p>These plates are crafted from <strong>high-grade steel sheets reinforced with precision-punched angle frames</strong>, ensuring exceptional resistance to <strong>heavy loads, concrete pressure, and deformation</strong>. Whether used in <strong>high-rise buildings, bridges, metro projects, precast structures, or commercial complexes</strong>, our Acro Plate systems optimize formwork efficiency, <strong>minimize material wastage</strong>, and accelerate construction timelines.</p>
-        
-                <p>With <strong>customizable size and thickness options</strong>, these plates can be <strong>tailored to specific project requirements</strong>. The robust design ensures <strong>high reusability</strong>, helping contractors <strong>reduce costs and improve sustainability</strong> in large-scale infrastructure developments.</p>
-            </div>
-            
-            <div class="benefits-list">
-                <h3>Key Benefits:</h3>
-                <ul>
-                    <li>Ensures <strong>consistent concrete finish</strong> by preventing deformation and leakage.</li>
-                    <li>Enhances <strong>structural stability</strong> with superior load-bearing strength.</li>
-                    <li>Minimizes <strong>labor costs</strong> with quick installation and multiple reuses.</li>
-                    <li>Available in <strong>custom sizes and thicknesses</strong> for specific project needs.</li>
-                    <li>Designed for <strong>compatibility with various scaffolding and shuttering systems</strong>.</li>
-                    <li>Manufactured with <strong>corrosion-resistant coatings</strong> for extended durability.</li>
-                </ul>
-            </div>
-        
-            <div class="features-list">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Unmatched Load Capacity</h3>
-                    <p>Our Acro Plates are engineered to withstand extreme pressure, ensuring structural integrity during concrete casting and curing.</p>
-                </div>
-        
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <h3>Precision & Dimensional Accuracy</h3>
-                    <p>Designed for perfect alignment, eliminating inconsistencies in formwork and improving the final concrete surface finish.</p>
-                </div>
-        
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-recycle"></i>
-                    </div>
-                    <h3>Reusability & Cost Efficiency</h3>
-                    <p>Manufactured for <strong>multiple reuses</strong>, reducing overall project costs by minimizing material waste and replacement needs.</p>
-                </div>
-        
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Customizable Design</h3>
-                    <p>Available in multiple sizes and thickness options, adaptable to various formwork applications, including <strong>slabs, beams, and columns</strong>.</p>
-                </div>
-            </div>
-            
-            <div class="applications">
-                <h2>Applications</h2>
-                <p>The Acro Plate Wall Formwork system is versatile and suitable for numerous construction applications:</p>
-                <ul>
-                    <li>High-rise building construction</li>
-                    <li>Bridges and flyovers</li>
-                    <li>Metro rail projects</li>
-                    <li>Precast concrete structures</li>
-                    <li>Commercial complexes</li>
-                    <li>Industrial installations</li>
-                    <li>Infrastructure development projects</li>
-                </ul>
-            </div>
-        
-            <h2>Product Gallery</h2>
-            <div class="product-gallery">
-                <div class="gallery-item">
-                    <img src="/assets/acro-plate1.jpg" alt="Standard Acro Plate">
-                    <div style="padding: 10px;">
-                        <h3>Standard Acro Plate</h3>
-                        <p>General-purpose Acro Plate for slab and column shuttering.</p>
-                    </div>
-                </div>
-        
-                <div class="gallery-item">
-                    <img src="/assets/acro-plate2.jpg" alt="Heavy-Duty Acro Plate">
-                    <div style="padding: 10px;">
-                        <h3>Heavy-Duty Acro Plate</h3>
-                        <p>Designed for industrial projects requiring high load-bearing capacity.</p>
-                    </div>
-                </div>
-        
-                <div class="gallery-item">
-                    <img src="/assets/acro-plate3.jpg" alt="Customized Acro Plate">
-                    <div style="padding: 10px;">
-                        <h3>Customized Acro Plate</h3>
-                        <p>Tailor-made Acro Plate solutions for specific project dimensions.</p>
-                    </div>
-                </div>
-        
-                <div class="gallery-item">
-                    <img src="/assets/acro-plate4.jpg" alt="Precast Acro Plate">
-                    <div style="padding: 10px;">
-                        <h3>Precast Acro Plate</h3>
-                        <p>Designed for <strong>precast concrete structures</strong>, ensuring seamless formwork alignment.</p>
-                    </div>
-                </div>
-        
-                <div class="gallery-item">
-                    <img src="/assets/acro-plate5.jpg" alt="Bridge Acro Plate">
-                    <div style="padding: 10px;">
-                        <h3>Bridge Acro Plate</h3>
-                        <p>High-strength plate engineered for <strong>infrastructure projects, including bridges and flyovers</strong>.</p>
-                    </div>
-                </div>
-            </div>
-        
-            <h2>Technical Specifications</h2>
-            <table class="specs-table">
-                <tr>
-                    <th>Specification</th>
-                    <th>Details</th>
-                </tr>
-                <tr>
-                    <td>Material</td>
-                    <td>Heavy-duty steel sheets with punched angle frames</td>
-                </tr>
-                <tr>
-                    <td>Thickness Options</td>
-                    <td>3.15mm, 4.0mm, 5.0mm</td>
-                </tr>
-                <tr>
-                    <td>Available Sizes</td>
-                    <td>Various standard and custom dimensions</td>
-                </tr>
-                <tr>
-                    <td>Load Capacity</td>
-                    <td>Up to 150kN per panel</td>
-                </tr>
-                <tr>
-                    <td>Surface Treatment</td>
-                    <td>Galvanized, powder-coated, or painted finish</td>
-                </tr>
-                <tr>
-                    <td>Weight</td>
-                    <td>Varies based on size and thickness</td>
-                </tr>
-                <tr>
-                    <td>Compliance</td>
-                    <td>Meets IS 4990:2011 and global construction safety standards</td>
-                </tr>
-            </table>
-            
-            <div class="quality-assurance">
-                <h2>Quality Assurance</h2>
-                <p>Each Acro Plate undergoes rigorous quality testing to ensure structural integrity and performance reliability. Our manufacturing process adheres to strict quality control measures, resulting in products that consistently exceed industry standards and maintain compliance with IS 4990:2011 specifications.</p>
-                
-                <h3>Why Choose HukumInfra's Acro Plate Wall Formwork:</h3>
-                <div class="benefits-list">
-                    <ul>
-                        <li>Engineered for superior load-bearing capacity</li>
-                        <li>Precision manufacturing for perfect dimensional accuracy</li>
-                        <li>Cost-effective solution with high reusability factor</li>
-                        <li>Reduced maintenance requirements</li>
-                        <li>Extended service life compared to standard alternatives</li>
-                        <li>Technical support and consultation available</li>
-                    </ul>
-                </div>
-            </div>
-        
-            <div class="cta-section">
-                <h2>Order Your Acro Plate Wall Formwork Today</h2>
-                <p>Upgrade your construction efficiency with <strong>high-quality Acro Plate Wall Formwork</strong> from HukumInfra. Contact us now for technical consultation, bulk pricing, or customized solutions.</p>
-        
-                <div style="margin-top: 30px;">
-                    <a href="/contact.html" class="btn">REQUEST A QUOTE</a>
-                </div>
-            </div>
-        </div>
-        
-                
-    </div>
+    .footer-links a:hover {
+        color: white;
+    }
 
+    /* Floating WhatsApp Icon */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 100px;
+        right: 40px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 100;
+    }
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 HukumInfra. All Rights Reserved.</p>
-    </footer>
+    .whatsapp-float i {
+        margin-top: 16px;
+    }
 
+    /* Add spacing between image and text in the About section for mobile */
+    @media (max-width: 768px) {
+        #about .row {
+            gap: 20px; /* Adds space between the image and text */
+        }
+    }
+
+    /* Reduce space between About and Services sections */
+    #about {
+        margin-bottom: 0px; /* Decrease the bottom margin */
+    }
+</style>
+
+    <!-- Floating WhatsApp Icon -->
+    <a href="https://wa.me/919876543210" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up the sidebar based on product context
-            setupContextSidebar();
-            
-            // Cache DOM elements
-            const navToggle = document.querySelector('.nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-            const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-            const dropdowns = document.querySelectorAll('.dropdown');
-            
-            // Toggle mobile menu
-            navToggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                navMenu.classList.toggle('active');
-            });
-            
-            // Handle all dropdown toggles
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    // Always prevent default for dropdown toggles
-                    e.preventDefault();
-                    
-                    const currentDropdown = this.closest('.dropdown');
-                    
-                    if (window.innerWidth <= 768) {
-                        // Close other dropdowns when one is opened
-                        dropdowns.forEach(dropdown => {
-                            if (dropdown !== currentDropdown) {
-                                dropdown.classList.remove('active');
-                            }
-                        });
-                        
-                        // Toggle the current dropdown
-                        currentDropdown.classList.toggle('active');
-                        
-                        // Stop propagation to prevent document click from immediately closing it
-                        e.stopPropagation();
-                    }
-                });
-            });
-            
-            // Close mega-menu when clicking on a menu item inside it
-            const megaMenuLinks = document.querySelectorAll('.mega-menu a');
-            megaMenuLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // If on mobile, close the dropdown and menu after selecting an item
-                    if (window.innerWidth <= 768) {
-                        this.closest('.dropdown').classList.remove('active');
-                        navMenu.classList.remove('active');
-                    }
-                });
-            });
-            
-            // Close menus when clicking outside
-            document.addEventListener('click', function(e) {
-                // If click is outside navbar, close everything
-                if (!e.target.closest('.navbar')) {
-                    navMenu.classList.remove('active');
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
-                } 
-                // If inside navbar but outside an active dropdown, close only dropdowns
-                else if (!e.target.closest('.dropdown.active') && !e.target.closest('.dropdown-toggle')) {
-                    dropdowns.forEach(dropdown => {
-                        dropdown.classList.remove('active');
-                    });
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Navbar scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Counter animation
+        const counters = document.querySelectorAll('.stat-number');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCount(entry.target, target);
+                    observer.unobserve(entry.target);
                 }
-            });
-            
-            // Handle window resize
-            let resizeTimer;
-            window.addEventListener('resize', function() {
-                // Debounce the resize event
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(function() {
-                    // If switching to desktop view, reset mobile menu states
-                    if (window.innerWidth > 768) {
-                        navMenu.classList.remove('active');
-                        dropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    }
-                }, 250);
             });
         });
-         
-        // Function to set up the sidebar based on the current page context
-        function setupContextSidebar() {
-            // Get the current page filename
-            const currentPath = window.location.pathname;
-            const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
-            
-            // Create a map of product categories and their associated pages
-            const productCategories = {
-                formwork: ['formwork-system.html', 'acro-plate-wall-formwork.html', 'shuttering-plate.html', 
-                          'pier-shuttering.html', 'girder-shuttering.html', 'precast-shuttering.html'],
-                scaffolding: ['cuplock-scaffolding-system.html', 'h-frame.html', 'galvanized-prop.html', 
-                             'ms-pipe.html', 'ms-chali.html'],
-                support: ['adjustable-prop.html', 'adjustable-base.html', 'heavy-duty-bridge-crib.html', 
-                         'adjustable-span.html', 'column-patti.html'],
-                accessories: ['couplers.html', 'builder-clamp.html', 'plank.html', 'ms-channel.html', 
-                             'jack-wheel.html', 'accessories.html']
-            };
-            
-            // Determine which category the current page belongs to
-            let currentCategory = '';
-            for (const [category, pages] of Object.entries(productCategories)) {
-                if (pages.includes(currentPage)) {
-                    currentCategory = category;
-                    break;
+
+        counters.forEach(counter => observer.observe(counter));
+        
+        function animateCount(el, target) {
+            let current = 0;
+            const increment = target / 100;
+            const timer = setInterval(() => {
+                current += increment;
+                el.textContent = Math.floor(current);
+                if (current >= target) {
+                    el.textContent = target;
+                    clearInterval(timer);
                 }
-            }
-            
-            // If we found a category, update the sidebar
-            if (currentCategory) {
-                // Hide all categories first
-                document.querySelectorAll('.sidebar-category').forEach(cat => {
-                    cat.classList.remove('show');
+            }, 20);
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-                
-                // Always show the category the current page belongs to
-                const mainCategory = document.querySelector(`.sidebar-category.${currentCategory}-category`);
-                if (mainCategory) {
-                    mainCategory.classList.add('show');
-                }
-                
-                // Show 1-2 additional related categories based on context
-                if (currentCategory === 'formwork') {
-                    // For formwork pages, also show support systems as they're closely related
-                    document.querySelector('.sidebar-category.support-category').classList.add('show');
-                } else if (currentCategory === 'scaffolding') {
-                    // For scaffolding, show accessories which are often used with scaffolding
-                    document.querySelector('.sidebar-category.accessories-category').classList.add('show');
-                } else if (currentCategory === 'support') {
-                    // For support systems, show formwork as they're often used together
-                    document.querySelector('.sidebar-category.formwork-category').classList.add('show');
-                } else if (currentCategory === 'accessories') {
-                    // For accessories, show scaffolding as many accessories are for scaffolding
-                    document.querySelector('.sidebar-category.scaffolding-category').classList.add('show');
-                }
-                
-                // Set active state for current page link
-                const allLinks = document.querySelectorAll('.sidebar a');
-                allLinks.forEach(link => {
-                    if (link.getAttribute('href') === currentPage) {
-                        link.parentElement.classList.add('active');
-                    }
-                });
+            });
+        });
+    </script>
+    <script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+</script>
+<script>
+    window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+<script>
+    document.addEventListener('click', function (event) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+
+        // Check if the click is outside the navbar or toggler
+        if (!navbarCollapse.contains(event.target) && !navbarToggler.contains(event.target)) {
+            if (navbarCollapse.classList.contains('show')) {
+                navbarToggler.click(); // Programmatically trigger the toggler to close the menu
             }
         }
-    </script>
+    });
+</script>
 </body>
 </html>
