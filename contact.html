@@ -766,7 +766,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="solution.html">Solutions</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -785,7 +785,9 @@
             <div class="contact-wrapper">
                 <div class="contact-grid">
                     <div class="form-section">
-                        <form id="contactForm">
+                        <!-- Updated Form for Netlify -->
+                        <form name="contact" method="POST" data-netlify="true">
+                            <input type="hidden" name="form-name" value="contact" />
                             <div class="form-group">
                                 <input type="text" class="input-animated" id="name" name="name" placeholder=" " required>
                                 <label class="label-animated" for="name">Full Name</label>
@@ -885,7 +887,7 @@
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="solution.html">Solutions</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
