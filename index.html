@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HukumInfra - Global Scaffolding Solutions</title>
+    <meta name="description" content="HukumInfra - Global Leaders in Scaffolding Solutions. Providing innovative and reliable scaffolding systems for construction, industrial, and commercial projects worldwide.">
+    <meta name="keywords" content="HukumInfra, scaffolding, construction, industrial, scaffolding solutions">
+    <meta name="author" content="HukumInfra">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -253,6 +257,14 @@
         </div>
     </section>
 
+    <!-- Contact Us Popup -->
+<div id="contact-popup" class="contact-popup">
+    <div class="popup-content">
+        <p>Need help?</p>
+        <button id="contact-popup-btn" class="popup-button">Contact Us</button>
+    </div>
+</div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -299,6 +311,60 @@
         --accent-color: #f59e0b;
         --grey-color: #64748b;
     }
+
+    /* Contact Us Popup */
+.contact-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 110px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Initially hidden */
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.contact-popup .popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contact-popup p {
+    margin: 0;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.popup-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.popup-button:hover {
+    background: var(--secondary-color);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
     /* Base Styles */
     body {
@@ -704,6 +770,24 @@
             }
         }
     });
+    // Function to show the popup
+function showPopup() {
+    const popup = document.getElementById('contact-popup');
+    popup.style.display = 'block';
+
+    // Hide the popup after 5 seconds
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 5000);
+}
+
+// Show the popup every 10 seconds
+setInterval(showPopup, 10000);
+
+// Redirect to contact.html when the button is clicked
+document.getElementById('contact-popup-btn').addEventListener('click', () => {
+    window.location.href = 'contact.html';
+});
 </script>
 </body>
 </html>
