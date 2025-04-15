@@ -272,7 +272,8 @@ main {
 
 /* Navbar */
 .navbar-brand img {
-    height: 50px; /* Adjust the height as needed */
+    height: 60px; /* Adjust the height as needed */
+    size: 60px; /* Ensure the logo is square */
     margin-right: 10px;
     border-radius: 0; /* Ensure no rounding is applied */
     transition: transform 0.3s ease; /* Keep the hover effect */
