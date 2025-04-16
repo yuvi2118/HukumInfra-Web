@@ -604,3 +604,143 @@
     }
 }
 
+/* Contact Float Styles */
+.contact-float-container {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.contact-float-button {
+    position: relative;
+}
+
+.contact-float-main {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.contact-float-options {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    visibility: hidden; /* Change from pointer-events to visibility */
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.contact-float-button:hover .contact-float-options {
+    opacity: 1;
+    visibility: visible; /* Change from pointer-events to visibility */
+    transform: translateY(0);
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.contact-option i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.contact-option.whatsapp {
+    background-color: #25d366;
+}
+
+.contact-option.phone {
+    background-color: #007bff;
+}
+
+.contact-option.indiamart {
+    background-color: #ff6b6b;
+}
+
+/* Hover Effects */
+.contact-float-container:hover .contact-float-options {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.contact-float-container:hover .contact-float-main {
+    transform: rotate(360deg);
+}
+
+.contact-option:hover {
+    transform: translateX(-10px);
+}
+
+.contact-info1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-left: 20%;
+}
+
+.contact-info1 i {
+    color: var(--primary-color);
+}
+
+.mobile-contact {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+}
+
+.mobile-phone {
+    display: flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.mobile-phone i {
+    margin-right: 8px;
+}
+
+.mobile-phone span {
+    color: var(--dark-color);
+}
+
+@media (max-width: 991px) {
+    .navbar-brand img {
+        height: 60px; /* Slightly smaller logo on mobile */
+    }
+    
+    .mobile-contact {
+        margin-left: 50px; /* Add some space from the logo */
+        padding-left: 12px; /* Add some padding to the left */
+    }
+}
